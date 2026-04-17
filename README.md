@@ -160,11 +160,14 @@
 Farmacia_Integradora/
 ├── 📄 README.md                         # Portada - Documentación Principal
 │
-├── 📁 docs/                             # Documentación (5%)
+├── 📁 DOCS/                             # Documentación (5%)
 │   ├── CONTEXTO.md                      # Documentos de contexto
+│   ├── FRs.md                           # Requisitos Funcionales
+│   ├── NFRs.md                          # Requisitos No Funcionales
+│   ├── BRs.md                           # Requisitos de Negocio
 │   └── PROMPTING.md                     # Bitácora de prompting
 │
-├── 📁 db/                               # Base de Datos
+├── 📁 DB/                               # Base de Datos
 │   ├── 📁 sql/                          # (15%)
 │   │   ├── README.md
 │   │   ├── respaldo_completo.sql        # Respaldo manual completo
@@ -189,7 +192,7 @@ Farmacia_Integradora/
 │       ├── usuarios_sql.sql
 │       └── usuarios_nosql.js
 │
-├── 📁 api/                              # Código Fuente API (15%)
+├── 📁 API/                              # Código Fuente API (15%)
 │   ├── README.md
 │   ├── main.py
 │   ├── config.py
@@ -199,7 +202,7 @@ Farmacia_Integradora/
 │   ├── 📁 schemas/
 │   └── 📁 utils/
 │
-├── 📁 tests/                            # Suite de Pruebas (10%)
+├── 📁 TESTS/                            # Suite de Pruebas (10%)
 │   ├── README.md                        # 10 Tests Documentados
 │   ├── test_01_compra_simple.py
 │   ├── test_02_impacto_masivo.py
@@ -213,7 +216,7 @@ Farmacia_Integradora/
 │   ├── test_10_reportes.py
 │   └── 📁 evidencias/                   # Resultados de tests
 │
-├── 📁 dashboard/                        # Dashboard Navicat BI (10%)
+├── 📁 DASHBOARD/                        # Dashboard Navicat BI (10%)
 │   ├── README.md
 │   ├── estatus_tests.navicat
 │   ├── cobertura_inventario.navicat
@@ -232,13 +235,13 @@ Farmacia_Integradora/
 | Componente | Peso | Carpeta |
 |------------|------|---------|
 | 📄 Portada (README) | 10% | / |
-| 🗄️ Respaldos SQL | 15% | /db/sql/ |
-| 🗄️ Respaldos NoSQL | 15% | /db/nosql/ |
-| 🔐 Seguridad | 15% | /db/security/ |
-| 💻 API REST | 15% | /api/ |
-| 🧪 Tests (10 casos) | 10% | /tests/ |
-| 📊 Dashboard | 10% | /dashboard/ |
-| 📝 Bitácora Prompting | 5% | /docs/PROMPTING.md |
+| 📋 Documentación | 5% | /DOCS/ |
+| 🗄️ Respaldos SQL | 15% | /DB/sql/ |
+| 🗄️ Respaldos NoSQL | 15% | /DB/nosql/ |
+| 🔐 Seguridad | 15% | /DB/security/ |
+| 💻 API REST | 15% | /API/ |
+| 🧪 Tests (10 casos) | 10% | /TESTS/ |
+| 📊 Dashboard | 10% | /DASHBOARD/ |
 
 ---
 
