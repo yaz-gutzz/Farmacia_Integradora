@@ -1,268 +1,521 @@
-# 🏥 ABD - Prácticas de Administración de Bases de Datos  
-## **EQUIPO DE FARMACIA - Tarea Integradora**
+# 🏥 Sistema de Gestión Farmacéutica Hospitalaria
+
+**EQUIPO DE FARMACIA - Tarea Integradora**
+
+---
 
 ## 📋 Descripción General
 
-Repositorio de **Prácticas de Administración de Bases de Datos** que implementa un **Sistema Hospitalario Integral** enfocado en la gestión de pacientes, medicamentos e inventarios. Progresa desde arquitecturas SQL tradicionales hasta sistemas híbridos SQL+NoSQL, con integración de APIs REST y análisis avanzado de datos.
+Sistema integral de gestión farmacéutica hospitalaria que integra gestión de pacientes, medicamentos, inventarios, compras y análisis económico. Arquitectura moderna con SQL + NoSQL, APIs REST seguras y documentación automática.
 
 **Equipo:** Departamento de Farmacia  
-**Organización:** Tres prácticas progresivas que construyen un ecosistema completo de gestión hospitalaria farmacéutica.
+**Objetivo Final:** Plataforma completa para el control operacional y administrativo de farmacia hospitalaria
 
 ---
 
-## 📂 Estructura General
+## 📂 Estructura del Proyecto
 
 ```
-ABD_Practica05_PH/
-├── 📁 Practica-05/          # Base de datos SQL + Rutinas + Dashboard + Tests
-├── 📁 Practica-07/          # API REST segura con 10 escenarios de prueba
-├── 📁 Practica-09/          # API Híbrida SQL+NoSQL con 5 casos de negocio
-└── 📄 README.md             # Este archivo
+Farmacia_Integradora/
+├── 📄 README.md                         # Portada - Documentación Principal
+│
+├── 📁 docs/                             # Documentación (5%)
+│   ├── CONTEXTO.md                      # Documentos de contexto
+│   └── PROMPTING.md                     # Bitácora de prompting
+│
+├── 📁 db/                               # Base de Datos
+│   ├── 📁 sql/                          # (15%)
+│   │   ├── README.md
+│   │   ├── respaldo_completo.sql        # Respaldo manual completo
+│   │   ├── respaldo_parcial.sql         # Respaldo manual parcial
+│   │   ├── script_respaldo_automatizado.sql
+│   │   ├── data_dictionary.md
+│   │   ├── bitacora_seguridad.log
+│   │   └── mecanismo_monitoreo.sql
+│   │
+│   ├── 📁 nosql/                        # (15%)
+│   │   ├── README.md
+│   │   ├── respaldo_completo.json       # Respaldo manual completo
+│   │   ├── respaldo_parcial.json        # Respaldo manual parcial
+│   │   ├── script_respaldo_automatizado.js
+│   │   ├── schema_hospital_medicamentos.json
+│   │   ├── data_dictionary.md
+│   │   ├── bitacora_seguridad.log
+│   │   └── mecanismo_monitoreo.js
+│   │
+│   └── 📁 security/                     # (15%)
+│       ├── SEGURIDAD.md
+│       ├── usuarios_sql.sql
+│       └── usuarios_nosql.js
+│
+├── 📁 api/                              # Código Fuente API (15%)
+│   ├── README.md
+│   ├── main.py
+│   ├── config.py
+│   ├── requirements.txt
+│   ├── 📁 models/
+│   ├── 📁 routes/
+│   ├── 📁 schemas/
+│   └── 📁 utils/
+│
+├── 📁 tests/                            # Suite de Pruebas (10%)
+│   ├── README.md                        # 10 Tests Documentados
+│   ├── test_01_compra_simple.py
+│   ├── test_02_impacto_masivo.py
+│   ├── test_03_subrogacion_economica.py
+│   ├── test_04_subrogacion_automatica.py
+│   ├── test_05_control_errores.py
+│   ├── test_06_validacion_pacientes.py
+│   ├── test_07_validacion_medicamentos.py
+│   ├── test_08_consultas_inventario.py
+│   ├── test_09_dispensacion.py
+│   ├── test_10_reportes.py
+│   └── 📁 evidencias/                   # Resultados de tests
+│
+├── 📁 dashboard/                        # Dashboard Navicat BI (10%)
+│   ├── README.md
+│   ├── estatus_tests.navicat
+│   ├── cobertura_inventario.navicat
+│   ├── impacto_masivo.navicat
+│   ├── analisis_costos.navicat
+│   ├── disponibilidad_medicamentos.navicat
+│   ├── dispensaciones_pacientes.navicat
+│   ├── medicamentos_criticos.navicat
+│   └── validaciones_fallidas.navicat
+│
+└── 📋 .gitignore
+```
+
+## 📊 Distribución de Entregables
+
+| Componente | Peso | Carpeta |
+|------------|------|---------|
+| 📄 Portada (README) | 10% | / |
+| 🗄️ Respaldos SQL | 15% | /db/sql/ |
+| 🗄️ Respaldos NoSQL | 15% | /db/nosql/ |
+| 🔐 Seguridad | 15% | /db/security/ |
+| 💻 API REST | 15% | /api/ |
+| 🧪 Tests (10 casos) | 10% | /tests/ |
+| 📊 Dashboard | 10% | /dashboard/ |
+| 📝 Bitácora Prompting | 5% | /docs/PROMPTING.md |
+
+---
+
+## 🎯 Módulos Principales
+
+### 🏨 Gestión de Pacientes y Clínica
+- Registro y administración de pacientes
+- Historiales médicos y clínicos
+- Recetas y medicamentos asociados
+- Control de datos personales y contacto
+
+### 💊 Gestión de Medicamentos
+- Catálogo de medicamentos
+- Control de proveedores
+- Gestión de inventarios
+- Precios y análisis de costos
+
+### 📦 Control de Compras y Subrogación
+- Órdenes de compra
+- Registros de compra
+- Análisis de diferencias económicas
+- Sistema automático de subrogación
+
+### 📊 Reportes y Analytics
+- Reportes de inventario
+- Análisis de costos
+- Trazabilidad de medicamentos
+- Estadísticas de consumo
+
+---
+
+## 🏗️ Arquitectura Técnica
+
+### Stack Tecnológico
+
+```
+┌─────────────────────────────────┐
+│   CAPA DE PRESENTACIÓN          │
+│   (Frontend/Cliente)            │
+└─────────────┬───────────────────┘
+              │
+┌─────────────▼───────────────────┐
+│   APIs REST (FastAPI)           │
+│   - Endpoints de pacientes      │
+│   - Endpoints de medicamentos   │
+│   - Endpoints de compras        │
+│   - Autenticación JWT           │
+│   - Documentación Swagger       │
+└─────────────┬───────────────────┘
+              │
+     ┌────────┴────────┐
+     │                 │
+┌────▼──────┐    ┌────▼──────────┐
+│ MySQL/BD  │    │   MongoDB     │
+│ (SQL)     │    │   (NoSQL)     │
+├───────────┤    ├───────────────┤
+│ hospital_ │    │ hospital_     │
+│ 230142    │    │ medicamentos  │
+│           │    │               │
+│ Tablas:   │    │ Colecciones:  │
+│ -personas │    │ -detalle_     │
+│ -pacientes│    │  compra       │
+│ -medicin. │    │ -inventario   │
+│ -hist.    │    │ -subrogacion  │
+│ -recetas  │    │ -dispens.     │
+└───────────┘    └───────────────┘
+```
+
+### Características de Seguridad
+- ✅ Autenticación JWT
+- ✅ Validación de permisos
+- ✅ Encriptación de datos sensibles
+- ✅ Auditoría de operaciones
+- ✅ Backups automáticos
+
+---
+
+## 📦 Estructura Base de Datos
+
+### MySQL/MariaDB (hospital_230142)
+
+**Tablas de Control de Pacientes:**
+```
+personas
+├─ id_persona (PK)
+├─ nombre, apellido
+├─ cedula, fecha_nacimiento
+└─ contacto, dirección
+
+pacientes
+├─ id_paciente (PK)
+├─ id_persona (FK)
+├─ historial_medico
+└─ estado
+```
+
+**Tablas de Medicamentos:**
+```
+medicamentos
+├─ id_medicamento (PK)
+├─ nombre, descripción
+├─ principio_activo
+└─ precio
+
+proveedores
+├─ id_proveedor (PK)
+├─ nombre, contacto
+└─ empresa
+```
+
+**Tablas de Documentos:**
+```
+historiales_recetas
+├─ id_historial (PK)
+├─ id_paciente (FK)
+├─ medicamentos_recetados
+└─ fecha, médico
+```
+
+### MongoDB (hospital_medicamentos)
+
+**detalle_compra**
+```json
+{
+  "_id": ObjectId,
+  "id_compra": String,
+  "id_medicamento": ObjectId,
+  "cantidad": Number,
+  "precio_unitario": Decimal,
+  "total": Decimal,
+  "fecha": Date,
+  "proveedor": String
+}
+```
+
+**inventario_medicamento**
+```json
+{
+  "_id": ObjectId,
+  "id_medicamento": ObjectId,
+  "cantidad_actual": Number,
+  "cantidad_minima": Number,
+  "cantidad_maxima": Number,
+  "ultima_actualizacion": Date,
+  "ubicacion": String
+}
+```
+
+**subrogacion_medicamentos**
+```json
+{
+  "_id": ObjectId,
+  "id_compra_original": ObjectId,
+  "medicamento_sustituto": ObjectId,
+  "diferencia_costo": Decimal,
+  "motivo": String,
+  "fecha": Date,
+  "aprobado_por": String
+}
+```
+
+**dispensaciones**
+```json
+{
+  "_id": ObjectId,
+  "id_paciente": ObjectId,
+  "id_medicamento": ObjectId,
+  "cantidad_dispensada": Number,
+  "fecha": Date,
+  "farmacéutico": String,
+  "receta_numero": String
+}
 ```
 
 ---
 
-## 🎯 Prácticas Disponibles
+## 🔌 APIs REST - Endpoints Principales
 
-### 📌 [**Práctica 05**](./Practica-05/README.md) - Diseño de Base de Datos Hospitalaria SQL
-
-**Objetivo:** Modelar y gestionar una base de datos compleja para un hospital con pacientes, historiales médicos, medicamentos y recetas.
-
-**Contenido:**
-- ✅ Diseño SQL de esquema `hospital_230142`
-- ✅ 10+ funciones y procedimientos almacenados
-- ✅ 15 escenarios de prueba con diferentes volúmenes (1 a 1,000,000 registros)
-- ✅ Dashboard interactivo (Notebook Interface)
-- ✅ Scripts de usuarios, roles y privilegios
-- ✅ Backups estructurales y funcionales
-
-**Tecnologías:** MySQL/MariaDB, SQL, Notebook Interface
-
-**Ubicación:** [`Practica-05/`](./Practica-05/)
-
-**Quick Links:**
-- [README Principal](./Practica-05/README.md)
-- [Funciones SQL](./Practica-05/db/routines/funciones/)
-- [Procedimientos](./Practica-05/db/routines/procedimiento/)
-- [Tests](./Practica-05/db/test/)
-- [Dashboard](./Practica-05/dashboard/)
-
----
-
-### 🔐 [**Práctica 07**](./Practica-07/README.md) - API REST Segura con Generación Automática de Datos
-
-**Objetivo:** Desarrollar una API REST segura con autenticación JWT, que genere automáticamente datos de pacientes y proporcione endpoints para consultar/manipular información hospitalaria.
-
-**Contenido:**
-- ✅ API FastAPI con autenticación JWT
-- ✅ 10 escenarios de prueba completos
-- ✅ Documentación Swagger/OpenAPI automática
-- ✅ Generación procedural de datos de pacientes
-- ✅ Tests documentados con evidencia visual (capturas)
-- ✅ Distribución de responsabilidades por equipo
-
-**Tecnologías:** FastAPI, Python, SQLAlchemy, JWT, Swagger
-
-**Ubicación:** [`Practica-07/`](./Practica-07/)
-
-**Quick Links:**
-- [README Principal](./Practica-07/README.md)
-- [Código API](./Practica-07/API/Api_Base_Datos/)
-- [Tests](./Practica-07/tests/)
-- [Swagger/OpenAPI](http://localhost:8000/docs) *(después de ejecutar API)*
-
----
-
-### 🚀 [**Práctica 09**](./Practica-09/README.md) - API Híbrida SQL+NoSQL (Integración Avanzada)
-
-**Objetivo:** Diseñar e implementar una arquitectura híbrida que integre MySQL (datos estructurados) con MongoDB (datos flexible) para gestión de medicamentos, inventarios y compras farmacéuticas.
-
-**Contenido:**
-- ✅ API REST con FastAPI
-- ✅ Integración seamless SQL + NoSQL
-- ✅ 4 colecciones MongoDB documentadas
-- ✅ 5 casos de negocio con pruebas específicas
-  - TEST 01: Compra simple
-  - TEST 02: Impacto masivo (500+)
-  - TEST 03: Subrogación con análisis económico
-  - TEST 04: Subrogación automática
-  - TEST 05: Control de errores
-- ✅ Sincronización de datos entre motores
-- ✅ Backups JSON de colecciones
-
-**Tecnologías:** FastAPI, MySQL/MariaDB, MongoDB, PyMongo, SQLAlchemy
-
-**Ubicación:** [`Practica-09/`](./Practica-09/)
-
-**Quick Links:**
-- [README Principal](./Practica-09/README.md)
-- [Colecciones MongoDB](./Practica-09/API_Hibrida/Tablas_MongoDB/Colleciones/)
-- [Tests (5 Casos de Negocio)](./Practica-09/API_Hibrida/Tablas_MongoDB/tests/)
-- [Backups MongoDB](./Practica-09/API_Hibrida/Respaldo_MongoDB/)
-
----
-
-## 🏗️ Arquitectura General
-
-### Stack Tecnológico Común
-```
-Frontend/Testing
-    ↓
-FastAPI REST APIs (Prácticas 07 y 09)
-    ↓
-┌─────────────────────────────┐
-│   Capa de Datos             │
-├─────────────────────────────┤
-│ SQL (MySQL/MariaDB)         │
-│ └─ hospital_230142          │
-│    └─ pacientes, personas   │
-│       historiales, recetas  │
-├─────────────────────────────┤
-│ NoSQL (MongoDB)             │ ← Solo Práctica 09
-│ └─ hospital_medicamentos    │
-│    └─ detalle_compra        │
-│       inventario_medicamento│
-│       subrogacion_medic.    │
-│       dispensaciones        │
-└─────────────────────────────┘
+### Autenticación
+```bash
+POST   /auth/login          # Obtener token JWT
+POST   /auth/refresh        # Renovar token
+POST   /auth/logout         # Cerrar sesión
 ```
 
-### Evolución de Prácticas
-
+### Pacientes
+```bash
+GET    /pacientes           # Listar todos
+POST   /pacientes           # Crear paciente
+GET    /pacientes/{id}      # Obtener uno
+PUT    /pacientes/{id}      # Actualizar
+DELETE /pacientes/{id}      # Eliminar
 ```
-Práctica 05                 Práctica 07                Práctica 09
-(SQL Puro)     ----→      (API SQL)       ----→     (API Híbrida)
-                                                      
-Diseño BD        ✅         REST APIs       ✅         Multi-DB      ✅
-Funciones        ✅         Autenticación   ✅         Sincronización ✅
-Procedures       ✅         Swagger         ✅         Flexibilidad   ✅
-Tests Volumen    ✅         JWT             ✅         NoSQL          ✅
-Dashboard        ✅         Auto-generation ✅         Casos Negocio  ✅
+
+### Medicamentos
+```bash
+GET    /medicamentos        # Listar todos
+POST   /medicamentos        # Crear medicamento
+GET    /medicamentos/{id}   # Obtener uno
+PUT    /medicamentos/{id}   # Actualizar
+```
+
+### Compras
+```bash
+GET    /compras             # Listar todas
+POST   /compras             # Crear compra
+GET    /compras/{id}        # Obtener detalles
+PUT    /compras/{id}        # Actualizar
+POST   /compras/{id}/subrogacion  # Aplicar subrogación
+```
+
+### Inventario
+```bash
+GET    /inventario          # Estado actual
+GET    /inventario/{id}     # Por medicamento
+POST   /inventario/alerta   # Medicamentos bajos
+```
+
+### Dispensación
+```bash
+GET    /dispensacion        # Historial
+POST   /dispensacion        # Registrar dispensación
+GET    /dispensacion/{paciente_id}  # Del paciente
 ```
 
 ---
 
-## 📦 Bases de Datos
+## 🗄️ Configuración de Bases de Datos
 
 ### MySQL/MariaDB
 ```
-Servidor: localhost:3307
-Base de datos: hospital_230142
-Conexión: root / (sin contraseña)
+Servidor:  localhost:3307
+BD:        hospital_230142
+Usuario:   root
+Contraseña: (sin contraseña)
 
-Tablas principales:
-├── personas
-├── pacientes
-├── medicamentos
-├── proveedores
-├── historiales_recetas
-└── (más tablas de auditoría y logs)
+Conexión: mysql -u root -h localhost -P 3307
 ```
 
 ### MongoDB
 ```
-Servidor: localhost:27017
-Base de datos: hospital_medicamentos
+Servidor:  localhost:27017
+BD:        hospital_medicamentos
+Colecciones: 4 (detalle_compra, inventario, subrogacion, dispensaciones)
 
-Colecciones:
-├── detalle_compra                  ← Práctica 09
-├── inventario_medicamento          ← Práctica 09
-├── subrogacion_medicamentos        ← Práctica 09
-└── dispensaciones                  ← Práctica 09
+Conexión: mongodb://localhost:27017/hospital_medicamentos
 ```
 
 ---
 
-## 🧪 Resumen de Pruebas
+## 🚀 Instalación y Ejecución
 
-### Práctica 05: 15 Tests de Volumen y Casos Específicos
-| Test | Descripción | Registros |
-|------|-------------|-----------|
-| test_01-06 | Volumen progresivo | 1 → 1,000,000 |
-| test_07 | 150 mujeres | 150 |
-| test_08 | 340 varones 20-30 años | 340 |
-| test_09-15 | Casos específicos (edad, estado, especialidades) | Variable |
+### Requisitos Previos
+- Python 3.8+
+- MySQL/MariaDB
+- MongoDB
+- pip (gestor de paquetes Python)
 
-### Práctica 07: 10 Tests de API REST
-| Test | Descripción |
-|------|-------------|
-| test_01 | 100k pacientes |
-| test_02 | 5k mujeres 20-50 años |
-| test_03 | 300 varones inválidos |
-| test_04 | 1.5k neonatos |
-| test_05 | 325 recién nacidos finados |
-| test_06 | 832 diabéticos 5-22 años |
-| test_07-10 | Casos específicos adicionales |
+### Instalación
 
-### Práctica 09: 5 Casos de Negocio
-| Test | Descripción | Objetivo |
-|------|-------------|----------|
-| TEST 01 | Compra de Medicamento | Inserción simple con validación |
-| TEST 02 | Impacto Masivo | 500+ operaciones batch |
-| TEST 03 | Subrogación Económica | Análisis de diferencias de costo |
-| TEST 04 | Subrogación Automática | Sistema-driven por stock=0 |
-| TEST 05 | Control de Errores | Validaciones y manejo de excepciones |
-
----
-
-## 🚀 Quick Start
-
-### Práctica 05 - Preparar Base de Datos
 ```bash
-cd Practica-05/db/
-# Restaurar estructura
-mysql -u root < backups/respaldo_estructural.sql
-# Poblar datos
-mysql -u root hospital_230142 < routines/procedimiento/sp_poblar_pacientes.sql
+# 1. Clonar repositorio
+git clone https://github.com/yaz-gutzz/Farmacia_Integradora.git
+cd Farmacia_Integradora
+
+# 2. Crear entorno virtual
+python -m venv venv
+source venv/bin/activate  # En Windows: venv\Scripts\activate
+
+# 3. Instalar dependencias
+pip install fastapi uvicorn sqlalchemy pymongo python-jose passlib
+
+# 4. Restaurar base de datos MySQL
+mysql -u root < db/backups/respaldo_estructura.sql
+
+# 5. Importar datos MongoDB
+mongoimport --db hospital_medicamentos --collection detalle_compra \
+  --file db/backups/detalle_compra.json --jsonArray
+# (Repetir para otras colecciones)
+
+# 6. Ejecutar API
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-### Práctica 07 - Ejecutar API
-```bash
-cd Practica-07/API/Api_Base_Datos/
-pip install -r requirements.txt
-uvicorn main:app --reload
-# Acceder a Swagger: http://localhost:8000/docs
-```
+### Acceso a la Aplicación
+- **API Base:** http://localhost:8000
+- **Documentación Swagger:** http://localhost:8000/docs
+- **Documentación ReDoc:** http://localhost:8000/redoc
 
-### Práctica 09 - API Híbrida
+---
+
+## 📊 Casos de Negocio
+
+### CU-001: Compra Simple de Medicamento
+**Descripción:** Registrar una compra estándar de medicamento desde un proveedor  
+**Actores:** Gerente de Compras, Proveedor  
+**Flujo Principal:**
+1. Crear orden de compra
+2. Validar disponibilidad de medicamento
+3. Registrar en detalle_compra
+4. Actualizar inventario automáticamente
+
+### CU-002: Impacto Masivo en Inventario
+**Descripción:** Procesar grandes volúmenes de compra (500+ unidades)  
+**Validaciones:**
+- Verificar capacidad de almacenamiento
+- Validar límites de cantidad máxima
+- Generar alerta si excede umbral
+
+### CU-003: Subrogación Económica
+**Descripción:** Analizar cambio de medicamento por diferencia de costo  
+**Análisis:**
+- Calcular diferencia económica
+- Documentar motivo de cambio
+- Mantener trazabilidad completa
+
+### CU-004: Subrogación Automática
+**Descripción:** Sistema auto-detecta stock=0 y sugiere sustitutos  
+**Proceso:**
+- Monitorear inventario
+- Identificar medicamentos sin stock
+- Proponer medicamentos sustitutos automáticamente
+
+### CU-005: Control y Validación de Errores
+**Descripción:** Validación integral de datos y manejo de excepciones  
+**Validaciones:**
+- Datos faltantes o incompletos
+- Cantidades negativas o cero
+- Precios inválidos
+- Relaciones inconsistentes
+
+---
+
+## 📈 Métricas y Reportes
+
+### Reportes Disponibles
+- **Inventario Crítico:** Medicamentos por debajo del mínimo
+- **Análisis de Costos:** Medicamentos más costosos
+- **Rotación:** Medicamentos más dispensados
+- **Subrogación:** Análisis económico de cambios
+- **Consumo Pacientes:** Por paciente o período
+
+### KPIs Monitorados
+- Tasa de rotación de inventario
+- Costo promedio por dispensación
+- Ahorro por subrogación
+- Disponibilidad de medicamentos (%)
+- Tiempo de abastecimiento
+
+---
+
+## 🧪 Testing
+
+### Suite de Pruebas
+- **Unitarias:** Validación de funciones base
+- **Integración:** Sincronización SQL + NoSQL
+- **Casos de Negocio:** 5 escenarios principales
+- **Volumen:** Pruebas con 500+ registros
+- **Errores:** Manejo de excepciones
+
+### Ejecución de Tests
 ```bash
-cd Practica-09/API_Hibrida/Api_Base_Datos\ Hibrida/
-pip install -r requirements.txt
-# Restaurar MongoDB
-mongoimport --db hospital_medicamentos --collection detalle_compra --file ../Respaldo_MongoDB/hospital_farmacia.detalle_compra.json --jsonArray
-# etc. para otras colecciones
-uvicorn main:app --reload
+# Tests unitarios
+pytest tests/unit/
+
+# Tests de integración
+pytest tests/integration/
+
+# Tests de casos de negocio
+pytest tests/business_cases/
+
+# Cobertura
+pytest --cov=.
 ```
 
 ---
 
-## 📊 Documentación por Práctica
+## 📚 Documentación
 
-### Práctica 05
-- [README Principal](./Practica-05/README.md)
-- [Funciones SQL](./Practica-05/db/routines/funciones/readme.md)
-- [Procedimientos](./Practica-05/db/routines/procedimiento/readme.md)
-- [Tests](./Practica-05/db/test/readme.md)
-- [Dashboard](./Practica-05/dashboard/README.md)
-
-### Práctica 07
-- [README Principal](./Practica-07/README.md)
-- [Código API](./Practica-07/API/README.md)
-- [Suite de Tests](./Practica-07/tests/readme.md)
-
-### Práctica 09
-- [README Principal](./Practica-09/README.md)
-- [API Híbrida](./Practica-09/API_Hibrida/README.md)
-- [Colecciones MongoDB](./Practica-09/API_Hibrida/Tablas_MongoDB/Colleciones/)
-  - [detalle_compra](./Practica-09/API_Hibrida/Tablas_MongoDB/Colleciones/detalle_compra/README.md)
-  - [inventario_medicamento](./Practica-09/API_Hibrida/Tablas_MongoDB/Colleciones/inventario_medicamento/README.md)
-  - [subrogacion_medicamentos](./Practica-09/API_Hibrida/Tablas_MongoDB/Colleciones/subrogacion_medicamentos/README.md)
-  - [dispensaciones](./Practica-09/API_Hibrida/Tablas_MongoDB/Colleciones/dispensaciones/readme.md)
-- [5 Tests de Negocio](./Practica-09/API_Hibrida/Tablas_MongoDB/tests/)
-- [Backups MongoDB](./Practica-09/API_Hibrida/Respaldo_MongoDB/README.md)
+Toda la documentación de API está disponible automáticamente en:
+- **Swagger UI:** `/docs`
+- **ReDoc:** `/redoc`
+- **OpenAPI JSON:** `/openapi.json`
 
 ---
 
-**Última actualización:** Marzo 2026  
-**Rama activa:** main  
+## 🤝 Integrantes del Equipo
+
+**Equipo de Farmacia - Tarea Integradora**
+
+Responsabilidades:
+- Especificación de requisitos farmacéuticos
+- Validación de casos de negocio
+- Control de calidad
+- Documentación operativa
+
+---
+
+## 📝 Versionado
+
+| Versión | Fecha | Cambios |
+|---------|-------|---------|
+| v1.0.0 | Abril 2026 | Versión inicial completa |
+
+**Rama Activa:** main  
 **Status:** ✅ Completo
+
+---
+
+## 📞 Soporte
+
+Para dudas o reportar problemas:
+- 📧 Email: farmacia@hospital.local
+- 💬 Teams: #farmacia-integradora
+- 📋 Issues: GitHub Issues
+
+---
+
+**Última actualización:** Abril 2026  
+**Equipo:** Departamento de Farmacia  
+**Proyecto:** Sistema Integral de Gestión Farmacéutica Hospitalaria
