@@ -1,19 +1,160 @@
-# 🏥 Sistema de Gestión Farmacéutica Hospitalaria
+# 🏥 Sistema de Gestión Farmacéutica Hospitalaria  
+### EQUIPO DE FARMACIA - TAREA INTEGRADORA
 
-**EQUIPO DE FARMACIA - Tarea Integradora**
-
----
-
-## 📋 Descripción General
-
-Sistema integral de gestión farmacéutica hospitalaria que integra gestión de pacientes, medicamentos, inventarios, compras y análisis económico. Arquitectura moderna con SQL + NoSQL, APIs REST seguras y documentación automática.
-
-**Equipo:** Departamento de Farmacia  
-**Objetivo Final:** Plataforma completa para el control operacional y administrativo de farmacia hospitalaria
+<p align="justify">El Sistema de Gestión Farmacéutica Hospitalaria es una solución integral que busca revolucionar la administración de medicamentos, inventarios y operaciones farmacéuticas en entornos hospitalarios. Con enfoque en sostenibilidad, eficiencia y la participación activa del equipo médico, esta plataforma promueve la excelencia en la gestión de recursos farmacéuticos.</p>
 
 ---
 
-## 📂 Estructura del Proyecto
+## 🎨 IDENTIDAD VISUAL DEL PROYECTO
+
+### LOGOTIPOS
+
+<table>
+  <tr>
+    <td align="center"><strong>Logo Principal</strong></td>
+    <td align="center"><strong>Logo Secundario</strong></td>
+  </tr>
+  <tr>
+    <td align="center">
+      <strong>🏥</strong><br/>
+      Sistema Farmacéutico
+    </td>
+    <td align="center">
+      <strong>💊</strong><br/>
+      Gestión de Medicamentos
+    </td>
+  </tr>
+</table>
+
+---
+
+## 📝 DESCRIPCIÓN
+
+<p align="justify">Se busca implementar una plataforma web integral que permita la gestión centralizada de medicamentos, inventarios, compras y dispensaciones en hospitales. Esta herramienta facilitará el monitoreo en tiempo real, la trazabilidad de medicamentos, y optimizará procesos de compra mediante análisis de costos y mecanismos de subrogación automática. La solución integra bases de datos SQL y NoSQL para garantizar flexibilidad, escalabilidad y confiabilidad en la administración farmacéutica.</p>
+
+---
+
+## 🔍 PLANTEAMIENTO DEL PROBLEMA
+
+<p align="justify">Los hospitales enfrentan desafíos significativos en la gestión eficiente de medicamentos y control de inventarios: falta de rastreabilidad de medicamentos, procesos manuales y propensos a errores, gestión ineficiente de compras con inconsistencias económicas, ausencia de sistemas de alerta para medicamentos con bajo stock, y dificultad en la toma de decisiones basada en datos. Estos problemas generan desperdicio de recursos, errores en dispensación, y comprometen la calidad de atención médica. Una solución tecnológica integral es esencial para optimizar estas operaciones y mejorar los resultados en salud.</p>
+
+---
+
+## 💡 PROPUESTA DE SOLUCIÓN
+
+<p align="justify">Implementamos una plataforma híbrida SQL+NoSQL que centraliza toda la gestión farmacéutica hospitalaria. La solución ofrece: gestión integral de pacientes y medicamentos con trazabilidad completa, sistema automático de compras y análisis económico de subrogaciones, alertas inteligentes de inventario crítico, análisis de costos y reportes en tiempo real, y participación colaborativa del equipo farmacéutico. Todo integrado en APIs REST seguras con autenticación JWT, documentación automática en Swagger, y un dashboard de Business Intelligence para visualización de métricas clave.</p>
+
+---
+
+## 🎯 OBJETIVO GENERAL
+
+<p align="justify">Implementar una plataforma web integral que permita la gestión centralizada, automatizada y eficiente de medicamentos, inventarios, compras y análisis económico en hospitales, facilitando la toma de decisiones basada en datos y mejorando la calidad de atención al paciente mediante optimización de recursos farmacéuticos.</p>
+
+---
+
+## 📊 OBJETIVOS ESPECÍFICOS
+
+<p align="justify"><strong>✅ Gestión Integral de Medicamentos:</strong> Implementar un sistema centralizado para registro, actualización y monitoreo en tiempo real de medicamentos, proveedores y precios, facilitando la trazabilidad completa del ciclo de vida del medicamento.</p>
+
+<p align="justify"><strong>✅ Control Automático de Inventario:</strong> Desarrollar mecanismos inteligentes de alerta para medicamentos con bajo stock, detección automática de productos críticos, y generación de reportes de disponibilidad en tiempo real.</p>
+
+<p align="justify"><strong>✅ Optimización de Compras:</strong> Implementar un sistema de gestión de compras con análisis automático de costos, detección de diferencias económicas, y sugerencias de subrogación para maximizar ahorro hospitalario.</p>
+
+<p align="justify"><strong>✅ Sistema de Subrogación Automática:</strong> Desarrollar mecanismo que auto-detecte medicamentos sin stock y sugiera sustitutos, reduciendo tiempos de respuesta y garantizando disponibilidad terapéutica.</p>
+
+<p align="justify"><strong>✅ Análisis y Reportes Avanzados:</strong> Crear dashboard interactivo con métricas de consumo, rotación de inventario, análisis económico de subrogaciones, y disponibilidad de medicamentos para apoyo en toma de decisiones estratégicas.</p>
+
+<p align="justify"><strong>✅ Seguridad y Auditoría:</strong> Implementar autenticación JWT, validación rigurosa de datos, bitácora de auditoría, y mecanismos de monitoreo para garantizar integridad de datos y cumplimiento normativo.</p>
+
+---
+
+## 📅 CRONOGRAMA DEL PROYECTO
+
+| Fase | Actividad | Duración | Estado |
+|------|-----------|----------|--------|
+| **Fase 1** | Diseño BD + Documentación | 2 semanas | ✅ Completado |
+| **Fase 2** | Desarrollo API REST Base | 3 semanas | ⏳ En Progreso |
+| **Fase 3** | Integración SQL + NoSQL | 2 semanas | ⏳ Pendiente |
+| **Fase 4** | Desarrollo Suite de Tests (10 casos) | 2 semanas | ⏳ Pendiente |
+| **Fase 5** | Dashboard Navicat BI | 1 semana | ⏳ Pendiente |
+| **Fase 6** | Validación y Optimización | 1 semana | ⏳ Pendiente |
+
+---
+
+## 👥 TABLA DE COLABORADORES
+
+| Nombre | Usuario GitHub | Rol | Responsabilidades |
+|--------|-----------------|-----|------------------|
+| Yazmin Gutierrez Hernández | [yaz-gutzz](https://github.com/yaz-gutzz) | Coordinadora Equipo | Arquitectura, Coordinación, Documentación |
+| - | - | Desarrollador Backend | APIs REST, Lógica de Negocio |
+| - | - | Desarrollador Frontend | Interfaz, UX/UI |
+| - | - | Especialista Database | Diseño BD, Optimización, Seguridad |
+
+---
+
+## 🏢 ORGANIGRAMA DEL EQUIPO
+
+```
+┌─────────────────────────────────────────┐
+│  EQUIPO DE FARMACIA - TAREA INTEGRADORA │
+└────────────────┬────────────────────────┘
+                 │
+        ┌────────┼────────┐
+        │                 │
+    ┌───▼──┐          ┌──▼────┐
+    │Backend│          │Database│
+    │ API   │          │Manager │
+    └───┬──┘          └──┬─────┘
+        │                 │
+    ┌───▼─────────────────▼────┐
+    │ Tests & Documentación     │
+    │ (10 Casos de Negocio)     │
+    └───────┬───────────────────┘
+            │
+        ┌───▼──────┐
+        │ Dashboard │
+        │ Analytics │
+        └──────────┘
+```
+
+---
+
+## 🛠️ TECNOLOGÍAS UTILIZADAS
+
+<p align="justify">
+
+**Backend & API:**
+- ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+- ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+- ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-CC2927?style=for-the-badge&logo=sqlalchemy&logoColor=white)
+
+**Bases de Datos:**
+- ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+- ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+- ![PyMongo](https://img.shields.io/badge/PyMongo-003B57?style=for-the-badge&logo=mongodb&logoColor=white)
+
+**Seguridad & Autenticación:**
+- ![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
+- ![Passlib](https://img.shields.io/badge/Passlib-FF6B6B?style=for-the-badge)
+
+**Testing & Análisis:**
+- ![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
+- ![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)
+
+**Dashboard & Visualización:**
+- ![Navicat](https://img.shields.io/badge/Navicat_BI-242E3E?style=for-the-badge)
+
+**Documentación:**
+- ![Markdown](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)
+- ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+
+</p>
+
+---
+
+---
+
+## 📂 ESTRUCTURA DEL PROYECTO
 
 ```
 Farmacia_Integradora/
