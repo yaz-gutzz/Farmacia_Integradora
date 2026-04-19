@@ -1,4 +1,6 @@
-# 🔌 API REST - Código Fuente y Documentación
+# API REST - Código Fuente y Documentación
+
+API REST que implementa todos los servicios del Departamento de Farmacia. Construida con FastAPI y conecta las operaciones de medicamentos, inventarios, compras, dispensaciones y reportes de un hospital de tercer nivel.
 
 ## Estructura de la API
 

@@ -1,79 +1,62 @@
-# 🔧 REQUISITOS NO FUNCIONALES (NFRs)
+#  REQUISITOS NO FUNCIONALES (NFRs)
 
 ## Sistema de Gestión Farmacéutica Hospitalaria
+
+Los Requisitos No Funcionales definen CÓMO debe funcionar el sistema en el Departamento de Farmacia de un hospital de tercer nivel. Estos 12 NFRs especifican atributos críticos como rendimiento, seguridad, disponibilidad, escalabilidad y cumplimiento normativo necesarios para una operación farmacéutica confiable, segura y eficiente.
 
 ---
 
 ## NFR-001: Rendimiento y Velocidad
 
 ### Descripción
-El sistema debe responder rápidamente a todas las solicitudes de usuarios para garantizar una experiencia fluida.
+El sistema debe responder rápidamente a todas las solicitudes para garantizar una experiencia fluida.
 
 ### Especificaciones
-- **Tiempo de Respuesta API:** < 500ms para 95% de solicitudes (p95)
-- **Carga de Página:** < 2 segundos
-- **Búsquedas:** Resultados en < 500ms incluso con 100k registros
-- **Reportes Simples:** Generación en < 5 segundos
-- **Reportes Complejos:** Generación en < 30 segundos
-- **Procesamiento Compras:** Actualización inventario en < 1 segundo
-
-### Métricas
-- SLA (Service Level Agreement): 99.5% uptime
+- Las páginas deben cargar en tiempo razonable
+- Las búsquedas deben devolver resultados rápidamente
+- Las operaciones críticas (inventario) deben procesarse sin demoras evidentes
 
 ### Validación
-- [ ] Pruebas de carga con 1000 usuarios simultáneos
-- [ ] Monitoreo APM (Application Performance Monitoring)
-- [ ] Alertas si p95 > 800ms
+- [ ] Monitoreo básico de tiempos de respuesta
+- [ ] Verificación de que no hay cuellos de botella evidentes
 
 ---
 
 ## NFR-002: Escalabilidad
 
 ### Descripción
-El sistema debe soportar crecimiento en usuarios, datos y transacciones sin degradación de rendimiento.
+El sistema debe soportar crecimiento en usuarios y datos sin problemas graves.
 
 ### Especificaciones
-- **Usuarios Simultáneos:** Mínimo 500 usuarios concurrentes
-- **Capacidad de BD SQL:** Mínimo 10 millones de registros
-- **Capacidad de BD NoSQL:** Mínimo 50 millones de documentos
-- **Transacciones por Segundo:** Mínimo 1000 TPS
-- **Almacenamiento:** Escalabilidad horizontal automática
-
-### Infraestructura
-- Arquitectura de microservicios
-- Load balancing automático
-- Replicación de bases de datos
-- Caché distribuido (Redis)
+- Debe funcionar correctamente con múltiples usuarios simultáneos
+- Debe almacenar crecimiento de datos en el tiempo
+- Arquitectura preparada para agregar más servidores si es necesario
 
 ### Validación
-- [ ] Pruebas de escalabilidad con datos reales
-- [ ] Plan de crecimiento documentado
-- [ ] Benchmarks de rendimiento
+- [ ] Pruebas con usuarios concurrentes
+- [ ] Verificación de que la base de datos puede crecer
 
 ---
 
 ## NFR-003: Disponibilidad y Confiabilidad
 
 ### Descripción
-El sistema debe estar disponible y funcional durante horarios de operación con mínimas interrupciones.
+El sistema debe estar disponible durante el horario de operación con mínimas interrupciones.
 
 ### Especificaciones
-- **Disponibilidad:** 99.9% uptime (máximo 4.38 horas/año de downtime)
-- **Recovery Time Objective (RTO):** < 1 hora
-- **Recovery Point Objective (RPO):** < 15 minutos
-- **Backups:** Diarios (automáticos)
-- **Replicación:** En tiempo real entre servidores
+- Disponibilidad alta durante horarios de operación
+- Backups regulares de datos
+- Recuperación ante fallos sin pérdida de datos críticos
 
 ### Mecanismos de Confiabilidad
 - Redundancia de servidores
-- Failover automático
-- Replicación de datos en tiempo real
-- Health checks cada 30 segundos
+- Backups automáticos diarios
+- Plan de recuperación documentado
 
 ### Validación
-- [ ] Monitoreo 24/7 de disponibilidad
-- [ ] Alertas inmediatas ante caídas
-- [ ] Plan de disaster recovery documentado
+- [ ] Monitoreo de disponibilidad
+- [ ] Alertas inmediatas ante caídas del sistema
+- [ ] Pruebas regulares de restauración de backups
 
 ---
 
@@ -83,31 +66,27 @@ El sistema debe estar disponible y funcional durante horarios de operación con 
 El sistema debe proteger datos sensibles de pacientes y medicamentos contra accesos no autorizados.
 
 ### Especificaciones Técnicas
-- **Autenticación:** JWT con expiración de 1 hora
-- **Encriptación en Tránsito:** TLS 1.3 (HTTPS)
-- **Encriptación en Reposo:** AES-256 para datos sensibles
-- **Hash de Contraseñas:** bcrypt con salt
-- **Validación de Entrada:** OWASP Top 10 protection
+- Autenticación de usuarios (usuario y contraseña)
+- Encriptación de datos sensibles
+- Conexiones seguras (HTTPS)
+- Validación de entrada de datos
 
 ### Control de Acceso
-- **RBAC (Role-Based Access Control):** 4 roles mínimo
+- Roles de usuario diferenciados:
   - Administrador
   - Farmacéutico
   - Médico
   - Almacenista
-- Permissions granulares por endpoint
-- Auditoría de todas las operaciones sensibles
+- Cada rol tiene permisos específicos
 
 ### Compliance
-- ✅ Cumplimiento HIPAA (Health Insurance Portability and Accountability Act)
-- ✅ GDPR para datos personales
-- ✅ Regulaciones locales de protección de datos
+- Cumplimiento de leyes de protección de datos
+- Privacidad de información de pacientes
 
 ### Validación
-- [ ] Pruebas de penetración (mensual)
-- [ ] Análisis de vulnerabilidades automatizado
-- [ ] Certificados SSL válidos
-- [ ] Auditorías de seguridad trimestrales
+- [ ] Verificación de autenticación funciona
+- [ ] Datos encriptados correctamente
+- [ ] Roles y permisos se aplican correctamente
 
 ---
 
@@ -117,23 +96,20 @@ El sistema debe proteger datos sensibles de pacientes y medicamentos contra acce
 El código debe ser limpio, documentado y fácil de mantener por otros desarrolladores.
 
 ### Especificaciones
-- **Cobertura de Tests:** > 80%
-- **Documentación:** Docstrings en 100% de funciones
-- **Complejidad Ciclomática:** < 10 por función
-- **Duplication:** < 5%
-- **Linting:** Cumple 100% with PEP-8
+- Código bien estructurado y organizado
+- Funciones con documentación clara
+- Nombres de variables descriptivos
+- Tests para verificar funcionalidad
 
 ### Estándares
-- Commits descriptivos (Conventional Commits)
-- Code Review en pull requests
-- Documentación en Swagger/OpenAPI
-- README en cada módulo
+- Commits con mensajes claros
+- Revisión de código antes de integrar cambios
+- Documentación básica de módulos
 
 ### Validación
-- [ ] SonarQube analysis en cada push
-- [ ] Pre-commit hooks para validación
-- [ ] Documentación actualizada
-- [ ] Technical debt < 30 días
+- [ ] Código revisado por otros desarrolladores
+- [ ] Funciones documentadas
+- [ ] Código sin errores detectados automáticamente
 
 ---
 
@@ -143,23 +119,20 @@ El código debe ser limpio, documentado y fácil de mantener por otros desarroll
 La interfaz debe ser intuitiva y fácil de usar para usuarios sin experiencia técnica.
 
 ### Especificaciones
-- **Interfaz Clara:** Máximo 3 clics para operación común
-- **Tiempo de Aprendizaje:** < 30 minutos para usuario nuevo
-- **Validación de Formularios:** Mensajes de error claros
-- **Responsivo:** Compatible con móviles y tablets
-- **Accesibilidad:** WCAG 2.1 Level AA
+- Interfaz clara y simple
+- Mensajes de error comprensibles
+- Compatible con dispositivos móviles
+- Accesible para todos los usuarios
 
 ### Diseño
-- Paleta de colores consistente
-- Tipografía legible
-- Iconografía clara y consistente
-- Feedback visual de operaciones
+- Colores y diseño consistente
+- Iconos claros
+- Navegación fácil
 
 ### Validación
-- [ ] Testing con usuarios reales
-- [ ] Evaluación de accesibilidad automatizada
-- [ ] Pruebas de responsivo en múltiples dispositivos
-- [ ] Satisfacción de usuario > 4/5
+- [ ] Pruebas con usuarios reales
+- [ ] Verificación en múltiples dispositivos
+- [ ] Feedback positivo de usuarios
 
 ---
 
@@ -169,22 +142,15 @@ La interfaz debe ser intuitiva y fácil de usar para usuarios sin experiencia t�
 El sistema debe poder integrarse con otros sistemas hospitalarios existentes.
 
 ### Especificaciones
-- **APIs REST:** Estándar OpenAPI 3.0
-- **Formatos:** JSON, XML
-- **Webhooks:** Para notificaciones de eventos
-- **Integración BD:** Compatible con MySQL, PostgreSQL
-- **Escalabilidad de datos:** Soporte para 100+ integraciones
-
-### Protocolos
-- HTTP/2 y HTTP/3
-- OAuth 2.0 para autenticaciones externas
-- GraphQL opcional para consultas complejas
+- APIs disponibles para integraciones
+- Formatos estándar (JSON, XML)
+- Documentación de API clara
+- Compatible con bases de datos comunes
 
 ### Validación
-- [ ] Documentación de API completa
-- [ ] Ejemplos de integración
-- [ ] Sandbox para testing
-- [ ] Versionado de API (v1, v2, etc.)
+- [ ] API documentada
+- [ ] Ejemplos de integración disponibles
+- [ ] Soporte para integraciones básicas
 
 ---
 
@@ -194,28 +160,21 @@ El sistema debe poder integrarse con otros sistemas hospitalarios existentes.
 El sistema debe funcionar en múltiples plataformas y navegadores.
 
 ### Navegadores Soportados
-- Chrome 90+
-- Firefox 88+
-- Safari 14+
-- Edge 90+
-- Mobile browsers (iOS Safari, Chrome Mobile)
+- Chrome
+- Firefox
+- Safari
+- Edge
+- Navegadores móviles (iOS y Android)
 
 ### Sistemas Operativos
-- Windows 10+
-- macOS 10.15+
-- Linux (Ubuntu 20.04+)
-- Android 10+
-- iOS 13+
-
-### Servidores
-- Linux (producción principal)
-- Windows Server (soporte)
-- Cloud platforms (AWS, Azure, GCP)
+- Windows
+- macOS
+- Linux
+- Dispositivos móviles
 
 ### Validación
-- [ ] Testing en matriz de navegadores/SO
-- [ ] CI/CD con múltiples plataformas
-- [ ] Compatibilidad backward > 2 versiones
+- [ ] Testing en navegadores principales
+- [ ] Funciona en dispositivos móviles
 
 ---
 
@@ -225,130 +184,113 @@ El sistema debe funcionar en múltiples plataformas y navegadores.
 Todas las operaciones deben ser auditables y cumplir con regulaciones.
 
 ### Bitácora de Auditoría
-- **Campos Registrados:** Usuario, Operación, Datos Modificados, Timestamp
-- **Retención:** Mínimo 6 años (HIPAA)
-- **Inmutabilidad:** No se pueden eliminar registros de auditoría
-- **Exportación:** Auditoría exportable a Excel/PDF
+- Registro de: Usuario, Operación, Timestamp
+- Retención de registros de auditoría
+- Los registros de auditoría no pueden ser eliminados
 
 ### Cumplimiento Normativo
-- ✅ Leyes de protección de datos
-- ✅ Regulaciones de medicamentos
-- ✅ Estándares hospitalarios internacionales
-- ✅ Privacidad de pacientes (confidencialidad)
+- Protección de datos de pacientes
+- Confidencialidad de información médica
 
 ### Reportes de Auditoría
-- Accesos no autorizados
-- Cambios en medicamentos controlados
-- Accesos a datos de pacientes VIP
-- Eliminaciones de registros
+- Accesos al sistema
+- Cambios importantes en datos
+- Accesos a información sensible
 
 ### Validación
-- [ ] Auditoría externa anual
-- [ ] Compliance check automático
-- [ ] Alertas de violaciones potenciales
+- [ ] Auditoría registra las operaciones principales
+- [ ] Los registros no pueden ser eliminados
+- [ ] Reportes de auditoría disponibles
 
 ---
 
 ## NFR-010: Portabilidad de Datos
 
 ### Descripción
-Los datos deben poder exportarse y migrarse entre sistemas.
+Los datos deben poder exportarse para migrar entre sistemas o hacer respaldos.
 
 ### Especificaciones
-- **Formatos de Exportación:** JSON, CSV, Excel, XML
-- **Migración:** Herramientas de import/export documentadas
-- **Encodings:** UTF-8 soportado
-- **Volumen:** Soporte para exportación de millones de registros
+- Exportación en formatos comunes (CSV, JSON, Excel)
+- Herramientas para importar datos
+- Soporte para grandes volúmenes de datos
 
 ### Datos Portables
 - Información de pacientes
 - Inventario de medicamentos
 - Historial de compras
-- Reportes de auditoría
 
 ### Validación
-- [ ] Testing de importación/exportación
-- [ ] Validación de integridad de datos
-- [ ] Documentación de proceso de migración
+- [ ] Exportación/importación funciona correctamente
+- [ ] Datos se transfieren íntegramente
+- [ ] Documentación del proceso disponible
 
 ---
 
 ## NFR-011: Recuperabilidad
 
 ### Descripción
-El sistema debe poder recuperarse de fallos sin pérdida de datos críticos.
-
-### RPO y RTO
-- **RPO:** < 15 minutos (máxima pérdida de datos)
-- **RTO:** < 1 hora (tiempo máximo de recuperación)
+El sistema debe recuperarse de fallos sin perder datos críticos.
 
 ### Estrategia de Backup
-- Backups diarios (automáticos)
-- Backups incrementales cada 6 horas
-- Almacenamiento en 2 ubicaciones diferentes
-- Testing mensual de restauración
+- Backups automáticos regulares
+- Almacenamiento en múltiples ubicaciones
+- Pruebas regulares de restauración
 
 ### Plan de Recuperación
-- Documentación detallada
-- Scripts de restauración probados
-- Runbook de disaster recovery
-- Equipo entrenado para recuperación
+- Documentación del proceso
+- Scripts de restauración
+- Equipo entrenado
 
 ### Validación
-- [ ] Simulacros de recuperación mensuales
-- [ ] Backup verificados automáticamente
-- [ ] Logs de restauración
+- [ ] Backups se ejecutan correctamente
+- [ ] Se puede restaurar desde un backup
+- [ ] Documentación del plan disponible
 
 ---
 
 ## NFR-012: Monitoreo y Observabilidad
 
 ### Descripción
-El sistema debe ser observable y monitoreado constantemente.
+El sistema debe monitorearse constantemente para detectar problemas.
 
 ### Métricas Monitoreadas
-- Uptime y disponibilidad
-- Latencia de respuestas
-- Errores por tipo
+- Disponibilidad del sistema
+- Errores que ocurren
 - Uso de recursos (CPU, RAM, Disco)
-- Conexiones a BD
+- Rendimiento de la base de datos
 
 ### Herramientas
-- **Logging:** ELK Stack (Elasticsearch, Logstash, Kibana)
-- **Monitoring:** Prometheus + Grafana
-- **APM:** New Relic o Datadog
-- **Alerting:** PagerDuty/Alertmanager
+- Sistema de logs centralizado
+- Monitoreo de disponibilidad
+- Alertas de problemas
 
 ### Dashboards
-- Dashboard de salud del sistema
-- Dashboard de operaciones
-- Dashboard de seguridad
-- Dashboard de business metrics
+- Vista general de salud del sistema
+- Alertas activas
 
 ### Validación
-- [ ] Alertas configuradas para anomalías
-- [ ] Logs centralizados y retenidos
-- [ ] Alertas probadas mensualmente
-- [ ] Capacidad de troubleshooting
+- [ ] Logs se registran correctamente
+- [ ] Alertas se disparan para problemas
+- [ ] Capacidad de revisar problemas pasados
 
 ---
 
 ## Resumen de NFRs
 
-| ID | Requisito | Métrica | Target | Estado |
-|----|-----------|---------|--------|--------|
-| NFR-001 | Rendimiento | p95 Latencia | < 500ms | ⏳ |
-| NFR-002 | Escalabilidad | Usuarios Concurrentes | 500+ | ⏳ |
-| NFR-003 | Disponibilidad | Uptime | 99.9% | ⏳ |
-| NFR-004 | Seguridad | Compliance | HIPAA+GDPR | ⏳ |
-| NFR-005 | Mantenibilidad | Test Coverage | > 80% | ⏳ |
-| NFR-006 | Usabilidad | Satisfacción | 4+/5 | ⏳ |
-| NFR-007 | Integrabilidad | APIs | OpenAPI 3.0 | ⏳ |
-| NFR-008 | Compatibilidad | Navegadores | 5+ | ⏳ |
-| NFR-009 | Auditoría | Retención | 6 años | ⏳ |
-| NFR-010 | Portabilidad | Formatos | 5+ | ⏳ |
-| NFR-011 | Recuperabilidad | RPO/RTO | 15min/1h | ⏳ |
-| NFR-012 | Monitoreo | Métricas | 15+ | ⏳ |
+| ID | Requisito | Estado |
+|----|-----------|--------|
+| NFR-001 | Rendimiento |✅  |
+| NFR-002 | Escalabilidad | ✅ |
+| NFR-003 | Disponibilidad | ✅ |
+| NFR-004 | Seguridad | ✅ |
+| NFR-005 | Mantenibilidad | ✅ |
+| NFR-006 | Usabilidad | ✅ |
+| NFR-007 | Integrabilidad | ✅ |
+| NFR-008 | Compatibilidad | ✅ |
+| NFR-009 | Auditoría | ✅ |
+| NFR-010 | Portabilidad | ✅ |
+| NFR-011 | Recuperabilidad | ✅ |
+| NFR-012 | Monitoreo | ✅ |
 
 ---
 

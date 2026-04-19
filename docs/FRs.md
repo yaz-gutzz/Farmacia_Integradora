@@ -1,6 +1,8 @@
-# 📋 REQUISITOS FUNCIONALES (FRs)
+# REQUISITOS FUNCIONALES (FRs)
 
 ## Sistema de Gestión Farmacéutica Hospitalaria
+
+Los Requisitos Funcionales definen QUÉ debe hacer el sistema para el Departamento de Farmacia de un hospital de tercer nivel. Estos 10 FRs especifican las capacidades técnicas necesarias para gestionar pacientes, medicamentos, inventarios, compras, dispensaciones y reportes en una institución con alta complejidad clínica y volumen de operaciones farmacéuticas.
 
 ---
 
@@ -10,13 +12,13 @@
 El sistema debe permitir el registro, actualización, consulta y supervisión completa de pacientes hospitalizados.
 
 ### Funcionalidades
-- ✅ Crear nuevo paciente con datos personales (nombre, apellido, cédula, fecha nacimiento)
-- ✅ Actualizar información de paciente
-- ✅ Consultar historial médico completo
-- ✅ Asignar número de expediente único
-- ✅ Registrar tipo de sangre y alergias
-- ✅ Documentar enfermedades crónicas
-- ✅ Cambiar estado del paciente (Activo, Inactivo, Suspendido)
+- Crear nuevo paciente con datos personales (nombre, apellido, cédula, fecha nacimiento)
+- Actualizar información de paciente
+- Consultar historial médico completo
+- Asignar número de expediente único
+- Registrar tipo de sangre y alergias
+- Documentar enfermedades crónicas
+- Cambiar estado del paciente (Activo, Inactivo, Suspendido)
 
 ### Actores Involucrados
 - Personal de enfermería
@@ -37,13 +39,13 @@ El sistema debe permitir el registro, actualización, consulta y supervisión co
 El sistema debe mantener un catálogo completo de medicamentos con información de precios, presentaciones y disponibilidad.
 
 ### Funcionalidades
-- ✅ Crear medicamento con nombre, principio activo, dosis
-- ✅ Actualizar información de medicamento
-- ✅ Consultar medicamentos por criterios (nombre, principio activo, presentación)
-- ✅ Gestionar precios unitarios
-- ✅ Definir cantidades mínimas y máximas
-- ✅ Cambiar estado (Activo, Inactivo, Descontinuado)
-- ✅ Registrar proveedores de medicamentos
+- Crear medicamento con nombre, principio activo, dosis
+- Actualizar información de medicamento
+- Consultar medicamentos por criterios (nombre, principio activo, presentación)
+- Gestionar precios unitarios
+- Definir cantidades mínimas y máximas
+- Cambiar estado (Activo, Inactivo, Descontinuado)
+- Registrar proveedores de medicamentos
 
 ### Actores Involucrados
 - Farmacéuticos
@@ -64,13 +66,13 @@ El sistema debe mantener un catálogo completo de medicamentos con información 
 El sistema debe monitorear constantemente el inventario de medicamentos y generar alertas automáticas.
 
 ### Funcionalidades
-- ✅ Mostrar cantidad actual en stock para cada medicamento
-- ✅ Comparar cantidad actual vs. mínima
-- ✅ Comparar cantidad actual vs. máxima
-- ✅ Generar alertas para medicamentos críticos (stock < mínimo)
-- ✅ Generar alertas para exceso de stock
-- ✅ Reportar medicamentos sin stock
-- ✅ Historial de movimientos de inventario
+- Mostrar cantidad actual en stock para cada medicamento
+- Comparar cantidad actual vs. mínima
+- Comparar cantidad actual vs. máxima
+- Generar alertas para medicamentos críticos (stock < mínimo)
+- Generar alertas para exceso de stock
+- Reportar medicamentos sin stock
+- Historial de movimientos de inventario
 
 ### Actores Involucrados
 - Farmacéuticos
@@ -91,13 +93,13 @@ El sistema debe monitorear constantemente el inventario de medicamentos y genera
 El sistema debe automatizar el proceso de compra de medicamentos y documentar todas las transacciones.
 
 ### Funcionalidades
-- ✅ Crear orden de compra
-- ✅ Seleccionar medicamento y cantidad
-- ✅ Asignar proveedor
-- ✅ Registrar precio unitario y total
-- ✅ Generar número único de compra
-- ✅ Consultar historial de compras
-- ✅ Actualizar automáticamente inventario al completar compra
+- Crear orden de compra
+- Seleccionar medicamento y cantidad
+- Asignar proveedor
+- Registrar precio unitario y total
+- Generar número único de compra
+- Consultar historial de compras
+- Actualizar automáticamente inventario al completar compra
 
 ### Actores Involucrados
 - Gerente de Compras
@@ -119,13 +121,13 @@ El sistema debe automatizar el proceso de compra de medicamentos y documentar to
 El sistema debe detectar automáticamente medicamentos sin stock y sugerir sustitutos, incluyendo análisis económico.
 
 ### Funcionalidades
-- ✅ Monitorear medicamentos con stock = 0
-- ✅ Sugerir medicamentos sustitutos con mismo principio activo
-- ✅ Calcular diferencia de costo entre medicamentos
-- ✅ Documentar motivo de cambio
-- ✅ Aplicar subrogación automática (con aprobación)
-- ✅ Registrar en historial de subrogaciones
-- ✅ Calcular ahorro económico de subrogaciones
+- Monitorear medicamentos con stock = 0
+- Sugerir medicamentos sustitutos con mismo principio activo
+- Calcular diferencia de costo entre medicamentos
+- Documentar motivo de cambio
+- Aplicar subrogación automática (con aprobación)
+- Registrar en historial de subrogaciones
+- Calcular ahorro económico de subrogaciones
 
 ### Actores Involucrados
 - Sistema de Monitoreo (automático)
@@ -147,13 +149,13 @@ El sistema debe detectar automáticamente medicamentos sin stock y sugerir susti
 El sistema debe registrar cada medicamento dispensado a pacientes con trazabilidad completa.
 
 ### Funcionalidades
-- ✅ Registrar medicamento dispensado por farmacéutico
-- ✅ Validar receta médica
-- ✅ Asociar medicamento a paciente
-- ✅ Reducir automáticamente inventario
-- ✅ Generar comprobante de dispensación
-- ✅ Registrar farmacéutico responsable
-- ✅ Historial de dispensaciones por paciente
+- Registrar medicamento dispensado por farmacéutico
+- Validar receta médica
+- Asociar medicamento a paciente
+- Reducir automáticamente inventario
+- Generar comprobante de dispensación
+- Registrar farmacéutico responsable
+- Historial de dispensaciones por paciente
 
 ### Actores Involucrados
 - Farmacéutico
@@ -175,13 +177,13 @@ El sistema debe registrar cada medicamento dispensado a pacientes con trazabilid
 El sistema debe controlar acceso mediante autenticación JWT y registrar todas las operaciones.
 
 ### Funcionalidades
-- ✅ Autenticación con usuario y contraseña
-- ✅ Generación de token JWT
-- ✅ Renovación de token
-- ✅ Cierre de sesión
-- ✅ Validación de permisos por rol
-- ✅ Bitácora de auditoría de acciones
-- ✅ Encriptación de contraseñas
+- Autenticación con usuario y contraseña
+- Generación de token JWT
+- Renovación de token
+- Cierre de sesión
+- Validación de permisos por rol
+- Bitácora de auditoría de acciones
+- Encriptación de contraseñas
 
 ### Actores Involucrados
 - Usuarios del Sistema
@@ -203,13 +205,13 @@ El sistema debe controlar acceso mediante autenticación JWT y registrar todas l
 El sistema debe generar reportes detallados sobre operaciones farmacéuticas y proveer datos para análisis.
 
 ### Funcionalidades
-- ✅ Reporte de inventario actual
-- ✅ Reporte de medicamentos críticos
-- ✅ Reporte de costos de medicamentos
-- ✅ Reporte de rotación de inventario
-- ✅ Reporte de subrogaciones aplicadas
-- ✅ Análisis de ahorro económico
-- ✅ Exportar reportes (PDF, Excel, CSV)
+- Reporte de inventario actual
+- Reporte de medicamentos críticos
+- Reporte de costos de medicamentos
+- Reporte de rotación de inventario
+- Reporte de subrogaciones aplicadas
+- Análisis de ahorro económico
+- Exportar reportes (PDF, Excel, CSV)
 
 ### Actores Involucrados
 - Farmacéutico
@@ -232,12 +234,12 @@ El sistema debe generar reportes detallados sobre operaciones farmacéuticas y p
 El sistema debe mantener información de proveedores y facilitar la gestión de relaciones comerciales.
 
 ### Funcionalidades
-- ✅ Registrar datos de proveedor
-- ✅ Actualizar información de contacto
-- ✅ Consultar medicamentos por proveedor
-- ✅ Registrar historial de compras por proveedor
-- ✅ Evaluar desempeño de proveedor
-- ✅ Cambiar estado (Activo, Inactivo)
+- Registrar datos de proveedor
+- Actualizar información de contacto
+- Consultar medicamentos por proveedor
+- Registrar historial de compras por proveedor
+- Evaluar desempeño de proveedor
+- Cambiar estado (Activo, Inactivo)
 
 ### Actores Involucrados
 - Gerente de Compras
@@ -258,13 +260,13 @@ El sistema debe mantener información de proveedores y facilitar la gestión de 
 El sistema debe permitir búsquedas rápidas y eficientes de medicamentos, pacientes y transacciones.
 
 ### Funcionalidades
-- ✅ Buscar medicamento por nombre
-- ✅ Buscar por principio activo
-- ✅ Buscar paciente por cédula o nombre
-- ✅ Filtrar por rango de fechas
-- ✅ Filtrar por proveedor
-- ✅ Búsqueda avanzada con múltiples criterios
-- ✅ Autocompletado en búsquedas
+- Buscar medicamento por nombre
+- Buscar por principio activo
+- Buscar paciente por cédula o nombre
+- Filtrar por rango de fechas
+- Filtrar por proveedor
+- Búsqueda avanzada con múltiples criterios
+- Autocompletado en búsquedas
 
 ### Actores Involucrados
 - Todos los usuarios del sistema
@@ -282,16 +284,16 @@ El sistema debe permitir búsquedas rápidas y eficientes de medicamentos, pacie
 
 | ID | Requisito | Estado | Prioridad |
 |----|-----------|---------|----|
-| FR-001 | Gestión de Pacientes | ⏳ Pendiente | 🔴 Alta |
-| FR-002 | Gestión de Medicamentos | ⏳ Pendiente | 🔴 Alta |
-| FR-003 | Control de Inventario | ⏳ Pendiente | 🔴 Alta |
-| FR-004 | Gestión de Compras | ⏳ Pendiente | 🔴 Alta |
-| FR-005 | Sistema de Subrogación | ⏳ Pendiente | 🟡 Media |
-| FR-006 | Dispensación | ⏳ Pendiente | 🔴 Alta |
-| FR-007 | Autenticación | ⏳ Pendiente | 🔴 Alta |
-| FR-008 | Reportes | ⏳ Pendiente | 🟡 Media |
-| FR-009 | Gestión Proveedores | ⏳ Pendiente | 🟡 Media |
-| FR-010 | Búsqueda y Filtrado | ⏳ Pendiente | 🟡 Media |
+| FR-001 | Gestión de Pacientes | Pendiente | Alta |
+| FR-002 | Gestión de Medicamentos | Pendiente | Alta |
+| FR-003 | Control de Inventario | Pendiente | Alta |
+| FR-004 | Gestión de Compras | Pendiente | Alta |
+| FR-005 | Sistema de Subrogación | Pendiente | Media |
+| FR-006 | Dispensación | Pendiente | Alta |
+| FR-007 | Autenticación | Pendiente | Alta |
+| FR-008 | Reportes | Pendiente | Media |
+| FR-009 | Gestión Proveedores | Pendiente | Media |
+| FR-010 | Búsqueda y Filtrado | Pendiente | Media |
 
 ---
 

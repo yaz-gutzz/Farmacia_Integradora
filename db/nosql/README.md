@@ -1,4 +1,6 @@
-# 🎯 Respaldos y Configuración NoSQL
+# Respaldos y Configuración NoSQL
+
+Respaldos y configuración de la base de datos MongoDB que soporta el Departamento de Farmacia de un hospital de tercer nivel. Almacena datos operacionales de compras, inventarios, subrogaciones y dispensaciones con flexibilidad y escalabilidad.
 
 ## Contenido
 

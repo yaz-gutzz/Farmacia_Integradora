@@ -1,4 +1,6 @@
-# 🧪 Suite de Pruebas - 10 Casos de Negocio
+# Suite de Pruebas - 10 Casos de Negocio
+
+Suite de pruebas que valida los 10 casos de negocio críticos del Departamento de Farmacia en un hospital de tercer nivel. Incluye pruebas de funcionalidad, rendimiento, integración y manejo de errores para todas las operaciones farmacéuticas.
 
 ## Estructura de Tests
 
@@ -26,12 +28,12 @@ tests/
 **Descripción:** Registrar una compra estándar de medicamento desde un proveedor  
 **Objetivo:** Validar que se puede registrar una compra correctamente  
 **Criterios de Aprobación:**
-- ✅ Se registra en detalle_compra
-- ✅ Se actualiza inventario automáticamente
-- ✅ Se genera ID de compra único
-- ✅ Respuesta 201 Created
+- Se registra en detalle_compra
+- Se actualiza inventario automáticamente
+- Se genera ID de compra único
+- Respuesta 201 Created
 
-**Estatus:** ✅ Pendiente Ejecución  
+**Estatus:** Pendiente Ejecución  
 **Evidencias:** /tests/evidencias/test_01/
 
 ---
@@ -43,12 +45,12 @@ tests/
 **Descripción:** Procesar grandes volúmenes de compra (500+ unidades)  
 **Objetivo:** Validar rendimiento con grandes volúmenes  
 **Criterios de Aprobación:**
-- ✅ Procesa 500+ registros sin error
-- ✅ Tiempo respuesta < 2 segundos
-- ✅ Inventario actualizado correctamente
-- ✅ Generación de alertas si excede máximo
+- Procesa 500+ registros sin error
+- Tiempo respuesta < 2 segundos
+- Inventario actualizado correctamente
+- Generación de alertas si excede máximo
 
-**Estatus:** ✅ Pendiente Ejecución  
+**Estatus:** Pendiente Ejecución  
 **Evidencias:** /tests/evidencias/test_02/
 
 ---
@@ -60,12 +62,12 @@ tests/
 **Descripción:** Analizar cambio de medicamento por diferencia de costo  
 **Objetivo:** Validar cálculo de diferencias económicas  
 **Criterios de Aprobación:**
-- ✅ Calcula diferencia de costo correctamente
-- ✅ Documenta motivo de cambio
-- ✅ Mantiene trazabilidad completa
-- ✅ Generaahorro económico
+- Calcula diferencia de costo correctamente
+- Documenta motivo de cambio
+- Mantiene trazabilidad completa
+- Genera ahorro económico
 
-**Estatus:** ✅ Pendiente Ejecución  
+**Estatus:** Pendiente Ejecución  
 **Evidencias:** /tests/evidencias/test_03/
 
 ---
@@ -77,12 +79,12 @@ tests/
 **Descripción:** Sistema auto-detecta stock=0 y sugiere sustitutos  
 **Objetivo:** Validar automatización de subrogación  
 **Criterios de Aprobación:**
-- ✅ Detecta stock=0 automáticamente
-- ✅ Sugiere medicamentos sustitutos
-- ✅ Aplica subrogación sin intervención manual
-- ✅ Registra todas las operaciones
+- Detecta stock=0 automáticamente
+- Sugiere medicamentos sustitutos
+- Aplica subrogación sin intervención manual
+- Registra todas las operaciones
 
-**Estatus:** ✅ Pendiente Ejecución  
+**Estatus:** Pendiente Ejecución  
 **Evidencias:** /tests/evidencias/test_04/
 
 ---
@@ -94,12 +96,12 @@ tests/
 **Descripción:** Validación integral de datos y manejo de excepciones  
 **Objetivo:** Validar manejo de errores  
 **Criterios de Aprobación:**
-- ✅ Rechaza datos faltantes
-- ✅ Valida cantidades positivas
-- ✅ Valida precios válidos
-- ✅ Retorna error 400 Bad Request
+- Rechaza datos faltantes
+- Valida cantidades positivas
+- Valida precios válidos
+- Retorna error 400 Bad Request
 
-**Estatus:** ✅ Pendiente Ejecución  
+**Estatus:** Pendiente Ejecución  
 **Evidencias:** /tests/evidencias/test_05/
 
 ---
@@ -111,12 +113,12 @@ tests/
 **Descripción:** Pruebas de creación y consulta de pacientes  
 **Objetivo:** Validar gestión de pacientes  
 **Criterios de Aprobación:**
-- ✅ Crea pacientes con datos válidos
-- ✅ Consulta pacientes registrados
-- ✅ Actualiza información de pacientes
-- ✅ Genera ID único por paciente
+- Crea pacientes con datos válidos
+- Consulta pacientes registrados
+- Actualiza información de pacientes
+- Genera ID único por paciente
 
-**Estatus:** ✅ Pendiente Ejecución  
+**Estatus:** Pendiente Ejecución  
 **Evidencias:** /tests/evidencias/test_06/
 
 ---
@@ -128,12 +130,12 @@ tests/
 **Descripción:** Pruebas de creación y consulta de medicamentos  
 **Objetivo:** Validar gestión de medicamentos  
 **Criterios de Aprobación:**
-- ✅ Crea medicamentos con datos válidos
-- ✅ Consulta medicamentos registrados
-- ✅ Actualiza información de medicamentos
-- ✅ Genera ID único por medicamento
+- Crea medicamentos con datos válidos
+- Consulta medicamentos registrados
+- Actualiza información de medicamentos
+- Genera ID único por medicamento
 
-**Estatus:** ✅ Pendiente Ejecución  
+**Estatus:** Pendiente Ejecución  
 **Evidencias:** /tests/evidencias/test_07/
 
 ---
@@ -145,12 +147,12 @@ tests/
 **Descripción:** Pruebas de consultas de estado de inventario  
 **Objetivo:** Validar reportes de inventario  
 **Criterios de Aprobación:**
-- ✅ Retorna estado actual de inventario
-- ✅ Identifica medicamentos críticos
-- ✅ Genera alertas de bajo stock
-- ✅ Filtra por criterios
+- Retorna estado actual de inventario
+- Identifica medicamentos críticos
+- Genera alertas de bajo stock
+- Filtra por criterios
 
-**Estatus:** ✅ Pendiente Ejecución  
+**Estatus:** Pendiente Ejecución  
 **Evidencias:** /tests/evidencias/test_08/
 
 ---
@@ -162,12 +164,12 @@ tests/
 **Descripción:** Pruebas de dispensación a pacientes  
 **Objetivo:** Validar proceso de dispensación  
 **Criterios de Aprobación:**
-- ✅ Registra dispensación correctamente
-- ✅ Actualiza inventario
-- ✅ Valida receta
-- ✅ Genera comprobante
+- Registra dispensación correctamente
+- Actualiza inventario
+- Valida receta
+- Genera comprobante
 
-**Estatus:** ✅ Pendiente Ejecución  
+**Estatus:** Pendiente Ejecución  
 **Evidencias:** /tests/evidencias/test_09/
 
 ---
@@ -179,12 +181,12 @@ tests/
 **Descripción:** Pruebas de generación de reportes  
 **Objetivo:** Validar reportes disponibles  
 **Criterios de Aprobación:**
-- ✅ Genera reporte de inventario crítico
-- ✅ Genera reporte de costos
-- ✅ Genera reporte de rotación
-- ✅ Datos consistentes con BD
+- Genera reporte de inventario crítico
+- Genera reporte de costos
+- Genera reporte de rotación
+- Datos consistentes con BD
 
-**Estatus:** ✅ Pendiente Ejecución  
+**Estatus:** Pendiente Ejecución  
 **Evidencias:** /tests/evidencias/test_10/
 
 ---

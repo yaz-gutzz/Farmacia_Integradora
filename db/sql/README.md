@@ -1,4 +1,6 @@
-# 🗄️ Respaldos y Scripts SQL
+# Respaldos y Scripts SQL
+
+Respaldos y configuración de la base de datos MySQL que soporta el Departamento de Farmacia de un hospital de tercer nivel. Incluye estructura completa de datos, scripts de respaldo automatizado y mecanismos de auditoría y seguridad.
 
 ## Contenido
 

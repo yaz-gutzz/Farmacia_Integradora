@@ -1,6 +1,8 @@
-# 💼 REQUISITOS DE NEGOCIO (BRs)
+#  REGLAS DE NEGOCIO (BRs)
 
 ## Sistema de Gestión Farmacéutica Hospitalaria
+
+Los Requisitos de Negocio definen los objetivos estratégicos del Departamento de Farmacia para un hospital de tercer nivel. Estos 10 BRs establecen cómo la solución tecnológica mejorará la gestión de medicamentos, inventarios y operaciones farmacéuticas en una institución con alta complejidad y volumen de pacientes. Cada BR incluye métricas de éxito, impacto esperado y stakeholders involucrados en la implementación.
 
 ---
 
@@ -10,10 +12,10 @@
 Reducir el tiempo y costo de operaciones farmacéuticas mediante automatización de procesos.
 
 ### Métricas de Éxito
-- 🎯 **Reducción de Tiempo:** Disminuir en 40% el tiempo de gestión de inventario
-- 🎯 **Reducción de Costos:** Ahorrar 25% en operaciones administrativas
-- 🎯 **Automatización:** Automatizar 80% de procesos manuales
-- 🎯 **Errores:** Reducir errores en dispensación a < 0.1%
+-  **Reducción de Tiempo:** Disminuir en 40% el tiempo de gestión de inventario
+-  **Reducción de Costos:** Ahorrar 25% en operaciones administrativas
+-  **Automatización:** Automatizar 80% de procesos manuales
+-  **Errores:** Reducir errores en dispensación a < 0.1%
 
 ### Impacto Esperado
 - Equipo farmacéutico se enfoca en tareas más críticas
@@ -38,10 +40,10 @@ Reducir el tiempo y costo de operaciones farmacéuticas mediante automatización
 Garantizar disponibilidad permanente de medicamentos críticos y reducir incidentes por falta de stock.
 
 ### Métricas de Éxito
-- 🎯 **Disponibilidad:** Mantener > 98% de medicamentos disponibles
-- 🎯 **Incidentes:** Reducir a 0 los casos de medicamentos no disponibles cuando se necesitan
-- 🎯 **Rotación:** Mejorar rotación de medicamentos en 30%
-- 🎯 **Urgencias:** Reducir tiempo de búsqueda de medicamentos a < 2 minutos
+-  **Disponibilidad:** Mantener > 98% de medicamentos disponibles
+-  **Incidentes:** Reducir a 0 los casos de medicamentos no disponibles cuando se necesitan
+-  **Rotación:** Mejorar rotación de medicamentos en 30%
+-  **Urgencias:** Reducir tiempo de búsqueda de medicamentos a < 2 minutos
 
 ### Impacto Esperado
 - Pacientes reciben medicamentos prescritos inmediatamente
@@ -68,10 +70,10 @@ Garantizar disponibilidad permanente de medicamentos críticos y reducir inciden
 Reducir gastos en compras de medicamentos mediante mejor gestión y análisis económico.
 
 ### Métricas de Éxito
-- 🎯 **Ahorro Directo:** Reducir costos de medicamentos en 15-20% anual
-- 🎯 **Subrogación:** Implementar sistema que genere $5,000+ mensuales en ahorros
-- 🎯 **Negociación:** Mejorar poder de negociación con proveedores
-- 🎯 **Compras:** Reducir compras de medicamentos innecesarios en 30%
+- Ahorro Directo: Reducir costos de medicamentos en 15-20% anual
+- Subrogación: Implementar sistema que genere $5,000+ mensuales en ahorros
+- Negociación: Mejorar poder de negociación con proveedores
+- Compras: Reducir compras de medicamentos innecesarios en 30%
 
 ### Impacto Esperado
 - Presupuesto farmacéutico más sostenible
@@ -102,10 +104,10 @@ Reducir gastos en compras de medicamentos mediante mejor gestión y análisis ec
 Garantizar trazabilidad completa de medicamentos desde compra hasta dispensación, cumpliendo regulaciones.
 
 ### Métricas de Éxito
-- 🎯 **Trazabilidad:** 100% de medicamentos con pausa de movimiento documentada
-- 🎯 **Auditoría:** Capacidad de auditar cualquier medicamento en < 5 minutos
-- 🎯 **Compliance:** Cumplimiento 100% con auditorías internas y externas
-- 🎯 **Legales:** 0 incidentes legales relacionados con medicamentos
+- Trazabilidad: 100% de medicamentos con pausa de movimiento documentada
+- Auditoría: Capacidad de auditar cualquier medicamento en < 5 minutos
+- Compliance: Cumplimiento 100% con auditías internas y externas
+- Legales: 0 incidentes legales relacionados con medicamentos
 
 ### Impacto Esperado
 - Hospital cumple regulaciones sanitarias
@@ -114,10 +116,10 @@ Garantizar trazabilidad completa de medicamentos desde compra hasta dispensació
 - Confianza de junta reguladora
 
 ### Requisitos Legales Cumplidos
-- ✅ HIPAA (Health Insurance Portability Act)
-- ✅ Regulaciones de Medicamentos Controlados
-- ✅ Leyes de Protección de Datos
-- ✅ Estándares Hospitalarios Internacionales
+- HIPAA (Health Insurance Portability Act)
+- Regulaciones de Medicamentos Controlados
+- Leyes de Protección de Datos
+- Estándares Hospitalarios Internacionales
 
 ### Stakeholders
 - Departamento de Cumplimiento
@@ -133,10 +135,10 @@ Garantizar trazabilidad completa de medicamentos desde compra hasta dispensació
 Proveer información confiable y accesible para decisiones estratégicas sobre farmacia y medicamentos.
 
 ### Métricas de Éxito
-- 🎯 **Reportes:** Disponibilidad de 20+ reportes analíticos
-- 🎯 **Dashboard:** Dashboard en tiempo real con métricas clave (KPIs)
-- 🎯 **Decisiones:** 90% de decisiones basadas en datos del sistema
-- 🎯 **Ahorro Tiempo:** Reducción de 80% en tiempo de análisis manual
+-  **Reportes:** Disponibilidad de 20+ reportes analíticos
+-  **Dashboard:** Dashboard en tiempo real con métricas clave (KPIs)
+-  **Decisiones:** 90% de decisiones basadas en datos del sistema
+-  **Ahorro Tiempo:** Reducción de 80% en tiempo de análisis manual
 
 ### Información Disponible
 - Consumo de medicamentos por especialidad
@@ -166,17 +168,17 @@ Proveer información confiable y accesible para decisiones estratégicas sobre f
 Asegurar que el sistema cumple con estándares internacionales de calidad en farmacéutica hospitalaria.
 
 ### Estándares a Cumplir
-- ✅ **ISO 9001:2015** - Gestión de calidad
-- ✅ **ISO 27001:2013** - Seguridad de información
-- ✅ **AABB Standards** - Estándares farmacéuticos
-- ✅ **Joint Commission Standards** - Estándares hospitalarios
+- ISO 9001:2015 - Gestión de calidad
+- ISO 27001:2013 - Seguridad de información
+- AABB Standards - Estándares farmacéuticos
+- Joint Commission Standards - Estándares hospitalarios
 
 ### Mecanismos de Aseguramiento
-- 🎯 Auditorías internas mensuales
-- 🎯 Revisión de procesos trimestrales
-- 🎯 Feedback de usuarios
-- 🎯 Métricas de calidad
-- 🎯 Planes de mejora continua
+- Auditías internas mensuales
+- Revisión de procesos trimestrales
+- Feedback de usuarios
+- Métricas de calidad
+- Planes de mejora continua
 
 ### Impacto Esperado
 - Hospital mantiene acreditaciones
@@ -197,10 +199,10 @@ Asegurar que el sistema cumple con estándares internacionales de calidad en far
 Proporcionar herramientas que permitan al equipo ser más productivo y profesional.
 
 ### Iniciativas
-- 🎯 **Capacitación:** 40 horas de entrenamiento en el nuevo sistema
-- 🎯 **Empowerment:** Automatizar tareas rutinarias para enfocarse en paciente
-- 🎯 **Satisfacción:** Mejorar satisfacción laboral a > 4/5
-- 🎯 **Carrera:** Oportunidades de desarrollo profesional
+- Capacitación: 40 horas de entrenamiento en el nuevo sistema
+- Empowerment: Automatizar tareas rutinarias para enfocarse en paciente
+- Satisfacción: Mejorar satisfacción laboral a > 4/5
+- Carrera: Oportunidades de desarrollo profesional
 
 ### Impacto Esperado
 - Equipo más competente y confiado
@@ -227,10 +229,10 @@ Proporcionar herramientas que permitan al equipo ser más productivo y profesion
 Facilitar comunicación entre farmacia, médicos y personal administrativo mediante el sistema.
 
 ### Canales de Comunicación
-- 🎯 **Alertas:** Notificaciones automáticas de problemas
-- 🎯 **Reportes:** Información compartida en tiempo real
-- 🎯 **Requísitos:** Registro de necesidades y urgencias
-- 🎯 **Feedback:** Sistema de sugerencias integrado
+- Alertas: Notificaciones automáticas de problemas
+- Reportes: Información compartida en tiempo real
+- Reqúsitos: Registro de necesidades y urgencias
+- Feedback: Sistema de sugerencias integrado
 
 ### Impacto Esperado
 - Reducción de miscomunicaciones
@@ -251,12 +253,12 @@ Facilitar comunicación entre farmacia, médicos y personal administrativo media
 Crear base flexible que permita agregar funcionalidades futuras sin reingeniería completa.
 
 ### Capacidades Futuras Planeadas
-- 🔮 Integración con EHR (Electronic Health Records)
-- 🔮 Machine Learning para predicción de demanda
-- 🔮 Mobile app para equipo de farmacia
-- 🔮 Integración con home delivery de medicamentos
-- 🔮 Portal de pacientes para historial de medicamentos
-- 🔮 Análisis de adverse effects (efectos adversos)
+- Integración con EHR (Electronic Health Records)
+- Machine Learning para predicción de demanda
+- Mobile app para equipo de farmacia
+- Integración con home delivery de medicamentos
+- Portal de pacientes para historial de medicamentos
+- Análisis de adverse effects (efectos adversos)
 
 ### Arquitectura Flexible
 - APIs REST independientes
@@ -282,17 +284,17 @@ Crear base flexible que permita agregar funcionalidades futuras sin reingenierí
 Diferenciar al hospital mediante servicio farmacéutico de excelencia y tecnología avanzada.
 
 ### Ventajas Competitivas
-- ✅ Disponibilidad de medicamentos garantizada
-- ✅ Procesos más eficientes y transparentes
-- ✅ Medicamentos más asequibles por optimización de costos
-- ✅ Mejor atención al paciente
-- ✅ Reputación de hospital tecnológicamente avanzado
+- Disponibilidad de medicamentos garantizada
+- Procesos más eficientes y transparentes
+- Medicamentos más asequibles por optimización de costos
+- Mejor atención al paciente
+- Reputación de hospital tecnológicamente avanzado
 
 ### Mercado Target
-- 🎯 Pacientes que buscan calidad y confiabilidad
-- 🎯 Médicos que valoran soporte farmacéutico
-- 🎯 Aseguradoras que buscan eficiencia
-- 🎯 Investigadores clínicos
+- Pacientes que buscan calidad y confiabilidad
+- Médicos que valoran soporte farmacéutico
+- Aseguradoras que buscan eficiencia
+- Investigadores clínicos
 
 ### Impacto Esperado
 - Atracción de nuevos pacientes

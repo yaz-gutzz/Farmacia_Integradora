@@ -1,8 +1,10 @@
-# 📊 Dashboard - Navicat BI
+# Dashboard - Navicat BI
+
+Dashboard de Business Intelligence para el Departamento de Farmacia de un hospital de tercer nivel. Visualiza métricas, resultados de tests, disponibilidad de medicamentos, costos operativos y análisis de desempeño del sistema.
 
 ## Descripción
 
-Dashboard de Business Intelligence para visualizar métricas y resultados de los tests del sistema de gestión farmacéutica hospitalaria.
+Dashboard de Business Intelligence para visualizar métricas operacionales, resultados de tests y análisis de desempeño del Departamento de Farmacia.
 
 ## Gráficos Disponibles
 
@@ -82,11 +84,11 @@ Dashboard de Business Intelligence para visualizar métricas y resultados de los
 
 | Métrica | Meta | Actual | Estado |
 |---------|------|--------|--------|
-| Tests Pasados | 100% | - | ⏳ Pendiente |
-| Tiempo TEST-02 | < 2s | - | ⏳ Pendiente |
-| Disponibilidad | > 95% | - | ⏳ Pendiente |
-| Ahorro Subrogación | > $1000/mes | - | ⏳ Pendiente |
-| Cobertura Testing | > 80% | - | ⏳ Pendiente |
+| Tests Pasados | 100% | - | Pendiente |
+| Tiempo TEST-02 | < 2s | - | Pendiente |
+| Disponibilidad | > 95% | - | Pendiente |
+| Ahorro Subrogación | > $1000/mes | - | Pendiente |
+| Cobertura Testing | > 80% | - | Pendiente |
 
 ---
 
