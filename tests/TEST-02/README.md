@@ -14,6 +14,12 @@
 - Inventario actualizado correctamente
 - Sin pérdida de datos
 
+## Visualización
+
+| Parámetros | Estatus |
+|---|---|
+| ![Parámetros](./img/parametros.png) | ![Estatus](./img/estatus.png) |
+
 ## Estatus
 
 Pendiente

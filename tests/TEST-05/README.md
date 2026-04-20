@@ -14,6 +14,12 @@
 - Usuario y timestamp registrados
 - No se pueden modificar registros de auditoría
 
+## Visualización
+
+| Parámetros | Estatus |
+|---|---|
+| ![Parámetros](./img/parametros.png) | ![Estatus](./img/estatus.png) |
+
 ## Estatus
 
 Pendiente

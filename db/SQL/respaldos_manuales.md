@@ -1,5 +1,13 @@
 # Respaldos Manuales
 
+<table style="border: none; border-collapse: collapse; width: 100%;">
+<tr style="border: none;">
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Database-MySQL%205.7%2B-blue?style=flat-square" alt="MySQL"/></td>
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Type-On%20Demand-orange?style=flat-square" alt="On Demand"/></td>
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Feature-Manual-green?style=flat-square" alt="Manual"/></td>
+</tr>
+</table>
+
 ## ¿Qué son Respaldos Manuales?
 
 Los respaldos manuales son copias de seguridad de la base de datos que se crean de forma manual bajo demanda del administrador o usuario. A diferencia de los respaldos automáticos, estos se ejecutan en momentos específicos determinados por el operador, siendo útiles para crear puntos de control antes de cambios críticos, migrar datos entre servidores o generar copias de trabajo para desarrollo y pruebas.

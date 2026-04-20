@@ -14,6 +14,12 @@
 - Médico solo ve medicamentos asignados
 - Auditor sin permisos de modificación
 
+## Visualización
+
+| Parámetros | Estatus |
+|---|---|
+| ![Parámetros](./img/parametros.png) | ![Estatus](./img/estatus.png) |
+
 ## Estatus
 
 Pendiente

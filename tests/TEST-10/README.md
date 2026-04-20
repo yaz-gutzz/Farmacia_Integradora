@@ -14,6 +14,12 @@
 - Ejecución de plan óptima
 - Sin consultas N+1
 
+## Visualización
+
+| Parámetros | Estatus |
+|---|---|
+| ![Parámetros](./img/parametros.png) | ![Estatus](./img/estatus.png) |
+
 ## Estatus
 
 Pendiente

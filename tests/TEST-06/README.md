@@ -14,6 +14,12 @@
 - Recuperación de datos posible
 - Integridad de datos restaurados verificada
 
+## Visualización
+
+| Parámetros | Estatus |
+|---|---|
+| ![Parámetros](./img/parametros.png) | ![Estatus](./img/estatus.png) |
+
 ## Estatus
 
 Pendiente

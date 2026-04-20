@@ -1,5 +1,13 @@
 #  DOCUMENTACIÓN DE CONTEXTO DEL PROYECTO
 
+<table style="border: none; border-collapse: collapse; width: 100%;">
+<tr style="border: none;">
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Repository-GitHub-black?style=flat-square" alt="GitHub"/></td>
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Documentation-100%25-blue?style=flat-square" alt="Documentation"/></td>
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Requirements-32%20Defined-orange?style=flat-square" alt="Requirements"/></td>
+</tr>
+</table>
+
 ## Sistema de Gestión Farmacéutica Hospitalaria
 
 Este documento proporciona el contexto general del proyecto para el Departamento de Farmacia de un hospital de tercer nivel. Incluye visión general, stakeholders clave, objetivos estratégicos y referencias a la documentación específica de requisitos (BRs, FRs, NFRs).

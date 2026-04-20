@@ -13,6 +13,12 @@
 - Conexión a MongoDB exitosa
 - Respuesta de prueba de conexión en menos de 1 segundo
 
+## Visualización
+
+| Parámetros | Estatus |
+|---|---|
+| ![Parámetros](./img/parametros.png) | ![Estatus](./img/estatus.png) |
+
 ## Estatus
 
 Pendiente

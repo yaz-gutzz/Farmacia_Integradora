@@ -14,6 +14,12 @@
 - Datos no se pierden
 - Alertas generadas correctamente
 
+## Visualización
+
+| Parámetros | Estatus |
+|---|---|
+| ![Parámetros](./img/parametros.png) | ![Estatus](./img/estatus.png) |
+
 ## Estatus
 
 Pendiente

@@ -1,5 +1,13 @@
 # Respaldo Automatizado MongoDB
 
+<table style="border: none; border-collapse: collapse; width: 100%;">
+<tr style="border: none;">
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Database-MongoDB%206.0%2B-green?style=flat-square" alt="MongoDB"/></td>
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Type-Automated-orange?style=flat-square" alt="Automated"/></td>
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Platform-Linux%20Bash-blue?style=flat-square" alt="Linux"/></td>
+</tr>
+</table>
+
 ## Qué es un Respaldo Automatizado
 
 Un respaldo automatizado es un proceso que se ejecuta sin intervención manual para crear copias de seguridad de la base de datos MongoDB en intervalos regulares y predefinidos. Estos respaldos garantizan la disponibilidad de datos en caso de pérdida, corrupción o desastres.

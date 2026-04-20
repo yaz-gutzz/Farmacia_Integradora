@@ -1,5 +1,13 @@
 # Bitácora y Monitoreo - MongoDB Farmacia
 
+<table style="border: none; border-collapse: collapse; width: 100%;">
+<tr style="border: none;">
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Database-MongoDB%206.0%2B-green?style=flat-square" alt="MongoDB"/></td>
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Function-Auditing-orange?style=flat-square" alt="Auditing"/></td>
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Feature-Monitoring-blue?style=flat-square" alt="Monitoring"/></td>
+</tr>
+</table>
+
 ## Qué es la Bitácora y Monitoreo
 
 La bitácora y monitoreo es un conjunto de mecanismos y herramientas de auditoría diseñadas para registrar, controlar y supervisar todos los cambios realizados en la base de datos MongoDB. Proporciona un registro completo de quién, qué, cuándo y cómo se modificaron los documentos, así como el estado y desempeño del sistema.

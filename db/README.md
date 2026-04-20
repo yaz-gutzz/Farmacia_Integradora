@@ -1,6 +1,14 @@
 # Scripts SQL - Base de Datos Farmacia Hospitalaria
 
-Documentación completa y scripts SQL para la base de datos MySQL que soporta el Departamento de Farmacia de un hospital de tercer nivel. Incluye estructura de tablas, respaldos, auditoría y monitoreo.
+<table style="border: none; border-collapse: collapse; width: 100%;">
+<tr style="border: none;">
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Database-MySQL%205.7%2B-blue?style=flat-square" alt="MySQL"/></td>
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Database-MongoDB%206.0%2B-green?style=flat-square" alt="MongoDB"/></td>
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Security-RBAC-red?style=flat-square" alt="Security"/></td>
+</tr>
+</table>
+
+Documentación completa y scripts SQL para la base de datos que soporta el Departamento de Farmacia de un hospital de tercer nivel. Incluye estructura de tablas, respaldos, auditoría y monitoreo.
 
 ---
 

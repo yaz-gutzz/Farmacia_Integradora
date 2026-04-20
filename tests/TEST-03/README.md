@@ -14,6 +14,12 @@
 - Integridad referencial mantenida
 - Transacciones completadas correctamente
 
+## Visualización
+
+| Parámetros | Estatus |
+|---|---|
+| ![Parámetros](./img/parametros.png) | ![Estatus](./img/estatus.png) |
+
 ## Estatus
 
 Pendiente

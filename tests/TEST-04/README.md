@@ -14,6 +14,12 @@
 - Verifica datos obligatorios de pacientes
 - Responde con códigos de error apropiados
 
+## Visualización
+
+| Parámetros | Estatus |
+|---|---|
+| ![Parámetros](./img/parametros.png) | ![Estatus](./img/estatus.png) |
+
 ## Estatus
 
 Pendiente
