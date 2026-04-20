@@ -2,52 +2,178 @@
 
 Suite de pruebas que valida los 10 casos de negocio críticos del Departamento de Farmacia en un hospital de tercer nivel. Incluye pruebas de funcionalidad, rendimiento, integración y manejo de errores para todas las operaciones farmacéuticas.
 
-## Estructura de Tests
+---
 
-```
-tests/
-├── test_01_compra_simple.py
-├── test_02_impacto_masivo.py
-├── test_03_subrogacion_economica.py
-├── test_04_subrogacion_automatica.py
-├── test_05_control_errores.py
-├── test_06_validacion_pacientes.py
-├── test_07_validacion_medicamentos.py
-├── test_08_consultas_inventario.py
-├── test_09_dispensacion.py
-├── test_10_reportes.py
-└── README.md
-```
+## TEST 01: Conexión a Base de Datos
+
+**Clave:** TEST-01  
+**Nombre:** Conexión a Base de Datos  
+**Descripción:** Validar la conexión exitosa a MySQL y MongoDB  
+**Objetivo:** Asegurar que la API puede conectar correctamente con ambas bases de datos  
+**Criterios de Aprobación:**
+- Conexión a MySQL exitosa
+- Conexión a MongoDB exitosa
+- Respuesta de prueba de conexión en menos de 1 segundo
+
+**Estatus:** Pendiente  
+**Evidencias:** [EVIDENCIAS/TEST-01-conexion.md](./EVIDENCIAS/TEST-01-conexion.md)
 
 ---
 
-## TEST 01: Compra Simple de Medicamento
+## TEST 02: Performance Masivo
 
-**Clave:** TEST-001  
-**Nombre:** Compra Simple de Medicamento  
-**Descripción:** Registrar una compra estándar de medicamento desde un proveedor  
-**Objetivo:** Validar que se puede registrar una compra correctamente  
+**Clave:** TEST-02  
+**Nombre:** Performance Masivo  
+**Descripción:** Procesar grandes volúmenes de registros (500+ unidades)  
+**Objetivo:** Validar rendimiento de la API con grandes volúmenes de datos  
 **Criterios de Aprobación:**
-- Se registra en detalle_compra
-- Se actualiza inventario automáticamente
-- Se genera ID de compra único
-- Respuesta 201 Created
-
-**Estatus:** Pendiente Ejecución  
-**Evidencias:** /tests/evidencias/test_01/
-
----
-
-## TEST 02: Impacto Masivo en Inventario
-
-**Clave:** TEST-002  
-**Nombre:** Impacto Masivo  
-**Descripción:** Procesar grandes volúmenes de compra (500+ unidades)  
-**Objetivo:** Validar rendimiento con grandes volúmenes  
-**Criterios de Aprobación:**
-- Procesa 500+ registros sin error
-- Tiempo respuesta < 2 segundos
+- Procesa 500+ registros sin errores
+- Tiempo de respuesta < 2 segundos
 - Inventario actualizado correctamente
+- Sin pérdida de datos
+
+**Estatus:** Pendiente  
+**Evidencias:** [EVIDENCIAS/TEST-02-performance.md](./EVIDENCIAS/TEST-02-performance.md)
+
+---
+
+## TEST 03: Integridad de Datos
+
+**Clave:** TEST-03  
+**Nombre:** Integridad de Datos  
+**Descripción:** Validar la consistencia de datos entre MySQL y MongoDB  
+**Objetivo:** Asegurar que no hay inconsistencias en la sincronización híbrida  
+**Criterios de Aprobación:**
+- Datos coinciden entre ambas bases de datos
+- No hay registros duplicados
+- Integridad referencial mantenida
+- Transacciones completadas correctamente
+
+**Estatus:** Pendiente  
+**Evidencias:** [EVIDENCIAS/TEST-03-integridad.md](./EVIDENCIAS/TEST-03-integridad.md)
+
+---
+
+## TEST 04: Validaciones de Negocio
+
+**Clave:** TEST-04  
+**Nombre:** Validaciones de Negocio  
+**Descripción:** Validar reglas de negocio en operaciones de medicamentos y pacientes  
+**Objetivo:** Asegurar que se cumplen todas las reglas de negocio del departamento de farmacia  
+**Criterios de Aprobación:**
+- Rechaza medicamentos expirados
+- Valida cantidad mínima de stock
+- Verifica datos obligatorios de pacientes
+- Responde con códigos de error apropiados
+
+**Estatus:** Pendiente  
+**Evidencias:** [EVIDENCIAS/TEST-04-validaciones.md](./EVIDENCIAS/TEST-04-validaciones.md)
+
+---
+
+## TEST 05: Auditoría y Cambios
+
+**Clave:** TEST-05  
+**Nombre:** Auditoría y Cambios  
+**Descripción:** Validar el registro de auditoría de todos los cambios realizados  
+**Objetivo:** Asegurar que se registran todos los cambios con usuario, fecha y detalles  
+**Criterios de Aprobación:**
+- Se registra cada cambio en bitácora
+- Datos antes/después capturados
+- Usuario y timestamp registrados
+- No se pueden modificar registros de auditoría
+
+**Estatus:** Pendiente  
+**Evidencias:** [EVIDENCIAS/TEST-05-auditoria.md](./EVIDENCIAS/TEST-05-auditoria.md)
+
+---
+
+## TEST 06: Respaldos Automatizados
+
+**Clave:** TEST-06  
+**Nombre:** Respaldos Automatizados  
+**Descripción:** Validar que los respaldos automáticos se ejecutan y recuperan correctamente  
+**Objetivo:** Asegurar disponibilidad de datos ante pérdida o corrupción  
+**Criterios de Aprobación:**
+- Respaldo completo ejecutado exitosamente
+- Respaldo incremental registrado
+- Recuperación de datos posible
+- Integridad de datos restaurados verificada
+
+**Estatus:** Pendiente  
+**Evidencias:** [EVIDENCIAS/TEST-06-respaldos.md](./EVIDENCIAS/TEST-06-respaldos.md)
+
+---
+
+## TEST 07: Control de Acceso
+
+**Clave:** TEST-07  
+**Nombre:** Control de Acceso  
+**Descripción:** Validar que los permisos por rol se aplican correctamente  
+**Objetivo:** Asegurar que solo usuarios autorizados pueden acceder a datos sensibles  
+**Criterios de Aprobación:**
+- Administrador accede a todo
+- Farmacéutico accede a medicamentos
+- Médico solo ve medicamentos asignados
+- Auditor sin permisos de modificación
+
+**Estatus:** Pendiente  
+**Evidencias:** [EVIDENCIAS/TEST-07-control_acceso.md](./EVIDENCIAS/TEST-07-control_acceso.md)
+
+---
+
+## TEST 08: Recuperación ante Desastres
+
+**Clave:** TEST-08  
+**Nombre:** Recuperación ante Desastres  
+**Descripción:** Validar que el sistema se recupera ante fallos de base de datos  
+**Objetivo:** Asegurar continuidad del servicio ante fallos críticos  
+**Criterios de Aprobación:**
+- Recuperación automática de conexión
+- Reintentos exponenciales funcionales
+- Datos no se pierden
+- Alertas generadas correctamente
+
+**Estatus:** Pendiente  
+**Evidencias:** [EVIDENCIAS/TEST-08-recuperacion.md](./EVIDENCIAS/TEST-08-recuperacion.md)
+
+---
+
+## TEST 09: Sincronización de Datos
+
+**Clave:** TEST-09  
+**Nombre:** Sincronización de Datos  
+**Descripción:** Validar sincronización bidireccional entre MySQL y MongoDB  
+**Objetivo:** Asegurar consistencia de datos en arquitectura híbrida  
+**Criterios de Aprobación:**
+- Cambios en MySQL reflejados en MongoDB
+- Cambios en MongoDB reflejados en MySQL
+- Sin retrasos significativos
+- Conflictos resueltos correctamente
+
+**Estatus:** Pendiente  
+**Evidencias:** [EVIDENCIAS/TEST-09-sincronizacion.md](./EVIDENCIAS/TEST-09-sincronizacion.md)
+
+---
+
+## TEST 10: Optimización de Índices
+
+**Clave:** TEST-10  
+**Nombre:** Optimización de Índices  
+**Descripción:** Validar que los índices mejoran el rendimiento de consultas  
+**Objetivo:** Asegurar que las consultas se ejecutan con máximo rendimiento  
+**Criterios de Aprobación:**
+- Consultas frecuentes < 100ms
+- Índices activos en tablas críticas
+- Ejecución de plan óptima
+- Sin consultas N+1
+
+**Estatus:** Pendiente  
+**Evidencias:** [EVIDENCIAS/TEST-10-optimizacion.md](./EVIDENCIAS/TEST-10-optimizacion.md)
+
+---
+
+**Última actualización:** Abril 2026
 - Generación de alertas si excede máximo
 
 **Estatus:** Pendiente Ejecución  

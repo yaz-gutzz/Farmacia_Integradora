@@ -1,58 +1,30 @@
-# API REST - Código Fuente y Documentación
+# API REST Híbrida - Farmacia Hospital
 
-API REST que implementa todos los servicios del Departamento de Farmacia. Construida con FastAPI y conecta las operaciones de medicamentos, inventarios, compras, dispensaciones y reportes de un hospital de tercer nivel.
+## Qué es una API Híbrida
 
-## Estructura de la API
+Una API híbrida es una arquitectura de servicio web que integra múltiples sistemas de bases de datos heterogéneos para proporcionar una interfaz unificada de acceso a los datos. En este caso, la API conecta MySQL para datos relacionales estructurados y MongoDB para datos no estructurados o semi-estructurados, permitiendo aprovechar las fortalezas de ambos sistemas en una única aplicación.
 
-```
-api/
-├── main.py                      # Punto de entrada FastAPI
-├── models/                      # Modelos de datos Pydantic
-│   ├── paciente.py
-│   ├── medicamento.py
-│   ├── compra.py
-│   └── inventario.py
-├── routes/                      # Endpoints de la API
-│   ├── auth.py                 # Autenticación JWT
-│   ├── pacientes.py            # Gestión de pacientes
-│   ├── medicamentos.py         # Gestión de medicamentos
-│   ├── compras.py              # Gestión de compras
-│   └── inventario.py           # Control de inventario
-├── schemas/                     # Esquemas de validación
-├── utils/                       # Funciones auxiliares
-├── requirements.txt             # Dependencias Python
-└── config.py                    # Configuración de la API
-```
+El propósito es proporcionar un conjunto cohesivo de servicios que abstrae la complejidad de trabajar con múltiples bases de datos, facilitando operaciones CRUD, validaciones, autenticación y gestión de errores de forma centralizada.
 
-## Tecnologías
+## Repositorio Oficial
 
-- **Framework:** FastAPI
-- **Servidor:** Uvicorn
-- **ORM:** SQLAlchemy (MySQL)
-- **Driver NoSQL:** PyMongo (MongoDB)
-- **Autenticación:** JWT
-- **Documentación:** Swagger/OpenAPI
+La API híbrida completa junto con scripts de respaldo y gestión del proyecto se encuentra en un repositorio dedicado:
 
-## Instalación Local
+**[Repositorio API Híbrida + Respaldos](https://github.com/tu-usuario/api-farmacia-hibrida)**
 
-```bash
-# 1. Entorno virtual
-python -m venv venv
-source venv/bin/activate
+Este repositorio incluye:
+- Código fuente de la API
+- Scripts de respaldo para MySQL y MongoDB
+- Configuración de entornos
+- Documentación técnica completa
+- Instrucciones de despliegue
 
-# 2. Instalar dependencias
-pip install -r requirements.txt
+## Documentación Completa
 
-# 3. Ejecutar API
-uvicorn main:app --reload --host 0.0.0.0 --port 8000
-```
+La documentación técnica, especificaciones de endpoints, configuración y mejores prácticas está disponible en formato PDF.
 
-## Acceso a Documentación
-
-- **Swagger UI:** http://localhost:8000/docs
-- **ReDoc:** http://localhost:8000/redoc
-- **OpenAPI JSON:** http://localhost:8000/openapi.json
+**[Ver API Híbrida en PDF](./api_hibrida.pdf)**
 
 ---
 
-**Despliegue Local:** Abril 2026
+**Última actualización:** Abril 2026
