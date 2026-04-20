@@ -1,5 +1,13 @@
 #  REGLAS DE NEGOCIO (BRs)
 
+<table style="border: none; border-collapse: collapse; width: 100%;">
+<tr style="border: none;">
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Type-Business%20Rules-blue?style=flat-square" alt="BRs"/></td>
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Count-10%20Defined-green?style=flat-square" alt="Count"/></td>
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Status-Complete-brightgreen?style=flat-square" alt="Complete"/></td>
+</tr>
+</table>
+
 ## Sistema de Gestión Farmacéutica Hospitalaria
 
 Los Requisitos de Negocio definen los objetivos estratégicos del Departamento de Farmacia para un hospital de tercer nivel. Estos 10 BRs establecen cómo la solución tecnológica mejorará la gestión de medicamentos, inventarios y operaciones farmacéuticas en una institución con alta complejidad y volumen de pacientes. Cada BR incluye métricas de éxito, impacto esperado y stakeholders involucrados en la implementación.

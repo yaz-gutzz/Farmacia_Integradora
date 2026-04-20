@@ -1,5 +1,13 @@
 # TEST-08: Recuperación ante Desastres
 
+<table style="border: none; border-collapse: collapse; width: 100%;">
+<tr style="border: none;">
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Test-08-orange?style=flat-square" alt="Test-08"/></td>
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Type-Disaster%20Recovery-blue?style=flat-square" alt="DR"/></td>
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Status-Documented-green?style=flat-square" alt="Status"/></td>
+</tr>
+</table>
+
 ## Información del Test
 
 **Clave:** TEST-08  

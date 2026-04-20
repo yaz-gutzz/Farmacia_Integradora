@@ -1,5 +1,13 @@
 # REQUISITOS FUNCIONALES (FRs)
 
+<table style="border: none; border-collapse: collapse; width: 100%;">
+<tr style="border: none;">
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Type-Functional%20Requirements-blue?style=flat-square" alt="FRs"/></td>
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Count-10%20Defined-green?style=flat-square" alt="Count"/></td>
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Status-Complete-brightgreen?style=flat-square" alt="Complete"/></td>
+</tr>
+</table>
+
 ## Sistema de Gestión Farmacéutica Hospitalaria
 
 Los Requisitos Funcionales definen QUÉ debe hacer el sistema para el Departamento de Farmacia de un hospital de tercer nivel. Estos 10 FRs especifican las capacidades técnicas necesarias para gestionar pacientes, medicamentos, inventarios, compras, dispensaciones y reportes en una institución con alta complejidad clínica y volumen de operaciones farmacéuticas.

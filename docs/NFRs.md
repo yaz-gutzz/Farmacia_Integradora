@@ -1,5 +1,13 @@
 #  REQUISITOS NO FUNCIONALES (NFRs)
 
+<table style="border: none; border-collapse: collapse; width: 100%;">
+<tr style="border: none;">
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Type-Non%20Functional%20Requirements-blue?style=flat-square" alt="NFRs"/></td>
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Count-12%20Defined-green?style=flat-square" alt="Count"/></td>
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Status-Complete-brightgreen?style=flat-square" alt="Complete"/></td>
+</tr>
+</table>
+
 ## Sistema de Gestión Farmacéutica Hospitalaria
 
 Los Requisitos No Funcionales definen CÓMO debe funcionar el sistema en el Departamento de Farmacia de un hospital de tercer nivel. Estos 12 NFRs especifican atributos críticos como rendimiento, seguridad, disponibilidad, escalabilidad y cumplimiento normativo necesarios para una operación farmacéutica confiable, segura y eficiente.
