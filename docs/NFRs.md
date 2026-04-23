@@ -1,4 +1,4 @@
-#  REQUISITOS NO FUNCIONALES (NFRs)
+# REQUISITOS NO FUNCIONALES (NFRs)
 
 <table style="border: none; border-collapse: collapse; width: 100%;">
 <tr style="border: none;">
@@ -193,6 +193,11 @@ Todas las operaciones deben ser auditables y cumplir con regulaciones.
 
 ### Bitácora de Auditoría
 - Registro de: Usuario, Operación, Timestamp
+- Registro específico de operaciones **INSERT, UPDATE, DELETE** sobre:
+  - Medicamentos (precios, estatus, clasificación)
+  - Recetas (cambios de estado, cancelaciones)
+  - Inventario (movimientos por lote)
+  - Pacientes (modificaciones de datos sensibles)
 - Retención de registros de auditoría
 - Los registros de auditoría no pueden ser eliminados
 
@@ -287,7 +292,7 @@ El sistema debe monitorearse constantemente para detectar problemas.
 
 | ID | Requisito | Estado |
 |----|-----------|--------|
-| NFR-001 | Rendimiento |✅  |
+| NFR-001 | Rendimiento | ✅ |
 | NFR-002 | Escalabilidad | ✅ |
 | NFR-003 | Disponibilidad | ✅ |
 | NFR-004 | Seguridad | ✅ |
