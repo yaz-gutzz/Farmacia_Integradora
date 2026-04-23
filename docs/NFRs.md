@@ -306,7 +306,14 @@ El sistema debe monitorearse constantemente para detectar problemas.
 | NFR-012 | Monitoreo | ✅ |
 
 ---
+##  Documentación del Proyecto
 
+El PDF con los requerimientos originales está disponible aquí:
+
+[![PDF Badge](https://img.shields.io/badge/PDF-Requerimientos-red?style=flat-square&logo=adobe-acrobat-reader)](./Requerimientos%20Funcionales%20y%20No%20Funcionales.pdf)
+
+>  **Para el profesor:** Haz clic en el enlace superior para visualizar el PDF original en el navegador.
+> 
 **Documento:** Requisitos No Funcionales - Sistema Farmacéutico Hospitalario  
 **Última Actualización:** Abril 2026  
 **Equipo:** Departamento de Farmacia
