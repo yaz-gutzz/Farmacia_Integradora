@@ -1,4 +1,4 @@
-# 📦 Manual de Instalación y Despliegue Local - API Híbrida (Farmacia/Hospital)
+#  Manual de Instalación y Despliegue Local - API Híbrida (Farmacia/Hospital)
 
 ## 1. Descripción
 Este proyecto es una API híbrida desarrollada con **FastAPI**, que integra **MySQL (SQL)** y **MongoDB (NoSQL)** para la gestión de un sistema de farmacia/hospital.
@@ -117,7 +117,7 @@ http://127.0.0.1:8000/redoc
 
 ## 10. Solución de errores frecuentes (FAQ)
 
-### ❌ 1. Error: No se puede conectar a MySQL
+###  1. Error: No se puede conectar a MySQL
 **Posibles causas:**
 - MySQL no está encendido
 - Usuario o contraseña incorrectos en `.env`
@@ -130,7 +130,7 @@ http://127.0.0.1:8000/redoc
 
 ---
 
-### ❌ 2. Error: MongoDB no conecta
+###  2. Error: MongoDB no conecta
 **Posibles causas:**
 - Servicio de MongoDB detenido
 - URL incorrecta en `.env`
@@ -144,7 +144,7 @@ MONGO_URL=mongodb://localhost:27017
 
 ---
 
-### ❌ 3. Error: "Module not found"
+###  3. Error: "Module not found"
 **Posibles causas:**
 - No se instalaron dependencias
 - Entorno virtual no activado
@@ -157,7 +157,7 @@ pip install -r requirements.txt
 
 ---
 
-### ❌ 4. Error: Uvicorn no reconoce main
+###  4. Error: Uvicorn no reconoce main
 **Posibles causas:**
 - Archivo principal no se llama `main.py`
 
@@ -169,7 +169,7 @@ uvicorn main:app --reload
 
 ---
 
-### ❌ 5. Swagger no carga
+###  5. Swagger no carga
 **Posibles causas:**
 - El servidor no está corriendo
 
