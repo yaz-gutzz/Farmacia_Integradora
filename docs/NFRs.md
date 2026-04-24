@@ -1,4 +1,4 @@
-#  REQUISITOS NO FUNCIONALES (NFRs)
+# REQUISITOS NO FUNCIONALES (NFRs)
 
 <table style="border: none; border-collapse: collapse; width: 100%;">
 <tr style="border: none;">
@@ -193,6 +193,11 @@ Todas las operaciones deben ser auditables y cumplir con regulaciones.
 
 ### Bitácora de Auditoría
 - Registro de: Usuario, Operación, Timestamp
+- Registro específico de operaciones **INSERT, UPDATE, DELETE** sobre:
+  - Medicamentos (precios, estatus, clasificación)
+  - Recetas (cambios de estado, cancelaciones)
+  - Inventario (movimientos por lote)
+  - Pacientes (modificaciones de datos sensibles)
 - Retención de registros de auditoría
 - Los registros de auditoría no pueden ser eliminados
 
@@ -287,7 +292,7 @@ El sistema debe monitorearse constantemente para detectar problemas.
 
 | ID | Requisito | Estado |
 |----|-----------|--------|
-| NFR-001 | Rendimiento |✅  |
+| NFR-001 | Rendimiento | ✅ |
 | NFR-002 | Escalabilidad | ✅ |
 | NFR-003 | Disponibilidad | ✅ |
 | NFR-004 | Seguridad | ✅ |
@@ -301,7 +306,14 @@ El sistema debe monitorearse constantemente para detectar problemas.
 | NFR-012 | Monitoreo | ✅ |
 
 ---
+##  Documentación del Proyecto
 
+El PDF con los requerimientos originales está disponible aquí:
+
+[![PDF Badge](https://img.shields.io/badge/PDF-Requerimientos-red?style=flat-square&logo=adobe-acrobat-reader)](./Requerimientos%20Funcionales%20y%20No%20Funcionales.pdf)
+
+>  **Para el profesor:** Haz clic en el enlace superior para visualizar el PDF original en el navegador.
+> 
 **Documento:** Requisitos No Funcionales - Sistema Farmacéutico Hospitalario  
 **Última Actualización:** Abril 2026  
 **Equipo:** Departamento de Farmacia
