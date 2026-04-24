@@ -1,0 +1,62 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "_id",
+      "fecha",
+      "folio_compra",
+      "medicamentos",
+      "proveedor"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "objectId"
+      },
+      "fecha": {
+        "bsonType": "date"
+      },
+      "folio_compra": {
+        "bsonType": "string"
+      },
+      "medicamentos": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "object",
+          "properties": {
+            "cantidad": {
+              "bsonType": "int"
+            },
+            "concentracion": {
+              "bsonType": "string"
+            },
+            "forma_farmaceutica": {
+              "bsonType": "string"
+            },
+            "id_medicamento": {
+              "bsonType": "int"
+            },
+            "nombre": {
+              "bsonType": "string"
+            }
+          },
+          "required": [
+            "cantidad",
+            "id_medicamento",
+            "nombre"
+          ]
+        }
+      },
+      "proveedor": {
+        "bsonType": "object",
+        "properties": {
+          "nombre": {
+            "bsonType": "string"
+          }
+        },
+        "required": [
+          "nombre"
+        ]
+      }
+    }
+  }
+}
