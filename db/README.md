@@ -2,132 +2,208 @@
 
 <table style="border: none; border-collapse: collapse; width: 100%;">
 <tr style="border: none;">
-<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Database-MySQL%205.7%2B-blue?style=flat-square" alt="MySQL"/></td>
-<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Database-MongoDB%206.0%2B-green?style=flat-square" alt="MongoDB"/></td>
-<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Security-RBAC-red?style=flat-square" alt="Security"/></td>
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Database-MySQL%208.0.37-blue?style=flat-square" alt="MySQL"/></td>
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Server-Hospital-orange?style=flat-square" alt="Server"/></td>
+<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Estado-En%20Desarrollo-yellow?style=flat-square" alt="Estado"/></td>
 </tr>
 </table>
 
-Documentación completa y scripts SQL para la base de datos que soporta el Departamento de Farmacia de un hospital de tercer nivel. Incluye estructura de tablas, respaldos, auditoría y monitoreo.
+Documentacion completa y scripts SQL para la base de datos `hospital_matricula` que soporta el modulo de Farmacia Hospitalaria. Incluye estructura de tablas, indices, llaves foraneas, triggers y diccionarios de datos.
 
 ---
 
-##  PDF - Documentación Visual del Schema
+## PDF - Documentacion Visual del Schema
 
-###  [Schema_BD_Farmacia_Hospital.pdf](Schema_BD_Farmacia_Hospital.pdf)
+### Diccionarios de datos incluidos
 
-**Documento visual completo que incluye:**
-- Diagrama ER (Entity-Relationship) de todas las tablas
-- Estructura de cada tabla con campos y tipos
-- Relaciones entre entidades (1:1, 1:N, N:M)
-- Cardinalidades y constraints
-- Flujo de datos entre módulos
-- Índices y optimizaciones
-- Políticas de seguridad por tabla
+| Documento | Tabla documentada | Aprobado |
+|---|---|---|
+| `Diccionarios_datos_Lotes_Medicamentos.pdf` | `tbd_ph_lotes_medicamentos` | Si |
+| `Diccionario_datos_Inventario_Medicamentos.pdf` | `tbd_ph_inventario_medicamentos` | Si |
+| `Diccionario_datos_detalle_receta.pdf` | `tbd_ph_detalle_receta` | No |
 
-**Ideal para:**
--  Entender la arquitectura general de la BD
--  Explicar a nuevos desarrolladores
--  Presentaciones y documentación
--  Impresión en formato A4/A3
+> La tabla `tbd_ph_detalle_receta` aun no ha sido aprobada formalmente. Tratar como borrador sujeto a cambios.
 
 ---
 
-##  Guías Principales
+## Tablas documentadas
 
-###  Respaldos y Recuperación
+### `tbd_ph_lotes_medicamentos`
 
-1. **[Respaldos Manuales](respaldos_manuales.md)** 
-   - Respaldo Manual Completo (estructura + datos)
-   - Respaldo Manual Parcial (solo estructura)
-   - Cómo hacer respaldos manualmente
-   - Proceso de restauración
+**Entidad:** Lotes de Medicamentos  
+**Jerarquia:** Debil  
+**Percepcion:** Transaccional  
+**Aprobado:** Si
 
-2. **[Script Respaldo Automatizado](respaldo_automatizado.md)**
-   - Justificación de horarios (00:00, 06:00, 12:00, 18:00)
-   - Configuración con Node.js
-   - Monitoreo y alertas de respaldos
+Registra los lotes de medicamentos recibidos, con trazabilidad de proveedor, fechas de fabricacion y caducidad, y cantidades disponibles.
 
-###  Documentación de Datos
+| Pos | Campo | Tipo | Not Null | Descripcion |
+|---|---|---|---|---|
+| 1 | `Id` | `int` AI PK | Si | Identificador del lote |
+| 2 | `Medicamento_Id` | `int` | Si | Referencia al medicamento (FK) |
+| 3 | `Proveedor_Id` | `int` | No | Referencia al proveedor (FK) |
+| 4 | `Numero_Lote` | `varchar(100)` | Si | Numero de lote |
+| 5 | `Fecha_Fabricacion` | `date` | Si | Fecha de fabricacion |
+| 6 | `Fecha_Caducidad` | `date` | Si | Fecha de caducidad |
+| 7 | `Cantidad_Inicial` | `int` | Si | Cantidad inicial del lote |
+| 8 | `Cantidad_Actual` | `int` | Si | Cantidad actual disponible |
+| 9 | `Estado_Lote` | `enum` | No | Estado del lote (default: `Disponible`) |
+| 10 | `Observaciones` | `text` | No | Observaciones del lote |
+| 11 | `Fecha_Registro` | `datetime` | Si | default: `CURRENT_TIMESTAMP` |
+| 12 | `Fecha_Actualizacion` | `datetime` | No | default: `CURRENT_TIMESTAMP` |
+| 13 | `Estatus` | `bit(1)` | No | Estado del registro (default: `b'1'`) |
 
-3. **[Diccionario de Datos](data_dictionary.md)**
-   - Tabla: personas
-   - Tabla: pacientes
-   - Tabla: medicamentos
-   - Tabla: inventario
-   - Tabla: compras
-   - Tabla: dispensaciones
-   - Tabla: usuarios
-   - Estadísticas y ejemplos SQL
+**Indices:**
 
-4. **[Schema de Base de Datos](schema.md)**
-   - Estructura SQL completa de todas las tablas
-   - Foreign Keys y constraints
-   - Índices de optimización
-   - Permisos por rol
-   - Views de seguridad
+| Nombre | Tipo | Metodo | Campos |
+|---|---|---|---|
+| `unique_lote` | UNIQUE | BTREE | `Medicamento_Id`, `Numero_Lote` |
+| `fk_lote_proveedor` | NORMAL | BTREE | `Proveedor_Id` |
 
-###  Seguridad y Auditoría
+**Llaves foraneas:**
 
-5. **[Bitácora y Monitoreo](bitacora_y_monitoreo.md)**
-   - Tabla: cambios_auditados (auditoría completa)
-   - Tabla: bitacora_respaldos (monitoreo)
-   - Triggers automáticos
-   - Queries de análisis
-   - Alertas y notificaciones
-   - Compliance HIPAA/GDPR
+| Nombre | Campo | Tabla referenciada | Campo referenciado | On Delete | On Update |
+|---|---|---|---|---|---|
+| `fk_lote_medicamento` | `Medicamento_Id` | `tbc_ph_medicamentos` | `Id` | RESTRICT | RESTRICT |
+| `fk_lote_proveedor` | `Proveedor_Id` | `tbb_mr_proveedores` | `ID` | RESTRICT | RESTRICT |
+
+**Triggers:**
+
+| Nombre | Momento | INSERT | UPDATE | DELETE |
+|---|---|---|---|---|
+| `tbd_ph_lotes_BEFORE_UPDATE` | BEFORE | | Si | |
+| `tbd_ph_lotes_AFTER_INSERT` | AFTER | Si | | |
+| `tbd_ph_lotes_AFTER_UPDATE` | AFTER | | Si | |
+| `tbd_ph_lotes_AFTER_DELETE` | AFTER | | | Si |
 
 ---
 
-##  Inicio Rápido
+### `tbd_ph_inventario_medicamentos`
 
-### 1. Crear Base de Datos
+**Entidad:** Inventario de Medicamentos  
+**Jerarquia:** Debil  
+**Percepcion:** Generica  
+**Aprobado:** Si
 
-```bash
-# Usar respaldo completo (con datos)
-mysql -u root -p < respaldo_completo.sql
+Almacena la informacion complementaria de cada lote en inventario: marca, presentacion, via de administracion, efectos secundarios y cantidad disponible.
 
-# O usar respaldo parcial (solo estructura)
-mysql -u root -p < respaldo_parcial.sql
+| Pos | Campo | Tipo | Not Null | Descripcion |
+|---|---|---|---|---|
+| 1 | `Id` | `int` AI PK | Si | Identificador del inventario |
+| 2 | `Lote_Medicamento_Id` | `int` | Si | Referencia al lote (FK) |
+| 3 | `Marca` | `varchar(150)` | Si | Marca del medicamento |
+| 4 | `Empresa` | `varchar(150)` | Si | Empresa distribuidora |
+| 5 | `Farmaceutica` | `varchar(150)` | Si | Laboratorio fabricante |
+| 6 | `Presentacion` | `varchar(150)` | Si | Presentacion del medicamento |
+| 7 | `Via_Administracion` | `varchar(150)` | Si | Via de administracion |
+| 8 | `Efectos_Secundarios` | `text` | No | Posibles efectos secundarios |
+| 9 | `Restricciones` | `text` | No | Restricciones de uso |
+| 10 | `Cantidad` | `int` | Si | Cantidad disponible |
+| 11 | `Fecha_Registro` | `datetime` | Si | default: `CURRENT_TIMESTAMP` |
+| 12 | `Fecha_Actualizacion` | `datetime` | No | default: `CURRENT_TIMESTAMP` |
+| 13 | `Estatus` | `bit(1)` | No | Estado del registro (default: `b'1'`) |
+
+**Indices:**
+
+| Nombre | Tipo | Metodo | Campos |
+|---|---|---|---|
+| `fk_inventario_lote` | NORMAL | BTREE | `Lote_Medicamento_Id` |
+
+**Llaves foraneas:**
+
+| Nombre | Campo | Tabla referenciada | Campo referenciado | On Delete | On Update |
+|---|---|---|---|---|---|
+| `fk_inventario_lote` | `Lote_Medicamento_Id` | `tbd_ph_lotes_medicamentos` | `Id` | RESTRICT | RESTRICT |
+
+**Triggers:**
+
+| Nombre | Momento | INSERT | UPDATE | DELETE |
+|---|---|---|---|---|
+| `tbd_ph_inventario_BEFORE_UPDATE` | BEFORE | | Si | |
+| `tbd_ph_inventario_AFTER_INSERT` | AFTER | Si | | |
+| `tbd_ph_inventario_AFTER_UPDATE` | AFTER | | Si | |
+| `tbd_ph_inventario_AFTER_DELETE` | AFTER | | | Si |
+
+---
+
+### `tbd_ph_detalle_receta`
+
+**Entidad:** Detalle Receta  
+**Jerarquia:** Debil  
+**Percepcion:** Generica  
+**Aprobado:** No (borrador)
+
+Registra el detalle de cada medicamento prescrito dentro de una receta medica: dosis, frecuencia, duracion y cantidad total indicada.
+
+| Pos | Campo | Tipo | Not Null | Descripcion |
+|---|---|---|---|---|
+| 1 | `Id` | `int` AI PK | Si | Identificador del detalle de receta |
+| 2 | `Receta_Id` | `int` | Si | Referencia a la receta (FK) |
+| 3 | `Medicamento_Id` | `int` | Si | Referencia al medicamento (FK) |
+| 4 | `Dosis` | `varchar(100)` | Si | Dosis indicada del medicamento |
+| 5 | `Frecuencia` | `varchar(100)` | Si | Frecuencia de administracion |
+| 6 | `Duracion` | `varchar(100)` | Si | Duracion del tratamiento |
+| 7 | `Cantidad` | `int` | Si | Cantidad total prescrita |
+| 8 | `Indicaciones` | `text` | No | Indicaciones adicionales del medico |
+| 9 | `Fecha_Registro` | `datetime` | Si | default: `CURRENT_TIMESTAMP` |
+| 10 | `Fecha_Actualizacion` | `datetime` | No | default: `CURRENT_TIMESTAMP` |
+| 11 | `Estatus` | `bit(1)` | No | Estado del registro (default: `b'1'`) |
+
+**Indices:**
+
+| Nombre | Tipo | Metodo | Campos |
+|---|---|---|---|
+| `fk_detalle_receta` | NORMAL | BTREE | `Receta_Id` |
+| `fk_detalle_medicamento` | NORMAL | BTREE | `Medicamento_Id` |
+
+**Llaves foraneas:**
+
+| Nombre | Campo | Tabla referenciada | Campo referenciado | On Delete | On Update |
+|---|---|---|---|---|---|
+| `fk_detalle_medicamento` | `Medicamento_Id` | `tbc_ph_medicamentos` | `Id` | RESTRICT | RESTRICT |
+| `fk_detalle_receta` | `Receta_Id` | `tbb_ph_recetas_medicas` | `Id` | RESTRICT | RESTRICT |
+
+**Triggers:**
+
+| Nombre | Momento | INSERT | UPDATE | DELETE |
+|---|---|---|---|---|
+| `tbd_ph_detalle_BEFORE_UPDATE` | BEFORE | | Si | |
+| `tbd_ph_detalle_AFTER_INSERT` | AFTER | Si | | |
+| `tbd_ph_detalle_AFTER_UPDATE` | AFTER | | Si | |
+| `tbd_ph_detalle_AFTER_DELETE` | AFTER | | | Si |
+
+---
+
+## Relaciones entre tablas
+
+```
+tbc_ph_medicamentos         tbb_mr_proveedores
+        |                           |
+        | 1:N                       | 1:N
+        v                           v
+  tbd_ph_lotes_medicamentos --------+
+        |
+        | 1:1
+        v
+  tbd_ph_inventario_medicamentos
+
+  tbb_ph_recetas_medicas    tbc_ph_medicamentos
+        |                           |
+        | 1:N                       | 1:N
+        +---------> tbd_ph_detalle_receta <---------+
 ```
 
-### 2. Verificar Estructura
-
-```bash
-mysql -u root -p hospital_farmacia -e "SHOW TABLES;"
-mysql -u root -p hospital_farmacia -e "SELECT COUNT(*) FROM pacientes;"
-```
-
-### 3. Configurar Respaldos Automáticos
-
-Ver: **[Script Respaldo Automatizado](respaldo_automatizado.md)** → Sección "Cómo Configurar Respaldos Automatizados"
+> Las tablas `tbc_ph_medicamentos`, `tbb_mr_proveedores` y `tbb_ph_recetas_medicas` pertenecen a otros modulos de la base de datos y son referenciadas via llaves foraneas.
 
 ---
 
-##  Respaldos en Repositorio Separado
+## Informacion general
 
-⚠️ **IMPORTANTE:** Los archivos de respaldo (*.sql.gz) **NO se versionan en este repositorio**.
-
-Los respaldos se almacenan en:
-```
-Repositorio: Farmacia_Integradora_Backups
- respaldos_sql/
-├── completos/
-│   └── hospital_230142_YYYYMMDD_HHMMSS.sql.gz
-├── incrementales/
-│   └── hospital_230142_YYYYMMDD_HHMMSS.sql.gz
-└── README.md
-```
-
-**Ubicaciones:**
-
-Ver: **[DB/README.md](../README.md)** para más detalles
-
-
-
----
-
-**Base de Datos:** hospital_230142  
-**Última actualización:** Abril 2026  
-**Versión:** 1.0
-
+| Propiedad | Valor |
+|---|---|
+| **Base de datos** | `hospital_matricula` |
+| **Servidor** | Hospital |
+| **Motor** | MySQL 8.0.37 |
+| **Autores** | Farmacia / Administrator |
+| **Version** | 1.0 |
+| **Ultima actualizacion** | Abril 2026 |
