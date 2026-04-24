@@ -12,9 +12,9 @@ Documentación completa y scripts SQL para la base de datos que soporta el Depar
 
 ---
 
-## 📄 PDF - Documentación Visual del Schema
+##  PDF - Documentación Visual del Schema
 
-### 🔗 [Schema_BD_Farmacia_Hospital.pdf](Schema_BD_Farmacia_Hospital.pdf)
+###  [Schema_BD_Farmacia_Hospital.pdf](Schema_BD_Farmacia_Hospital.pdf)
 
 **Documento visual completo que incluye:**
 - Diagrama ER (Entity-Relationship) de todas las tablas
