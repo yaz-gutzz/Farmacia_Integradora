@@ -31,6 +31,8 @@ Respaldos y configuracion de la base de datos MongoDB que soporta el Departament
 
 Para el detalle de campos y estructuras de cada coleccion consultar el diccionario de datos en PDF.
 
+**[Diccionario de Datos NoSQL](./Diccionario_datos_NoSQL(MongoDB).pdf)**
+
 ---
 
 **Base de datos:** `hospital_medicamentos` — **Servidor:** localhost:27017 — **Abril 2026**

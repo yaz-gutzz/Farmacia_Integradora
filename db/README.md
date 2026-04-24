@@ -20,6 +20,13 @@ Documentacion del schema de la base de datos `hospital_matricula` correspondient
 
 Para el detalle de campos, indices, llaves foraneas y triggers de cada tabla consultar los diccionarios de datos en PDF.
 
+**[Diccionario Detalle Receta](./SQL/Diccionario_datos_detalle_receta.pdf)**
+
+**[Diccionario Inventario Medicamento](./SQL/Diccionario_datos_Inventario_Medicamentos.pdf)**
+
+**[Diccionario Lotes Medicamentos](./SQL/Diccionarios_datos_Lotes_Medicamentos.pdf)**
+
+
 ---
 
 **Base de datos:** `hospital_matricula` — **Servidor:** Hospital (MySQL 8.0.37) — **Version:** 1.0 — **Abril 2026**
