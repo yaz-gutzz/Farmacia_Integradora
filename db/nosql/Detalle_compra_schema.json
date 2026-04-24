@@ -26,15 +26,7 @@
             "cantidad": {
               "bsonType": "int"
             },
-            "concentracion": {
-              "bsonType": "string"
-            },
-            "forma_farmaceutica": {
-              "bsonType": "string"
-            },
-            "id_medicamento": {
-              "bsonType": "int"
-            },
+            
             "nombre": {
               "bsonType": "string"
             }
