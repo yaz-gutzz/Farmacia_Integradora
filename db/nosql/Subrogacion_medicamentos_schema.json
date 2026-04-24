@@ -1,0 +1,115 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "_id",
+      "fecha_solicitud",
+      "folio_subrogacion",
+      "medicamentos",
+      "paciente",
+      "receta"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "objectId"
+      },
+      "estatus": {
+        "bsonType": "string"
+      },
+      "fecha_solicitud": {
+        "bsonType": "date"
+      },
+      "folio_subrogacion": {
+        "bsonType": "string"
+      },
+      "medicamentos": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "object",
+          "properties": {
+            "cantidad": {
+              "bsonType": "int"
+            },
+            "concentracion": {
+              "bsonType": "string"
+            },
+            "costo": {
+              "bsonType": "double"
+            },
+            "dosis": {
+              "bsonType": "string"
+            },
+            "forma_farmaceutica": {
+              "bsonType": "string"
+            },
+            "id_medicamento": {
+              "bsonType": "int"
+            },
+            "nombre": {
+              "bsonType": "string"
+            }
+          },
+          "required": [
+            "cantidad",
+            "id_medicamento",
+            "nombre"
+          ]
+        }
+      },
+      "medico": {
+        "bsonType": "object",
+        "properties": {
+          "especialidad": {
+            "bsonType": "string"
+          },
+          "nombre": {
+            "bsonType": "string"
+          }
+        },
+        "required": [
+          "especialidad",
+          "nombre"
+        ]
+      },
+      "motivo_subrogacion": {
+        "bsonType": "string"
+      },
+      "paciente": {
+        "bsonType": "object",
+        "properties": {
+          "diagnostico": {
+            "bsonType": "string"
+          },
+          "id_paciente": {
+            "bsonType": "int"
+          },
+          "nombre": {
+            "bsonType": "string"
+          }
+        },
+        "required": [
+          "id_paciente",
+          "nombre"
+        ]
+      },
+      "receta": {
+        "bsonType": "object",
+        "properties": {
+          "folio": {
+            "bsonType": "string"
+          },
+          "id_receta": {
+            "bsonType": "int"
+          },
+          "vigente": {
+            "bsonType": "bool"
+          }
+        },
+        "required": [
+          "folio",
+          "id_receta"
+        ]
+      }
+    }
+  }
+}
