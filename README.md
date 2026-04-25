@@ -18,17 +18,19 @@
 
 ### LOGOTIPOS
 
-<table>
-  <tr>
-    <td align="center"><strong>Logo Principal</strong></td>
-    <td align="center"><strong>Logo Secundario</strong></td>
+<table style="border: none; border-collapse: collapse; width: 100%;">
+  <tr style="border: none;">
+    <td align="center" style="border: none; padding: 15px;"><strong>Logo Principal</strong></td>
+    <td align="center" style="border: none; padding: 15px;"><strong>Logo Secundario</strong></td>
   </tr>
-  <tr>
-    <td align="center">
-      Sistema Farmacéutico
+  <tr style="border: none;">
+    <td align="center" style="border: none; padding: 15px;">
+      <img src="[URL_LOGO_PRINCIPAL]" alt="Logo Principal - Sistema Farmacéutico" width="150" height="150" />
+      <p><em>Sistema Farmacéutico</em></p>
     </td>
-    <td align="center">
-      Gestión de Medicamentos
+    <td align="center" style="border: none; padding: 15px;">
+      <img src="[URL_LOGO_SECUNDARIO]" alt="Logo Secundario - Gestión de Medicamentos" width="150" height="150" />
+      <p><em>Gestión de Medicamentos</em></p>
     </td>
   </tr>
 </table>
@@ -167,7 +169,7 @@ Farmacia_Integradora/
 ---
 
 
-##  Integrantes del Equipo
+##  ORGANIGRAMA DEL EQUIPO
 
 **Equipo de Farmacia - Tarea Integradora**
 
@@ -176,6 +178,17 @@ Responsabilidades:
 - Validación de casos de negocio
 - Control de calidad
 - Documentación operativa
+
+<table style="border: none; border-collapse: collapse; width: 100%;">
+  <tr style="border: none;">
+    <td align="center" style="border: none; padding: 15px;">
+      <img src="[URL_ORGANIGRAMA_COMPLETO]" alt="Organigrama del Equipo" width="100%" height="auto" />
+    </td>
+    <td align="center" style="border: none; padding: 15px;">
+      <img src="[URL_ESTRUCTURA_ROLES]" alt="Estructura de Roles" width="100%" height="auto" />
+    </td>
+  </tr>
+</table>
 
 | Nombre | Usuario GitHub | Rol | Responsabilidades |
 |--------|-----------------|-----|------------------|
@@ -187,6 +200,19 @@ Responsabilidades:
 ---
 
 ##  CRONOGRAMA DEL PROYECTO
+
+<table style="border: none; border-collapse: collapse; width: 100%;">
+  <tr style="border: none;">
+    <td align="center" style="border: none; padding: 15px;">
+      <img src="[URL_CRONOGRAMA_GANTT]" alt="Cronograma Gantt del Proyecto" width="100%" height="auto" />
+      <p><strong>Diagrama de Gantt</strong></p>
+    </td>
+    <td align="center" style="border: none; padding: 15px;">
+      <img src="[URL_CRONOGRAMA_TIMELINE]" alt="Timeline del Proyecto" width="100%" height="auto" />
+      <p><strong>Timeline Visual</strong></p>
+    </td>
+  </tr>
+</table>
 
 | Fase | Actividad | Duración | Estado |
 |------|-----------|----------|--------|
