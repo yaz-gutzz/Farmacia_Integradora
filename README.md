@@ -91,7 +91,7 @@
 ```
 Farmacia_Integradora/
 │
-├─ 📋 DOCUMENTACIÓN (5%)
+├─ DOCUMENTACIÓN (5%)
 │  ├─ README.md                       # 📌 Portada Principal
 │  ├─ docs/
 │  │  ├─ readme.md                    # Contexto General
@@ -99,9 +99,9 @@ Farmacia_Integradora/
 │  │  ├─ Presentacion_MedAlert+.pdf
 │  │  ├─ Presentacion_Cartel.pdf
 │  │  └─ promting/
-│  │     └─ Bitácora de Prompting.pdf # 📝 Bitácora de Prompting
+│  │     └─ Bitácora de Prompting.pdf # Bitácora de Prompting
 │
-├─ 💾 BASE DE DATOS (45%)
+├─ BASE DE DATOS (45%)
 │  ├─ db/README.md
 │  ├─ db/SQL/ (15%)
 │  │  ├─ README.md
@@ -151,7 +151,7 @@ Farmacia_Integradora/
 │  │        ├─ inventario_medicamento/
 │  │        └─ subrogacion_medicamentos/
 │
-├─ 🧪 TESTS (10%)
+├─ TESTS (10%)
 │  ├─ tests/README.md                 # 10 Casos de Negocio
 │  ├─ tests/test_1/ a test_10/
 │  ├─ tests/Dashboard_final.png       # 🆕 Screenshot Dashboard Final
@@ -176,14 +176,14 @@ Farmacia_Integradora/
 
 | Componente | Peso | Carpeta | Estado |
 |------------|------|---------|--------|
-| Portada (README) | 10% | / | ✅ Completo |
-| Documentación | 5% | /docs/ | ✅ Completo |
-| Respaldos SQL | 15% | /db/SQL/ | ✅ Completo |
-| Respaldos NoSQL | 15% | /db/NOSQL/ | ✅ Completo |
-| Seguridad | 15% | /db/SECURITY/ | ✅ Completo |
-| API REST Híbrida | 15% | /api/API_Hibrida/ | ✅ Completo |
-| Tests (10 casos) | 10% | /tests/ | ✅ Completo |
-| Dashboard | 10% | /dashboard/ | ✅ Completo |
+| Portada (README) | 10% | / | COMPLETO |
+| Documentación | 5% | /docs/ | COMPLETO |
+| Respaldos SQL | 15% | /db/SQL/ | COMPLETO |
+| Respaldos NoSQL | 15% | /db/NOSQL/ | COMPLETO |
+| Seguridad | 15% | /db/SECURITY/ | COMPLETO |
+| API REST Híbrida | 15% | /api/API_Hibrida/ | COMPLETO |
+| Tests (10 casos) | 10% | /tests/ | COMPLETO |
+| Dashboard | 10% | /dashboard/ | COMPLETO |
 
 ---
 

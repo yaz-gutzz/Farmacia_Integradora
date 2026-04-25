@@ -1,5 +1,5 @@
 
-# 🔐 Bitácora de Seguridad - Módulo Farmacéutico
+# Bitácora de Seguridad - Módulo Farmacéutico
 
 <table style="border: none; border-collapse: collapse; width: 100%;">
 <tr style="border: none;">
@@ -20,7 +20,7 @@
 
 ---
 
-## 🧠 ¿Qué es la Bitácora de Seguridad?
+## ¿Qué es la Bitácora de Seguridad?
 
 La bitácora de seguridad es un componente del sistema farmacéutico hospitalario que registra automáticamente todas las operaciones críticas realizadas sobre las tablas principales del módulo.
 
@@ -28,7 +28,7 @@ Su propósito es garantizar la trazabilidad de los cambios, mantener un historia
 
 ---
 
-## 🎯 Objetivo
+## Objetivo
 
 El objetivo principal de la bitácora es asegurar la integridad y seguridad de los datos, permitiendo:
 
@@ -40,48 +40,48 @@ El objetivo principal de la bitácora es asegurar la integridad y seguridad de l
 
 ---
 
-## 📊 Tablas que generan registros en la bitácora
+## Tablas que generan registros en la bitácora
 
 La bitácora almacena información proveniente de las siguientes tablas:
 
-- 🧪 `tbd_ph_lotes_medicamentos` → Control de lotes y caducidad
-- 💊 `tbd_ph_inventario_medicamentos` → Gestión de inventario
-- 🧾 `tbd_ph_detalle_receta` → Medicamentos en recetas
-- 💉 `tbc_ph_medicamentos` → Catálogo de medicamentos
-- 🧑‍⚕️ `tbb_ph_recetas_medicas` → Control de recetas médicas
+- `tbd_ph_lotes_medicamentos` → Control de lotes y caducidad
+- `tbd_ph_inventario_medicamentos` → Gestión de inventario
+- `tbd_ph_detalle_receta` → Medicamentos en recetas
+- `tbc_ph_medicamentos` → Catálogo de medicamentos
+- `tbb_ph_recetas_medicas` → Control de recetas médicas
 
 ---
 
-## 🧠 Descripción de los campos
+## Descripción de los campos
 
-### 🔹 ID
+### ID
 Identificador único del registro en la bitácora.
 
-### 🔹 Nombre_Tabla
+### Nombre_Tabla
 Indica la tabla donde ocurrió la operación.
 
-### 🔹 Registro_ID
+### Registro_ID
 Identifica el registro afectado dentro de la tabla original.
 
-### 🔹 Usuario
+### Usuario
 Usuario que realizó la operación en el sistema.
 
-### 🔹 Operacion
+### Operacion
 Tipo de acción realizada:
 
 - INSERT → creación de registro  
 - UPDATE → modificación de registro  
 - DELETE → eliminación de registro  
 
-### 🔹 Descripcion
+### Descripcion
 Detalle del cambio realizado, permitiendo entender qué ocurrió en la operación.
 
-### 🔹 Fecha_Hora
+### Fecha_Hora
 Fecha y hora exacta del registro de la operación.
 
 ---
 
-## ⚙️ Funcionamiento
+## Funcionamiento
 
 La bitácora funciona de manera automática, registrando todas las operaciones realizadas en las tablas del sistema farmacéutico.
 
@@ -89,7 +89,7 @@ Esto permite capturar los cambios sin intervención manual, asegurando un histor
 
 ---
 
-## 🧱 Estructura de la Bitácora
+## Estructura de la Bitácora
 
 ```sql
 CREATE TABLE tbi_bitacora_ph (

@@ -1,5 +1,5 @@
 
-# 🗄️ Implementación de Base de Datos Relacional - Farmacia Hospitalaria
+# Implementación de Base de Datos Relacional - Farmacia Hospitalaria
 
 <table style="border: none; border-collapse: collapse; width: 100%;">
 <tr style="border: none;">
@@ -20,7 +20,7 @@
 
 ---
 
-## 🧠 Descripción General
+## Descripción General
 
 Este proyecto implementa una **Base de Datos Relacional en MySQL** para un sistema de farmacia hospitalaria de tercer nivel, integrando modelos de datos normalizados, llaves primarias y foráneas, restricciones de integridad, bitácora de seguridad, mecanismos de respaldo y monitoreo del sistema.
 
@@ -68,7 +68,7 @@ Ejemplo de entidades principales:
 
 ---
 
-## 🔗 Integridad Referencial
+## Integridad Referencial
 
 La base de datos implementa integridad referencial mediante:
 
@@ -82,7 +82,7 @@ La base de datos implementa integridad referencial mediante:
 
 ---
 
-## 🔐 Bitácora de Seguridad
+## Bitácora de Seguridad
 
 Se implementa una bitácora de auditoría (`tbi_bitacora_ph`) que registra automáticamente las operaciones críticas del sistema:
 
@@ -104,11 +104,10 @@ Se implementa una bitácora de auditoría (`tbi_bitacora_ph`) que registra autom
 
 ---
 
-## 💾 Respaldos de Base de Datos
+## Respaldos de Base de Datos
 
 Se implementa un sistema de respaldos dividido en tres tipos:
 
-### 📌 Respaldo Manual Completo
 - Copia total de la base de datos
 - Incluye estructura + datos
 - Usado para migraciones o recuperación total
@@ -155,7 +154,7 @@ El sistema se complementa con:
 
 ---
 
-## 🚀 Conclusión
+## Conclusión
 
 La implementación de esta base de datos garantiza un sistema robusto, seguro y escalable para la gestión farmacéutica hospitalaria, integrando:
 

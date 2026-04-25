@@ -36,7 +36,7 @@ La documentación completa con configuración técnica de usuarios, roles, privi
 **Última actualización:** Abril 2026
 =======
 
-# 🔐 Seguridad: Control de Acceso y Privilegios (Área Farmacia)
+# Seguridad: Control de Acceso y Privilegios (Área Farmacia)
 
 <div align="center">
 
@@ -47,20 +47,20 @@ La documentación completa con configuración técnica de usuarios, roles, privi
 
 ---
 
-## 🛡️ Modelo de Control de Acceso (RBAC)
+## Modelo de Control de Acceso (RBAC)
 
 El sistema de farmacia hospitalaria implementa un modelo de seguridad basado en **RBAC (Role-Based Access Control)** aplicado en un entorno híbrido:
 
-* 🟦 **MySQL** (Modelo Relacional)
-* 🟩 **MongoDB** (Modelo NoSQL Documental)
+* **MySQL** (Modelo Relacional)
+* **MongoDB** (Modelo NoSQL Documental)
 
 Ambos sistemas comparten la misma lógica de seguridad basada en roles, garantizando que la jerarquía de permisos sea consistente independientemente de la tecnología de persistencia.
 
 ---
 
-## ⚠️ Diferencia Clave: SQL vs NoSQL
+## Diferencia Clave: SQL vs NoSQL
 
-### 🟦 MySQL (Relacional)
+### MySQL (Relacional)
 Los permisos se gestionan de forma estructurada a nivel de entidad física:
 * **Asignación:** Directamente sobre tablas.
 * **Comandos:** Uso de sentencias `GRANT` (SELECT, INSERT, UPDATE, DELETE).
@@ -69,7 +69,7 @@ Los permisos se gestionan de forma estructurada a nivel de entidad física:
   GRANT SELECT ON hospital_matricula.tbc_ph_medicamentos TO rol_aux_farmacia;
   ```
 
-### 🟩 MongoDB (NoSQL)
+### MongoDB (NoSQL)
 El control es dinámico y basado en documentos:
 * **Asignación:** Se definen acciones (`actions`) sobre colecciones y recursos.
 * **Comandos:** No existe el `GRANT` tradicional; se definen documentos de rol.
@@ -79,7 +79,7 @@ El control es dinámico y basado en documentos:
     actions: ["find", "insert", "update", "remove"] }
   ```
 
-> **🧠 ¿Por qué la diferencia?** > MongoDB no trabaja con tablas fijas, sino con colecciones de documentos JSON flexibles. Por ello, el control se orienta a **acciones y recursos** en lugar de permisos sobre celdas o filas.
+> **¿Por qué la diferencia?** > MongoDB no trabaja con tablas fijas, sino con colecciones de documentos JSON flexibles. Por ello, el control se orienta a **acciones y recursos** en lugar de permisos sobre celdas o filas.
 
 ---
 
@@ -98,16 +98,16 @@ El control es dinámico y basado en documentos:
 ## 🎭 Definición de Roles (Concepto General RBAC)
 
 * 🏥 **Jefe de Farmacia:** Acceso total en ambas tecnologías para auditoría y control de errores críticos.
-* 💊 **Auxiliar de Farmacia:** Lectura y registro de recetas en SQL; acciones `find` e `insert` en colecciones NoSQL.
+* **Auxiliar de Farmacia:** Lectura y registro de recetas en SQL; acciones `find` e `insert` en colecciones NoSQL.
 * 📦 **Inventario:** Permisos de actualización de existencias y trazabilidad de movimientos.
 * 🚚 **Compras:** Gestión exclusiva de órdenes de compra y base de datos de proveedores.
 * 📑 **Subrogación:** Seguimiento de vales y recetas externas para medicamentos fuera de stock.
 
 ---
 
-## 🔑 Mapeo de Privilegios
+## Mapeo de Privilegios
 
-| Acción | 🟦 MySQL (SQL) | 🟩 MongoDB (NoSQL) |
+| Acción | MySQL (SQL) | MongoDB (NoSQL) |
 | :--- | :--- | :--- |
 | **Lectura** | `SELECT` | `find` |
 | **Inserción** | `INSERT` | `insert` |
@@ -116,24 +116,24 @@ El control es dinámico y basado en documentos:
 
 ---
 
-## 🧱 Restricciones y Políticas de Seguridad
+## Restricciones y Políticas de Seguridad
 
-1. 🔒 **Eliminación Restringida:** Bloqueo de borrado en módulos críticos (Recetas/Lotes).
-2. 🧾 **Trazabilidad:** Registro de auditoría (logs) para cada operación por usuario.
-3. 🛡️ **Protección de Datos:** Seguridad reforzada en información sensible de pacientes.
-4. 🔁 **Integridad Híbrida:** Control de consistencia entre tablas SQL y colecciones NoSQL.
-
----
-
-## ⚙️ Beneficios del Sistema Híbrido
-
-* ✅ **Seguridad Centralizada:** Un solo modelo lógico para dos bases de datos.
-* ✅ **Escalabilidad:** Adaptado a la flexibilidad de documentos y el orden relacional.
-* ✅ **Separación de Responsabilidades:** Cada área tiene su perímetro de acceso definido.
-* ✅ **Rendimiento:** Optimización de consultas según la tecnología más apta para el dato.
+1. **Eliminación Restringida:** Bloqueo de borrado en módulos críticos (Recetas/Lotes).
+2. **Trazabilidad:** Registro de auditoría (logs) para cada operación por usuario.
+3. **Protección de Datos:** Seguridad reforzada en información sensible de pacientes.
+4. **Integridad Híbrida:** Control de consistencia entre tablas SQL y colecciones NoSQL.
 
 ---
 
-> **🚀 Conclusión:** El sistema garantiza que **"cada usuario solo accede a lo que necesita para su función"**, manteniendo la integridad transaccional en MySQL y la flexibilidad documental en MongoDB.
+## Beneficios del Sistema Híbrido
+
+* **Seguridad Centralizada:** Un solo modelo lógico para dos bases de datos.
+* **Escalabilidad:** Adaptado a la flexibilidad de documentos y el orden relacional.
+* **Separación de Responsabilidades:** Cada área tiene su perímetro de acceso definido.
+* **Rendimiento:** Optimización de consultas según la tecnología más apta para el dato.
+
+---
+
+> **Conclusión:** El sistema garantiza que **"cada usuario solo accede a lo que necesita para su función"**, manteniendo la integridad transaccional en MySQL y la flexibilidad documental en MongoDB.
 ```
 >>>>>>> Integradora-Obed

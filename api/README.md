@@ -1,5 +1,5 @@
 
-# 🚀 API REST Híbrida - Farmacia Hospitalaria
+# API REST Híbrida - Farmacia Hospitalaria
 
 <div align="center">
 
@@ -10,18 +10,18 @@
 
 ---
 
-## 🛠️ Arquitectura de la API Híbrida
+## Arquitectura de la API Híbrida
 
 Una **API híbrida** es una arquitectura de servicio web avanzada que integra múltiples sistemas de bases de datos heterogéneos bajo una interfaz unificada. 
 
 Este backend, desarrollado con **Python** y **FastAPI**, actúa como una capa de abstracción que conecta dos motores de persistencia distintos, permitiendo aprovechar las fortalezas de cada paradigma en una única solución:
 
-* **🟦 MySQL (Relacional):** Gestiona datos estructurados, integridad referencial y transacciones complejas (ej. Roles, Usuarios y Catálogos Maestros).
-* **🟩 MongoDB (NoSQL):** Almacena datos semi-estructurados, documentos flexibles y logs de alta velocidad (ej. Inventarios, Recetas y Bitácoras de Seguridad).
+* **MySQL (Relacional):** Gestiona datos estructurados, integridad referencial y transacciones complejas (ej. Roles, Usuarios y Catálogos Maestros).
+* **MongoDB (NoSQL):** Almacena datos semi-estructurados, documentos flexibles y logs de alta velocidad (ej. Inventarios, Recetas y Bitácoras de Seguridad).
 
 ---
 
-## 🧠 Propósito y Capacidades
+## Propósito y Capacidades
 
 El objetivo central de esta implementación es proporcionar un ecosistema de servicios cohesivo que oculte la complejidad de la infraestructura subyacente, facilitando:
 
@@ -32,7 +32,7 @@ El objetivo central de esta implementación es proporcionar un ecosistema de ser
 
 ---
 
-## 🏗️ Stack Tecnológico
+## Stack Tecnológico
 
 * **Core:** FastAPI (Asynchronous Server Gateway Interface - ASGI).
 * **Base de Datos SQL:** MySQL con conectores optimizados para Python.
@@ -42,7 +42,7 @@ El objetivo central de esta implementación es proporcionar un ecosistema de ser
 
 ---
 
-## 🛡️ Gestión de Errores y Middleware
+## Gestión de Errores y Middleware
 
 La API incorpora controladores de excepciones personalizados para manejar errores de conexión de base de datos o fallos de validación, retornando códigos de estado HTTP estandarizados y mensajes claros para el desarrollador:
 

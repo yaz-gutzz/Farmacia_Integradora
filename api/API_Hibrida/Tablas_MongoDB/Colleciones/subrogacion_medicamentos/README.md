@@ -69,14 +69,14 @@ recetas        ←────referencia────► id_receta
 
 ## Pruebas Relacionadas
 
-### ✅ TEST 03: Subrogación con Impacto Económico
+### TEST 03: Subrogación con Impacto Económico
 - Registro de medicamento original y sustituto
 - Cálculo de diferencia de costo
 - Autorización documentada
 - Análisis de equivalencia terapéutica
 - Motivo: "Precio" o "Equivalente_Terapeutico"
 
-### ✅ TEST 04: Subrogación Automática (Desabasto)
+### TEST 04: Subrogación Automática (Desabasto)
 - Campo adicional `automatica: true`
 - Sin intervención humana inicial
 - Búsqueda automática de equivalente por principio_activo

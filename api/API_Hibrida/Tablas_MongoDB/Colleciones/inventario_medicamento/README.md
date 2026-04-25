@@ -88,21 +88,21 @@ proveedores   ←────referencia────► id_proveedor
 
 ## Pruebas Relacionadas
 
-### ✅ TEST 01: Compra de Medicamento
+### TEST 01: Compra de Medicamento
 - Consulta de disponibilidad
 - Validación de stock suficiente
 
-### ✅ TEST 02: Impacto Masivo  
+### TEST 02: Impacto Masivo  
 - Actualización masiva de inventarios
 - Decremento de cantidad_total por 500+ dispensaciones
 - Actualización de múltiples lotes
 
-### ✅ TEST 04: Subrogación Automática (Desabasto)
+### TEST 04: Subrogación Automática (Desabasto)
 - Validación de stock = 0
 - Búsqueda de equivalente disponible
 - Activación de lógica automática
 
-### ✅ TEST 05: Control de Errores
+### TEST 05: Control de Errores
 - Validación de cantidad > stock
 - Bloqueo de negativos
 - Validación de lotes vencidos

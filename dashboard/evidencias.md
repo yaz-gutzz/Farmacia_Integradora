@@ -10,130 +10,138 @@
 
 ## Descripción
 
-Galería de evidencias que muestra imágenes del dashboard con los resultados visuales de cada una de las 10 pruebas realizadas al sistema. Estas imágenes capturan los parámetros configurados y el estado de ejecución de cada test, proporcionando una vista rápida del desempeño y funcionalidad del Departamento de Farmacia.
+Galería de evidencias que muestra los resultados visuales de cada una de las 10 pruebas realizadas al sistema de farmacia. Estas imágenes capturan los parámetros configurados, resultados y validaciones en Navicat, proporcionando una vista rápida del desempeño y funcionalidad del Departamento de Farmacia.
 
-Para acceder a la documentación completa de cada test, incluyendo criterios de aprobación, resultados detallados y archivos de log, utiliza los enlaces "Ver TEST Completo" en cada sección.
-
----
-
-## TEST 01: Conexión a Base de Datos
-
-| Parámetros | Estatus |
-|---|---|
-| ![Parámetros](./imagenes/test1_parametros.png) | ![Estatus](./imagenes/test1_estatus.png) |
-
-Validar la conexión exitosa a MySQL y MongoDB.
-
-**Para más información:** [Ver TEST-01 Completo](../TESTS/TEST-01/README.md)
+Para acceder a la documentación completa de cada test, incluyendo criterios de aprobación, resultados detallados y explicaciones, utiliza el enlace "Ver Documentación Completa" al final.
 
 ---
 
-## TEST 02: Performance Masivo
+## PT-01: Ajuste Stock de Inventario
 
-| Parámetros | Estatus |
-|---|---|
-| ![Parámetros](./imagenes/test2_parametros.png) | ![Estatus](./imagenes/test2_estatus.png) |
+Intervención directa sobre el stock de un medicamento identificado por ID.
 
-Procesar grandes volúmenes de registros (500+ unidades).
+| Parámetros | Resultado | Navicat |
+|---|---|---|
+| ![Parámetros](../tests/test_1/Parametros_1.png) | ![Resultado](../tests/test_1/Resultado_1.png) | ![Navicat](../tests/test_1/Prueba_1_Navicat.png) |
 
-**Para más información:** [Ver TEST-02 Completo](../TESTS/TEST-02/README.md)
-
----
-
-## TEST 03: Integridad de Datos
-
-| Parámetros | Estatus |
-|---|---|
-| ![Parámetros](./imagenes/test3_parametros.png) | ![Estatus](./imagenes/test3_estatus.png) |
-
-Validar la consistencia de datos entre MySQL y MongoDB.
-
-**Para más información:** [Ver TEST-03 Completo](../TESTS/TEST-03/README.md)
+**Estado:** APROBADO
 
 ---
 
-## TEST 04: Validaciones de Negocio
+## PT-02: Generación de Lotes Masivos (Volumen Bajo)
 
-| Parámetros | Estatus |
-|---|---|
-| ![Parámetros](./imagenes/test4_parametros.png) | ![Estatus](./imagenes/test4_estatus.png) |
+Simulación de entrada de lotes mediante definición de esquema JSON. Generación controlada de 8 lotes disponibles.
 
-Validar reglas de negocio en operaciones de medicamentos y pacientes.
+| Parámetros | Resultado | Navicat |
+|---|---|---|
+| ![Parámetros](../tests/test_2/Parametros_2.png) | ![Resultado](../tests/test_2/Resultado_2.png) | ![Navicat](../tests/test_2/Prueba2_Navicat.png) |
 
-**Para más información:** [Ver TEST-04 Completo](../TESTS/TEST-04/README.md)
-
----
-
-## TEST 05: Auditoría y Cambios
-
-| Parámetros | Estatus |
-|---|---|
-| ![Parámetros](./imagenes/test5_parametros.png) | ![Estatus](./imagenes/test5_estatus.png) |
-
-Validar el registro de auditoría de todos los cambios realizados.
-
-**Para más información:** [Ver TEST-05 Completo](../TESTS/TEST-05/README.md)
+**Estado:** APROBADO
 
 ---
 
-## TEST 06: Respaldos Automatizados
+## PT-03: Registro de Movimiento NoSQL
 
-| Parámetros | Estatus |
-|---|---|
-| ![Parámetros](./imagenes/test6_parametros.png) | ![Estatus](./imagenes/test6_estatus.png) |
+Inserción de documento de movimiento en MongoDB para simulación de salida por dispensación (Paracetamol).
 
-Validar que los respaldos automáticos se ejecutan y recuperan correctamente.
+| Parámetros | Resultado | Navicat |
+|---|---|---|
+| ![Parámetros](../tests/test_3/Parametros_3.png) | ![Resultado](../tests/test_3/Resultados_3.png) | ![Navicat](../tests/test_3/Prueba3_Navicat.png) |
 
-**Para más información:** [Ver TEST-06 Completo](../TESTS/TEST-06/README.md)
-
----
-
-## TEST 07: Control de Acceso
-
-| Parámetros | Estatus |
-|---|---|
-| ![Parámetros](./imagenes/test7_parametros.png) | ![Estatus](./imagenes/test7_estatus.png) |
-
-Validar que los permisos por rol se aplican correctamente.
-
-**Para más información:** [Ver TEST-07 Completo](../TESTS/TEST-07/README.md)
+**Estado:** APROBADO
 
 ---
 
-## TEST 08: Recuperación ante Desastres
+## PT-04: Generación de Lotes (Volumen Alto)
 
-| Parámetros | Estatus |
-|---|---|
-| ![Parámetros](./imagenes/test8_parametros.png) | ![Estatus](./imagenes/test8_estatus.png) |
+Simulación masiva de 100 lotes simultáneos para evaluar rendimiento del sistema.
 
-Validar que el sistema se recupera ante fallos de base de datos.
+| Parámetros | Resultado | Navicat |
+|---|---|---|
+| ![Parámetros](../tests/test_4/Parametros_4.png) | ![Resultado](../tests/test_4/Resutado_4.png) | ![Navicat](../tests/test_4/Prueba4_Navicat.png) |
 
-**Para más información:** [Ver TEST-08 Completo](../TESTS/TEST-08/README.md)
-
----
-
-## TEST 09: Sincronización de Datos
-
-| Parámetros | Estatus |
-|---|---|
-| ![Parámetros](./imagenes/test9_parametros.png) | ![Estatus](./imagenes/test9_estatus.png) |
-
-Validar sincronización bidireccional entre MySQL y MongoDB.
-
-**Para más información:** [Ver TEST-09 Completo](../TESTS/TEST-09/README.md)
+**Estado:** APROBADO
 
 ---
 
-## TEST 10: Optimización de Índices
+## PT-05: Inventario Controlado Empresa Pfizer / Marca Advil
 
-| Parámetros | Estatus |
-|---|---|
-| ![Parámetros](./imagenes/test10_parametros.png) | ![Estatus](./imagenes/test10_estatus.png) |
+Poblamiento de stock de marca específica con generación de 1300 registros Empresa Pfizer.
 
-Validar que los índices mejoran el rendimiento de consultas.
+| Parámetros | Resultado | Navicat |
+|---|---|---|
+| ![Parámetros](../tests/test_5/Parametros_5.png) | ![Resultado](../tests/test_5/Resultados_5.png) | ![Navicat](../tests/test_5/Prueba5_Navicat.png) |
 
-**Para más información:** [Ver TEST-10 Completo](../TESTS/TEST-10/README.md)
+**Estado:** APROBADO
 
 ---
 
-**Última actualización:** Abril 2026
+## PT-06: Subrogación de Medicamentos
+
+Registro de déficit de inventario con creación de subrogación por falta de inventario.
+
+| Parámetros | Resultado | Navicat |
+|---|---|---|
+| ![Parámetros](../tests/test_6/Parametros_6.png) | ![Resultado](../tests/test_6/Resultados_7.png) | ![Navicat](../tests/test_6/Prueba6_Navicat.png) |
+
+**Estado:** APROBADO
+
+---
+
+## PT-07: Lotes con Ciclo de Vida Largo
+
+Simulación de lotes con rango extendido (2021–2029). Generación de 1300 registros para validar manejo de datos históricos y futuros.
+
+| Parámetros | Resultado | Navicat |
+|---|---|---|
+| ![Parámetros](../tests/test_7/Parametros_7.png) | ![Resultado](../tests/test_7/Resultados_7.png) | ![Navicat](../tests/test_7/Prueba7_Navicat.png) |
+
+**Estado:** APROBADO
+
+---
+
+## PT-08: Recetas Canceladas
+
+Generación de recetas con estado "Cancelada" para pruebas de auditoría y análisis de fallos.
+
+| Parámetros | Resultado | Navicat |
+|---|---|---|
+| ![Parámetros](../tests/test_8/Parametro8.png) | ![Resultado](../tests/test_8/Resultados_8.png) | ![Navicat](../tests/test_8/Prueba8_Navicat.png) |
+
+**Estado:** APROBADO
+
+---
+
+## PT-09: Stock Inicial Diclofenaco
+
+Registro base de stock con definición de stock mínimo, máximo y actual.
+
+| Parámetros | Resultado | Navicat |
+|---|---|---|
+| ![Parámetros](../tests/test_9/Parametros_9.png) | ![Resultado](../tests/test_9/Resultados_9.png) | ![Navicat](../tests/test_9/Prueba9_Navicat.png) |
+
+**Estado:** APROBADO
+
+---
+
+## PT-10: Último Test - Validación Final
+
+Validación final del sistema con todas las operaciones integradas.
+
+| Parámetros | Resultado | Navicat |
+|---|---|---|
+| ![Parámetros](../tests/test_10/Parametros_10.png) | ![Resultado](../tests/test_10/Resultados_10.png) | ![Navicat](../tests/test_10/Prueba10_Navicat.png) |
+
+**Estado:** APROBADO
+
+---
+
+## Documentación Completa
+
+Para acceder a la documentación técnica completa de todas las pruebas, incluyendo descripción detallada, criterios de aceptación, objetivos y resultados:
+
+**[Ver Documentación de Tests Completa](../tests/README.md)**
+
+---
+
+**Última actualización:** Abril 25, 2026
