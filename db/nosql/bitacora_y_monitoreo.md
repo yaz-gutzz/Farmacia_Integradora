@@ -14,6 +14,20 @@ La bitácora y monitoreo es un conjunto de mecanismos y herramientas de auditor�
 
 El propósito principal es garantizar la integridad, seguridad y trazabilidad de los datos, permitir la detección de cambios no autorizados, facilitar la recuperación ante incidentes y cumplir con requisitos de auditoría y regulación normativa.
 
+## Estructura de la Bitácora (Schema)
+
+La colección de bitácora en MongoDB sigue una estructura estricta definida por esquema (`bitacora_schema.json`). Todos los siguientes campos son obligatorios:
+
+| Campo | Tipo (BSON) | Descripción |
+| :--- | :--- | :--- |
+| `_id` | `objectId` | Identificador único del registro de bitácora. |
+| `detalles` | `string` | Documentación o detalles de la modificación realizada. |
+| `fecha` | `date` | Fecha en la que ocurrió el evento u operación. |
+| `hora` | `string` | Hora exacta de la modificación. |
+| `ip_cliente` | `string` | Dirección IP que originó la petición (muy importante para auditoría). |
+| `operacion` | `string` | Tipo de operación que desencadenó el registro (ej. INSERT, UPDATE, DELETE). |
+| `tabla_afectada` | `string` | Nombre de la colección o tabla que fue alterada. |
+
 ## Visualización
 
 ### Gráfico de Bitácora

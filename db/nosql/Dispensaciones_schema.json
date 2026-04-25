@@ -1,0 +1,110 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "_id",
+      "dispensados",
+      "faltantes",
+      "fecha",
+      "id_paciente",
+      "id_receta",
+      "status_final"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "objectId"
+      },
+      "dispensados": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "object",
+          "properties": {
+            "cantidad_surtida": {
+              "bsonType": "int"
+            },
+            "concentracion": {
+              "bsonType": "string"
+            },
+            "forma_farmaceutica": {
+              "bsonType": "string"
+            },
+            "id_medicamento": {
+              "bsonType": "int"
+            },
+            "lotes_usados": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "object",
+                "properties": {
+                  "cantidad_descontada": {
+                    "bsonType": "int"
+                  },
+                  "id_lote": {
+                    "bsonType": "int"
+                  }
+                },
+                "required": [
+                  "cantidad_descontada",
+                  "id_lote"
+                ]
+              }
+            },
+            "nombre_medicamento": {
+              "bsonType": "string"
+            }
+          },
+          "required": [
+            "cantidad_surtida",
+            "id_medicamento",
+            "lotes_usados",
+            "nombre_medicamento"
+          ]
+        }
+      },
+      "faltantes": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "object",
+          "properties": {
+            "cantidad_pendiente": {
+              "bsonType": "int"
+            },
+            "concentracion": {
+              "bsonType": "string"
+            },
+            "forma_farmaceutica": {
+              "bsonType": "string"
+            },
+            "id_medicamento": {
+              "bsonType": "int"
+            },
+            "motivo": {
+              "bsonType": "string"
+            },
+            "nombre_medicamento": {
+              "bsonType": "string"
+            }
+          },
+          "required": [
+            "cantidad_pendiente",
+            "id_medicamento",
+            "motivo",
+            "nombre_medicamento"
+          ]
+        }
+      },
+      "fecha": {
+        "bsonType": "date"
+      },
+      "id_paciente": {
+        "bsonType": "int"
+      },
+      "id_receta": {
+        "bsonType": "int"
+      },
+      "status_final": {
+        "bsonType": "string"
+      }
+    }
+  }
+}

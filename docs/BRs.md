@@ -14,7 +14,7 @@ Los Requisitos de Negocio definen los objetivos estratégicos del Departamento d
 
 ---
 
-## BR-001: Mejorar Eficiencia Operativa
+## BR-001:  
 
 ### Objetivo Empresarial
 Reducir el tiempo y costo de operaciones farmacéuticas mediante automatización de procesos.
