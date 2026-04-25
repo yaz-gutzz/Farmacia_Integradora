@@ -53,3 +53,18 @@ La API incorpora controladores de excepciones personalizados para manejar errore
 ---
 
 > **Nota:** Esta arquitectura permite que el sistema farmacéutico sea altamente escalable, manteniendo la robustez de los datos relacionales y la flexibilidad del modelo de documentos.
+
+---
+
+##  Integrantes del Equipo
+
+**Equipo de Farmacia - Tarea Integradora**
+
+
+
+| Nombre | Usuario GitHub | Rol |
+|--------|-----------------|-----|
+| **Yazmin Gutierrez Hernández** | [yaz-gutzz](https://github.com/yaz-gutzz) |Documentacion |
+| **Obed Guzman Flores** | [@ObedGuzmanGuz](https://github.com/ObedGuzmanGuz) | Desarrollador Backend |
+| **Citlalli Perez Dionicio** |   [@KouDionicio](https://github.com/KouDioniciob) | Base de Datos |
+| **Michelle Castro Otero** |[@Ktmich2095](https://github.com/Ktmich2095)  | Base datos-Backend |
