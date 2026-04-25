@@ -176,3 +176,16 @@ Este dashboard representa el estado final del sistema después de la ejecución 
 | ![Dashboard Final](./Dashboard_final.png) |
 
 ---
+
+
+
+**Equipo de Farmacia - Tarea Integradora**
+
+
+
+| Nombre | Usuario GitHub | Rol |
+|--------|-----------------|-----|
+| **Yazmin Gutierrez Hernández** | [yaz-gutzz](https://github.com/yaz-gutzz) |Documentacion |
+| **Obed Guzman Flores** | [@ObedGuzmanGuz](https://github.com/ObedGuzmanGuz) | Desarrollador Backend |
+| **Citlalli Perez Dionicio** |   [@KouDionicio](https://github.com/KouDioniciob) | Base de Datos |
+| **Michelle Castro Otero** |[@Ktmich2095](https://github.com/Ktmich2095)  | Base datos-Backend |
