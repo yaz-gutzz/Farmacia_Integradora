@@ -22,7 +22,7 @@ Este archivo documenta el contexto general del proyecto de Sistema de Gestión F
 
 ##  Documentos de Contexto Disponibles
 
-### 1. **FRs.md** - Requisitos Funcionales
+### 1. **Requisitos Funcionales**
 Especifica QUÉ debe ser capaz de hacer el sistema.
 
 **Contenido:**
@@ -34,11 +34,11 @@ Especifica QUÉ debe ser capaz de hacer el sistema.
 
 **Beneficiario Principal:** Equipo de Desarrollo
 
-[ Ver Requisitos Funcionales](./FRs.md)
+[ Ver Requisitos Funcionales](./Requerimientos%20Funcionales%20y%20No%20Funcionales.pdf)
 
 ---
 
-### 2. **NFRs.md** - Requisitos No Funcionales
+### 2. **Requisitos No Funcionales**
 Especifica CÓMO debe funcionar el sistema (atributos del sistema).
 
 **Contenido:**
@@ -50,11 +50,11 @@ Especifica CÓMO debe funcionar el sistema (atributos del sistema).
 
 **Beneficiario Principal:** Equipo de Arquitectura y Operaciones
 
-[ Ver Requisitos No Funcionales](./NFRs.md)
+[ Ver Requisitos No Funcionales](./Requerimientos%20Funcionales%20y%20No%20Funcionales.pdf)
 
 ---
 
-### 3. **BRs.md** - Requisitos de Negocio
+### 3. **Requisitos de Negocio**
 Define POR QUÉ se construye el sistema y qué valor genera.
 
 **Contenido:**
@@ -66,7 +66,7 @@ Define POR QUÉ se construye el sistema y qué valor genera.
 
 **Beneficiario Principal:** Directivos y Gerencia
 
-[ Ver Requisitos de Negocio](./BRs.md)
+[ Ver Requisitos de Negocio](./Requerimientos%20Funcionales%20y%20No%20Funcionales.pdf)
 
 ---
 ## Información General del Proyecto
