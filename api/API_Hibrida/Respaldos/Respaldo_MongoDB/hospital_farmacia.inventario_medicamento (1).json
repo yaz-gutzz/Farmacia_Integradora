@@ -1,0 +1,472 @@
+[{
+  "_id": {
+    "$oid": "69c6d8d0135aab9ed61c8351"
+  },
+  "id_medicamento": 1,
+  "movimientos": [
+    {
+      "tipo": "ENTRADA",
+      "fecha": {
+        "$date": "2026-03-27T19:21:54.933Z"
+      },
+      "cantidad": 10,
+      "referencia": "FOLIO-20260327132058"
+    },
+    {
+      "tipo": "SALIDA",
+      "fecha": {
+        "$date": "2026-03-27T20:08:19.408Z"
+      },
+      "cantidad": 8,
+      "referencia": "RECETA-40",
+      "motivo": "DISPENSACION"
+    },
+    {
+      "tipo": "SALIDA",
+      "fecha": {
+        "$date": "2026-03-27T20:19:08.801Z"
+      },
+      "cantidad": 5,
+      "referencia": "RECETA-41",
+      "motivo": "DISPENSACION"
+    },
+    {
+      "tipo": "SALIDA",
+      "fecha": {
+        "$date": "2026-03-27T20:19:26.964Z"
+      },
+      "cantidad": 377,
+      "referencia": "RECETA-42",
+      "motivo": "DISPENSACION"
+    },
+    {
+      "tipo": "SALIDA",
+      "fecha": {
+        "$date": "2026-03-27T20:20:07.130Z"
+      },
+      "cantidad": 4623,
+      "referencia": "SUB-42",
+      "motivo": "SUBROGACION"
+    },
+    {
+      "tipo": "ENTRADA",
+      "fecha": {
+        "$date": "2026-03-28T04:26:37.542Z"
+      },
+      "cantidad": 500,
+      "referencia": "FOLIO-20260327222637"
+    }
+  ],
+  "nombre": "Paracetamol Test",
+  "stock_actual": 120,
+  "concentracion": "500mg",
+  "forma_farmaceutica": "Tableta"
+},
+{
+  "_id": {
+    "$oid": "69c6db40135aab9ed61c8467"
+  },
+  "id_medicamento": 46,
+  "movimientos": [
+    {
+      "tipo": "ENTRADA",
+      "fecha": {
+        "$date": "2026-03-27T19:32:18.856Z"
+      },
+      "cantidad": 25,
+      "referencia": "FOLIO-20260327133217"
+    },
+    {
+      "tipo": "ENTRADA",
+      "fecha": {
+        "$date": "2026-03-27T19:37:51.804Z"
+      },
+      "cantidad": 5,
+      "referencia": "FOLIO-20260327133749"
+    }
+  ],
+  "nombre": "Clonazepam",
+  "stock_actual": 30
+},
+{
+  "_id": {
+    "$oid": "69c6dcc8135aab9ed61c84f0"
+  },
+  "id_medicamento": 5,
+  "movimientos": [
+    {
+      "tipo": "ENTRADA",
+      "fecha": {
+        "$date": "2026-03-27T19:38:50.291Z"
+      },
+      "cantidad": 10,
+      "referencia": "FOLIO-20260327133845"
+    },
+    {
+      "tipo": "SALIDA",
+      "fecha": {
+        "$date": "2026-03-27T19:41:29.592Z"
+      },
+      "cantidad": 5,
+      "referencia": "RECETA-34",
+      "motivo": "DISPENSACION"
+    },
+    {
+      "tipo": "SALIDA",
+      "fecha": {
+        "$date": "2026-03-27T19:42:44.841Z"
+      },
+      "cantidad": 5,
+      "referencia": "RECETA-35",
+      "motivo": "DISPENSACION"
+    },
+    {
+      "tipo": "SALIDA",
+      "fecha": {
+        "$date": "2026-03-27T19:44:05.782Z"
+      },
+      "cantidad": 15,
+      "referencia": "SUB-35",
+      "motivo": "SUBROGACION"
+    },
+    {
+      "tipo": "SALIDA",
+      "fecha": {
+        "$date": "2026-03-27T19:46:45.489Z"
+      },
+      "cantidad": 15,
+      "referencia": "SUB-35",
+      "motivo": "SUBROGACION"
+    },
+    {
+      "tipo": "SALIDA",
+      "fecha": {
+        "$date": "2026-03-27T19:46:59.244Z"
+      },
+      "cantidad": 15,
+      "referencia": "SUB-35",
+      "motivo": "SUBROGACION"
+    }
+  ],
+  "nombre": "Ácido Acetilsalicílico",
+  "stock_actual": 0
+},
+{
+  "_id": {
+    "$oid": "69c6e02a135aab9ed61c8620"
+  },
+  "id_medicamento": 6,
+  "movimientos": [
+    {
+      "tipo": "ENTRADA",
+      "fecha": {
+        "$date": "2026-03-27T19:53:16.926Z"
+      },
+      "cantidad": 5,
+      "referencia": "FOLIO-20260327135252"
+    },
+    {
+      "tipo": "SALIDA",
+      "fecha": {
+        "$date": "2026-03-27T19:53:25.426Z"
+      },
+      "cantidad": 5,
+      "referencia": "RECETA-36",
+      "motivo": "DISPENSACION"
+    },
+    {
+      "tipo": "SALIDA",
+      "fecha": {
+        "$date": "2026-03-27T19:53:58.302Z"
+      },
+      "cantidad": 5,
+      "referencia": "SUB-36",
+      "motivo": "SUBROGACION"
+    },
+    {
+      "tipo": "SALIDA",
+      "fecha": {
+        "$date": "2026-03-27T19:55:37.353Z"
+      },
+      "cantidad": 5,
+      "referencia": "SUB-36",
+      "motivo": "SUBROGACION"
+    },
+    {
+      "tipo": "SALIDA",
+      "fecha": {
+        "$date": "2026-03-27T19:55:46.376Z"
+      },
+      "cantidad": 5,
+      "referencia": "SUB-36",
+      "motivo": "SUBROGACION"
+    },
+    {
+      "tipo": "SALIDA",
+      "fecha": {
+        "$date": "2026-03-27T20:01:10.170Z"
+      },
+      "cantidad": 5,
+      "referencia": "SUB-36",
+      "motivo": "SUBROGACION"
+    }
+  ],
+  "nombre": "Omeprazol 20mg",
+  "stock_actual": 0
+},
+{
+  "_id": {
+    "$oid": "69c6e347135aab9ed61c87fd"
+  },
+  "id_medicamento": 26,
+  "movimientos": [
+    {
+      "tipo": "SALIDA",
+      "fecha": {
+        "$date": "2026-03-27T20:06:33.914Z"
+      },
+      "cantidad": 8456,
+      "referencia": "SUB-37",
+      "motivo": "SUBROGACION"
+    }
+  ],
+  "nombre": "Metronidazol",
+  "stock_actual": 0
+},
+{
+  "_id": {
+    "$oid": "69c6e887135aab9ed61c89d3"
+  },
+  "id_medicamento": 10,
+  "concentracion": "25 mg",
+  "forma_farmaceutica": "Tableta",
+  "movimientos": [
+    {
+      "tipo": "ENTRADA",
+      "fecha": {
+        "$date": "2026-03-27T20:28:57.635Z"
+      },
+      "cantidad": 50,
+      "referencia": "FOLIO-20260327142853"
+    },
+    {
+      "tipo": "SALIDA",
+      "fecha": {
+        "$date": "2026-03-27T20:29:45.369Z"
+      },
+      "cantidad": 10,
+      "referencia": "RECETA-43",
+      "motivo": "DISPENSACION"
+    },
+    {
+      "tipo": "SALIDA",
+      "fecha": {
+        "$date": "2026-03-27T20:30:11.476Z"
+      },
+      "cantidad": 50,
+      "referencia": "RECETA-44",
+      "motivo": "DISPENSACION"
+    },
+    {
+      "tipo": "SALIDA",
+      "fecha": {
+        "$date": "2026-03-27T20:30:28.533Z"
+      },
+      "cantidad": 40,
+      "referencia": "RECETA-45",
+      "motivo": "DISPENSACION"
+    },
+    {
+      "tipo": "SALIDA",
+      "fecha": {
+        "$date": "2026-03-27T20:30:55.194Z"
+      },
+      "cantidad": 10,
+      "referencia": "SUB-45",
+      "motivo": "SUBROGACION"
+    },
+    {
+      "tipo": "ENTRADA",
+      "fecha": {
+        "$date": "2026-03-28T04:26:12.011Z"
+      },
+      "cantidad": 5000,
+      "referencia": "FOLIO-20260327222610"
+    },
+    {
+      "tipo": "ENTRADA",
+      "fecha": {
+        "$date": "2026-03-28T05:19:04.340Z"
+      },
+      "cantidad": 850,
+      "referencia": "FOLIO-20260327231901"
+    }
+  ],
+  "nombre": "Captopril 25mg",
+  "stock_actual": 5800
+},
+{
+  "_id": {
+    "$oid": "69c75896135aab9ed61d041c"
+  },
+  "id_medicamento": 3,
+  "concentracion": "400 mg",
+  "forma_farmaceutica": "Tableta",
+  "movimientos": [
+    {
+      "tipo": "ENTRADA",
+      "fecha": {
+        "$date": "2026-03-28T04:27:03.975Z"
+      },
+      "cantidad": 300,
+      "referencia": "FOLIO-20260327222703"
+    },
+    {
+      "tipo": "ENTRADA",
+      "fecha": {
+        "$date": "2026-03-28T04:30:41.466Z"
+      },
+      "cantidad": 1500,
+      "referencia": "FOLIO-20260327223041"
+    }
+  ],
+  "nombre": "Ibuprofeno 400mg",
+  "stock_actual": 1800
+},
+{
+  "_id": {
+    "$oid": "69c7597a135aab9ed61d0b0a"
+  },
+  "id_medicamento": 7,
+  "concentracion": "850 mg",
+  "forma_farmaceutica": "Tableta",
+  "movimientos": [
+    {
+      "tipo": "ENTRADA",
+      "fecha": {
+        "$date": "2026-03-28T04:30:52.300Z"
+      },
+      "cantidad": 800,
+      "referencia": "FOLIO-20260327223052"
+    }
+  ],
+  "nombre": "Metformina 850mg",
+  "stock_actual": 800
+},
+{
+  "_id": {
+    "$oid": "69c7598b135aab9ed61d0b8e"
+  },
+  "id_medicamento": 12,
+  "concentracion": "50 mg",
+  "forma_farmaceutica": "Tableta",
+  "movimientos": [
+    {
+      "tipo": "ENTRADA",
+      "fecha": {
+        "$date": "2026-03-28T04:31:09.272Z"
+      },
+      "cantidad": 2000,
+      "referencia": "FOLIO-20260327223109"
+    }
+  ],
+  "nombre": "Diclofenaco 50mg",
+  "stock_actual": 2000
+},
+{
+  "_id": {
+    "$oid": "69c759bb135aab9ed61d0cc8"
+  },
+  "id_medicamento": 20,
+  "concentracion": "5 mg",
+  "forma_farmaceutica": "Tableta",
+  "movimientos": [
+    {
+      "tipo": "ENTRADA",
+      "fecha": {
+        "$date": "2026-03-28T04:31:57.316Z"
+      },
+      "cantidad": 1200,
+      "referencia": "FOLIO-20260327223157"
+    }
+  ],
+  "nombre": "Warfarina",
+  "stock_actual": 1200
+},
+{
+  "_id": {
+    "$oid": "69c759ca135aab9ed61d0d36"
+  },
+  "id_medicamento": 40,
+  "concentracion": "600 mg",
+  "forma_farmaceutica": "Tableta",
+  "movimientos": [
+    {
+      "tipo": "ENTRADA",
+      "fecha": {
+        "$date": "2026-03-28T04:32:11.563Z"
+      },
+      "cantidad": 500,
+      "referencia": "FOLIO-20260327223211"
+    },
+    {
+      "tipo": "ENTRADA",
+      "fecha": {
+        "$date": "2026-03-28T04:33:05.335Z"
+      },
+      "cantidad": 500,
+      "referencia": "FOLIO-20260327223305"
+    }
+  ],
+  "nombre": "Calcio",
+  "stock_actual": 1000
+},
+{
+  "_id": {
+    "$oid": "69c759df135aab9ed61d0dd3"
+  },
+  "id_medicamento": 45,
+  "concentracion": "10 mg",
+  "forma_farmaceutica": "Tableta",
+  "movimientos": [
+    {
+      "tipo": "ENTRADA",
+      "fecha": {
+        "$date": "2026-03-28T04:32:33.001Z"
+      },
+      "cantidad": 2200,
+      "referencia": "FOLIO-20260327223232"
+    }
+  ],
+  "nombre": "Diazepam",
+  "stock_actual": 2200
+},
+{
+  "_id": {
+    "$oid": "69c7655b135aab9ed61d1577"
+  },
+  "id_medicamento": 15,
+  "concentracion": "10 mg",
+  "forma_farmaceutica": "Inyectable",
+  "movimientos": [
+    {
+      "tipo": "ENTRADA",
+      "fecha": {
+        "$date": "2026-03-28T05:21:33.338Z"
+      },
+      "cantidad": 150000,
+      "referencia": "FOLIO-20260327232133"
+    },
+    {
+      "tipo": "SALIDA",
+      "fecha": {
+        "$date": "2026-03-28T05:26:15.154Z"
+      },
+      "cantidad": 500,
+      "referencia": "RECETA-49",
+      "motivo": "DISPENSACION"
+    }
+  ],
+  "nombre": "Morfina 10mg",
+  "stock_actual": 149500
+}]

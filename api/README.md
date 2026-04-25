@@ -1,38 +1,55 @@
-# API REST Híbrida - Farmacia Hospital
+# 🚀 API REST Híbrida - Farmacia Hospitalaria
 
-<table style="border: none; border-collapse: collapse; width: 100%;">
-<tr style="border: none;">
-<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Language-Python%203.9%2B-blue?style=flat-square" alt="Python"/></td>
-<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/Documentation-Swagger-green?style=flat-square" alt="Swagger"/></td>
-<td align="center" style="border: none; padding: 10px;"><img src="https://img.shields.io/badge/CORS-Enabled-brightgreen?style=flat-square" alt="CORS"/></td>
-</tr>
-</table>
+<div align="center">
 
-## Qué es una API Híbrida
+| ![Python](https://img.shields.io/badge/Language-Python%203.9%2B-blue?style=for-the-badge&logo=python&logoColor=white) | ![FastAPI](https://img.shields.io/badge/Framework-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white) | ![Documentation](https://img.shields.io/badge/Documentation-Swagger-green?style=for-the-badge&logo=swagger&logoColor=white) | ![CORS](https://img.shields.io/badge/CORS-Enabled-brightgreen?style=for-the-badge) |
+| :---: | :---: | :---: | :---: |
 
-Una API híbrida es una arquitectura de servicio web que integra múltiples sistemas de bases de datos heterogéneos para proporcionar una interfaz unificada de acceso a los datos. En este caso, la API conecta MySQL para datos relacionales estructurados y MongoDB para datos no estructurados o semi-estructurados, permitiendo aprovechar las fortalezas de ambos sistemas en una única aplicación.
-
-El propósito es proporcionar un conjunto cohesivo de servicios que abstrae la complejidad de trabajar con múltiples bases de datos, facilitando operaciones CRUD, validaciones, autenticación y gestión de errores de forma centralizada.
-
-## Repositorio Oficial
-
-La API híbrida completa junto con scripts de respaldo y gestión del proyecto se encuentra en un repositorio dedicado:
-
-**[Repositorio API Híbrida + Respaldos](https://github.com/tu-usuario/api-farmacia-hibrida)**
-
-Este repositorio incluye:
-- Código fuente de la API
-- Scripts de respaldo para MySQL y MongoDB
-- Configuración de entornos
-- Documentación técnica completa
-- Instrucciones de despliegue
-
-## Documentación Completa
-
-La documentación técnica, especificaciones de endpoints, configuración y mejores prácticas está disponible en formato PDF.
-
-**[Ver API Híbrida en PDF](./api_hibrida.pdf)**
+</div>
 
 ---
 
-**Última actualización:** Abril 2026
+## 🛠️ Arquitectura de la API Híbrida
+
+Una **API híbrida** es una arquitectura de servicio web avanzada que integra múltiples sistemas de bases de datos heterogéneos bajo una interfaz unificada. 
+
+Este backend, desarrollado con **Python** y **FastAPI**, actúa como una capa de abstracción que conecta dos motores de persistencia distintos, permitiendo aprovechar las fortalezas de cada paradigma en una única solución:
+
+* **🟦 MySQL (Relacional):** Gestiona datos estructurados, integridad referencial y transacciones complejas (ej. Roles, Usuarios y Catálogos Maestros).
+* **🟩 MongoDB (NoSQL):** Almacena datos semi-estructurados, documentos flexibles y logs de alta velocidad (ej. Inventarios, Recetas y Bitácoras de Seguridad).
+
+---
+
+## 🧠 Propósito y Capacidades
+
+El objetivo central de esta implementación es proporcionar un ecosistema de servicios cohesivo que oculte la complejidad de la infraestructura subyacente, facilitando:
+
+1.  **Operaciones CRUD Unificadas:** Interacción simplificada con colecciones de MongoDB y tablas de MySQL.
+2.  **Validación de Datos:** Uso intensivo de **Pydantic** para garantizar que los esquemas de datos cumplan con los requerimientos del sector salud.
+3.  **Seguridad Centralizada:** Gestión de autenticación, autorización y políticas de CORS desde un solo punto de entrada.
+4.  **Documentación Automática:** Exposición de endpoints mediante **Swagger UI** y **ReDoc** para facilitar el consumo por parte del frontend.
+
+---
+
+## 🏗️ Stack Tecnológico
+
+* **Core:** FastAPI (Asynchronous Server Gateway Interface - ASGI).
+* **Base de Datos SQL:** MySQL con conectores optimizados para Python.
+* **Base de Datos NoSQL:** MongoDB utilizando el driver oficial Motor/PyMongo.
+* **Esquemas/Serialización:** Pydantic para modelos de datos rigurosos.
+* **Servidor Web:** Uvicorn para despliegues de alto rendimiento.
+
+---
+
+## 🛡️ Gestión de Errores y Middleware
+
+La API incorpora controladores de excepciones personalizados para manejar errores de conexión de base de datos o fallos de validación, retornando códigos de estado HTTP estandarizados y mensajes claros para el desarrollador:
+
+* `200 OK` / `201 Created` para operaciones exitosas.
+* `400 Bad Request` para errores de validación de esquema.
+* `401 Unauthorized` para fallos en el control de acceso (RBAC).
+* `500 Internal Server Error` para fallos críticos en la persistencia híbrida.
+
+---
+
+> **Nota:** Esta arquitectura permite que el sistema farmacéutico sea altamente escalable, manteniendo la robustez de los datos relacionales y la flexibilidad del modelo de documentos.

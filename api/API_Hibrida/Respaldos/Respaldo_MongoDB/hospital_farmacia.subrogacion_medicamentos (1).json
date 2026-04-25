@@ -1,0 +1,268 @@
+[{
+  "_id": {
+    "$oid": "69c6de091968fed8641f6762"
+  },
+  "folio_subrogacion": "SUB-1774640649",
+  "fecha_solicitud": {
+    "$date": "2026-03-27T19:44:09.992Z"
+  },
+  "receta": {
+    "id_receta": 35,
+    "folio": "REC-35",
+    "vigente": true
+  },
+  "paciente": {
+    "id_paciente": 1,
+    "nombre": "Paciente / Consultar en SQL"
+  },
+  "medicamentos": [
+    {
+      "id_medicamento": 5,
+      "nombre": "Ácido Acetilsalicílico",
+      "cantidad": 15
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69c6dea61968fed8641f6763"
+  },
+  "folio_subrogacion": "SUB-1774640806",
+  "fecha_solicitud": {
+    "$date": "2026-03-27T19:46:46.809Z"
+  },
+  "receta": {
+    "id_receta": 35,
+    "folio": "REC-35",
+    "vigente": true
+  },
+  "paciente": {
+    "id_paciente": 1,
+    "nombre": "Paciente / Consultar en SQL"
+  },
+  "medicamentos": [
+    {
+      "id_medicamento": 5,
+      "nombre": "Ácido Acetilsalicílico",
+      "cantidad": 15
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69c6deb31968fed8641f6764"
+  },
+  "folio_subrogacion": "SUB-1774640819",
+  "fecha_solicitud": {
+    "$date": "2026-03-27T19:46:59.444Z"
+  },
+  "receta": {
+    "id_receta": 35,
+    "folio": "REC-35",
+    "vigente": true
+  },
+  "paciente": {
+    "id_paciente": 1,
+    "nombre": "Paciente / Consultar en SQL"
+  },
+  "medicamentos": [
+    {
+      "id_medicamento": 5,
+      "nombre": "Ácido Acetilsalicílico",
+      "cantidad": 15
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69c6e056ac0d00995e23fcbe"
+  },
+  "folio_subrogacion": "SUB-1774641238",
+  "fecha_solicitud": {
+    "$date": "2026-03-27T19:53:58.416Z"
+  },
+  "receta": {
+    "id_receta": 36,
+    "folio": "REC-36",
+    "vigente": true
+  },
+  "paciente": {
+    "id_paciente": 1,
+    "nombre": "Paciente / Consultar en SQL"
+  },
+  "medicamentos": [
+    {
+      "id_medicamento": 6,
+      "nombre": "Omeprazol 20mg",
+      "cantidad": 5
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69c6e0b9ac0d00995e23fcbf"
+  },
+  "folio_subrogacion": "SUB-1774641337",
+  "fecha_solicitud": {
+    "$date": "2026-03-27T19:55:37.461Z"
+  },
+  "receta": {
+    "id_receta": 36,
+    "folio": "REC-36",
+    "vigente": true
+  },
+  "paciente": {
+    "id_paciente": 1,
+    "nombre": "Paciente / Consultar en SQL"
+  },
+  "medicamentos": [
+    {
+      "id_medicamento": 6,
+      "nombre": "Omeprazol 20mg",
+      "cantidad": 5
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69c6e0c20a5ede594bf95bd4"
+  },
+  "folio_subrogacion": "SUB-1774641346",
+  "fecha_solicitud": {
+    "$date": "2026-03-27T19:55:46.526Z"
+  },
+  "receta": {
+    "id_receta": 36,
+    "folio": "REC-36",
+    "vigente": true
+  },
+  "paciente": {
+    "id_paciente": 1,
+    "nombre": "Paciente / Consultar en SQL"
+  },
+  "medicamentos": [
+    {
+      "id_medicamento": 6,
+      "nombre": "Omeprazol 20mg",
+      "cantidad": 5
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69c6e2066878977f3853b81c"
+  },
+  "folio_subrogacion": "SUB-1774641670",
+  "fecha_solicitud": {
+    "$date": "2026-03-27T20:01:10.364Z"
+  },
+  "receta": {
+    "id_receta": 36,
+    "folio": "REC-36",
+    "vigente": true
+  },
+  "paciente": {
+    "id_paciente": 1,
+    "nombre": "Paciente / Consultar en SQL"
+  },
+  "medicamentos": [
+    {
+      "id_medicamento": 6,
+      "nombre": "Omeprazol 20mg",
+      "cantidad": 5
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69c6e34ad552bc10436bb390"
+  },
+  "folio_subrogacion": "SUB-1774641994",
+  "fecha_solicitud": {
+    "$date": "2026-03-27T20:06:34.060Z"
+  },
+  "receta": {
+    "id_receta": 37,
+    "folio": "REC-37",
+    "vigente": true
+  },
+  "paciente": {
+    "id_paciente": 1,
+    "nombre": "Paciente / Consultar en SQL"
+  },
+  "medicamentos": [
+    {
+      "id_medicamento": 26,
+      "nombre": "Metronidazol",
+      "cantidad": 8456
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69c6e677f8cdfd51069c7aac"
+  },
+  "folio_subrogacion": "SUB-1774642807",
+  "fecha_solicitud": {
+    "$date": "2026-03-27T20:20:07.348Z"
+  },
+  "estatus": "Pendiente",
+  "motivo_subrogacion": "Falta de stock",
+  "receta": {
+    "id_receta": 42,
+    "folio": "REC-42"
+  },
+  "paciente": {
+    "id_paciente": 1,
+    "nombre": "Juan Perez",
+    "diagnostico": "Hipertensión Arterial"
+  },
+  "medico": {
+    "nombre": "Dr. House",
+    "especialidad": "Medicina Interna"
+  },
+  "medicamentos": [
+    {
+      "id_medicamento": 1,
+      "nombre": "Paracetamol Test",
+      "cantidad": 4623,
+      "dosis": "1 tab",
+      "costo": 450.5
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69c6e8ff7252c685024e57cd"
+  },
+  "folio_subrogacion": "SUB-1774643455",
+  "fecha_solicitud": {
+    "$date": "2026-03-27T20:30:55.532Z"
+  },
+  "estatus": "Pendiente",
+  "motivo_subrogacion": "Falta de stock",
+  "receta": {
+    "id_receta": 45,
+    "folio": "REC-45"
+  },
+  "paciente": {
+    "id_paciente": 1,
+    "nombre": "Juan Perez",
+    "diagnostico": "Hipertensión Arterial"
+  },
+  "medico": {
+    "nombre": "Dr. House",
+    "especialidad": "Medicina Interna"
+  },
+  "medicamentos": [
+    {
+      "id_medicamento": 10,
+      "nombre": "Captopril 25mg",
+      "cantidad": 10,
+      "dosis": "10 tab",
+      "costo": 450.5,
+      "concentracion": "25 mg",
+      "forma_farmaceutica": "Tableta"
+    }
+  ]
+}]
