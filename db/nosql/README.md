@@ -42,4 +42,13 @@ Respaldos y configuración de la base de datos MongoDB que soporta el Departamen
 
 ---
 
+## Equipo de Farmacia - Tarea Integradora
+
+| Nombre | Usuario GitHub | Rol | Responsabilidades |
+|--------|-----------------|-----|------------------|
+| **Yazmin Gutierrez Hernández** | [yaz-gutzz](https://github.com/yaz-gutzz) | Arquitecto/Coordinador | Arquitectura Híbrida, API REST, Coordinación General, Documentación |
+| **Obed Guzman Garcia** | [@ObedGuzmanGuz](https://github.com/ObedGuzmanGuz) | Desarrollador Backend | Desarrollo API (FastAPI), Lógica de Negocio, Integración SQL-NoSQL, Tests de API |
+| **Citlalli Perez Dionicio** | [@KouDionicio](https://github.com/KouDioniciob) | Especialista NoSQL | Desarrollo MongoDB, Esquemas JSON, Colecciones, Tests NoSQL |
+| **Michelle Castro Otero** | [@Ktmich2095](https://github.com/Ktmich2095) | Especialista SQL | Desarrollo MySQL, Diseño Relacional, Seguridad, Optimización, Tests SQL |
+
 

@@ -22,7 +22,7 @@ Este archivo documenta el contexto general del proyecto de Sistema de Gestión F
 
 ##  Documentos de Contexto Disponibles
 
-### 1. **FRs.md** - Requisitos Funcionales
+### 1. **Requisitos Funcionales**
 Especifica QUÉ debe ser capaz de hacer el sistema.
 
 **Contenido:**
@@ -34,11 +34,11 @@ Especifica QUÉ debe ser capaz de hacer el sistema.
 
 **Beneficiario Principal:** Equipo de Desarrollo
 
-[ Ver Requisitos Funcionales](./FRs.md)
+[ Ver Requisitos Funcionales](./Requerimientos%20Funcionales%20y%20No%20Funcionales.pdf)
 
 ---
 
-### 2. **NFRs.md** - Requisitos No Funcionales
+### 2. **Requisitos No Funcionales**
 Especifica CÓMO debe funcionar el sistema (atributos del sistema).
 
 **Contenido:**
@@ -50,11 +50,11 @@ Especifica CÓMO debe funcionar el sistema (atributos del sistema).
 
 **Beneficiario Principal:** Equipo de Arquitectura y Operaciones
 
-[ Ver Requisitos No Funcionales](./NFRs.md)
+[ Ver Requisitos No Funcionales](./Requerimientos%20Funcionales%20y%20No%20Funcionales.pdf)
 
 ---
 
-### 3. **BRs.md** - Requisitos de Negocio
+### 3. **Requisitos de Negocio**
 Define POR QUÉ se construye el sistema y qué valor genera.
 
 **Contenido:**
@@ -66,7 +66,7 @@ Define POR QUÉ se construye el sistema y qué valor genera.
 
 **Beneficiario Principal:** Directivos y Gerencia
 
-[ Ver Requisitos de Negocio](./BRs.md)
+[ Ver Requisitos de Negocio](./Requerimientos%20Funcionales%20y%20No%20Funcionales.pdf)
 
 ---
 ## Información General del Proyecto
@@ -169,6 +169,17 @@ BR-003: Optimizar Costos
   - [NFRs.md - Requisitos No Funcionales](./NFRs.md)
   - [BRs.md - Requisitos de Negocio](./BRs.md)
   - [../README.md - Portada del Proyecto](../README.md)
+
+---
+
+## Equipo de Farmacia - Tarea Integradora
+
+| Nombre | Usuario GitHub | Rol | Responsabilidades |
+|--------|-----------------|-----|------------------|
+| **Yazmin Gutierrez Hernández** | [yaz-gutzz](https://github.com/yaz-gutzz) | Arquitecto/Coordinador | Arquitectura Híbrida, API REST, Coordinación General, Documentación |
+| **Obed Guzman Garcia** | [@ObedGuzmanGuz](https://github.com/ObedGuzmanGuz) | Desarrollador Backend | Desarrollo API (FastAPI), Lógica de Negocio, Integración SQL-NoSQL, Tests de API |
+| **Citlalli Perez Dionicio** | [@KouDionicio](https://github.com/KouDioniciob) | Especialista NoSQL | Desarrollo MongoDB, Esquemas JSON, Colecciones, Tests NoSQL |
+| **Michelle Castro Otero** | [@Ktmich2095](https://github.com/Ktmich2095) | Especialista SQL | Desarrollo MySQL, Diseño Relacional, Seguridad, Optimización, Tests SQL |
 
 ---
 

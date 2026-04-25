@@ -64,17 +64,17 @@ id_receta    ←────referencia────► id_receta
 
 ## Pruebas Relacionadas
 
-### ✅ TEST 01: Compra de Medicamento
+### TEST 01: Compra de Medicamento
 - Inserción simple en esta colección
 - Registro de dispensa básica
 - Validación de lotes
 
-### ✅ TEST 02: Impacto Masivo
+### TEST 02: Impacto Masivo
 - Inserción de 500+ registros de compra
 - Múltiples medicamentos por receta
 - Actualización masiva de inventario
 
-### ✅ TEST 05: Control de Errores
+### TEST 05: Control de Errores
 - Validación cuando cantidad > stock
 - Registro de faltantes
 - Manejo de negativos

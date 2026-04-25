@@ -18,17 +18,19 @@
 
 ### LOGOTIPOS
 
-<table>
-  <tr>
-    <td align="center"><strong>Logo Principal</strong></td>
-    <td align="center"><strong>Logo Secundario</strong></td>
+<table style="border: none; border-collapse: collapse; width: 100%;">
+  <tr style="border: none;">
+    <td align="center" style="border: none; padding: 15px;"><strong>Logo Principal</strong></td>
+    <td align="center" style="border: none; padding: 15px;"><strong>Logo Secundario</strong></td>
   </tr>
-  <tr>
-    <td align="center">
-      Sistema Farmacéutico
+  <tr style="border: none;">
+    <td align="center" style="border: none; padding: 20px;">
+      <img src="/img/logo_principal.png" alt="Logo Principal - Sistema Farmacéutico" width="300" height="300" />
+      <p><em>Sistema Farmacéutico</em></p>
     </td>
-    <td align="center">
-      Gestión de Medicamentos
+    <td align="center" style="border: none; padding: 20px;">
+      <img src="/img/logo_sec.png" alt="Logo Secundario - Gestión de Medicamentos" width="300" height="300" />
+      <p><em>Gestión de Medicamentos</em></p>
     </td>
   </tr>
 </table>
@@ -89,85 +91,104 @@
 ```
 Farmacia_Integradora/
 │
-├─ 📋 DOCUMENTACIÓN (5%)
+├─ DOCUMENTACIÓN (5%)
 │  ├─ README.md                       # 📌 Portada Principal
 │  ├─ docs/
 │  │  ├─ readme.md                    # Contexto General
-│  │  ├─ FRs.md                       # 10 Requisitos Funcionales
-│  │  ├─ NFRs.md                      # 12 Requisitos No Funcionales
-│  │  └─ BRs.md                       # 10 Reglas de Negocio
-│  │
-│  └─ OTHER/
-│     └─ PROMPTING.md                 # Bitácora de Prompting
+│  │  ├─ Requerimientos Funcionales y No Funcionales.pdf
+│  │  ├─ Presentacion_MedAlert+.pdf
+│  │  ├─ Presentacion_Cartel.pdf
+│  │  └─ promting/
+│  │     └─ Bitácora de Prompting.pdf # Bitácora de Prompting
 │
-├─ 💾 BASE DE DATOS (45%)
+├─ BASE DE DATOS (45%)
 │  ├─ db/README.md
 │  ├─ db/SQL/ (15%)
 │  │  ├─ README.md
-│  │  ├─ schema.md
-│  │  ├─ data_dictionary.md
+│  │  ├─ Diagrama_Sql_.nmodel
+│  │  ├─ Mecanismo_Monitoreo.sql
+│  │  ├─ Respaldo Manual Parcial.sql
 │  │  ├─ bitacora_y_monitoreo.md
-│  │  ├─ respaldo_automatizado.md
-│  │  ├─ respaldos_manuales.md
-│  │  └─ respaldo_completo.sql
+│  │  └─ backup_respaldo_automatizado_sql.bat
 │  │
 │  ├─ db/NOSQL/ (15%)
 │  │  ├─ README.md
-│  │  ├─ schema.md
-│  │  ├─ data_dictionary.md
-│  │  ├─ bitacora_y_monitoreo.md
-│  │  ├─ respaldo_automatizado.md
-│  │  ├─ respaldos_manuales.md
-│  │  └─ respaldo_completo.json
+│  │  ├─ monitoreo_farmacia_mongodb.js
+│  │  ├─ bitacora_Seguridad.json
+│  │  ├─ backup_mongo_hospital.bat
+│  │  ├─ backup_hospital_farmacia_completo/
+│  │  │  └─ hospital_farmacia/ (archivos .bson)
+│  │  └─ backup_parcial_inventario/
+│  │     └─ hospital_farmacia/ (archivos .bson)
 │  │
 │  └─ db/SECURITY/ (15%)
 │     ├─ README.md
-│     ├─ SEGURIDAD.md
-│     ├─ usuarios_sql.sql
-│     └─ usuarios_nosql.js
+│     ├─ rbac_farmacia_mongodb.js
+│     └─ Script_roles_usuarios_privilegios_sql.sql
 │
 ├─ 🔌 API REST (15%)
 │  ├─ api/README.md
-│  ├─ api/main.py
-│  ├─ api/config.py
-│  ├─ api/requirements.txt
-│  ├─ api/MODELS/
-│  ├─ api/ROUTES/
-│  ├─ api/SCHEMAS/
-│  └─ api/UTILS/
+│  ├─ api/API_Hibrida/
+│  │  ├─ auditoria.py
+│  │  ├─ dispensaciones_mongo.py
+│  │  ├─ lotes_inventario_crud.py
+│  │  ├─ medicamentos_crud.py
+│  │  ├─ recetas_crud.py
+│  │  ├─ Configuracion_Hibrida.jpeg  # 🆕 Diagrama de configuración
+│  │  ├─ config/
+│  │  │  └─ database.js
+│  │  ├─ Respaldos/
+│  │  │  └─ API_Python/
+│  │  │     └─ hospital-farmacia-python/
+│  │  │        ├─ main.py
+│  │  │        ├─ requirements.txt
+│  │  │        ├─ app/ (modelos, rutas, schemas, utilidades)
+│  │  │        └─ scripts/ (test y configuración)
+│  │  └─ Tablas_MongoDB/
+│  │     └─ Colleciones/
+│  │        ├─ detalle_compra/
+│  │        ├─ dispensaciones/
+│  │        ├─ inventario_medicamento/
+│  │        └─ subrogacion_medicamentos/
 │
-├─ 🧪 TESTS (10%)
-│  ├─ TESTS/README.md                 # 10 Casos de Negocio
-│  ├─ TESTS/TEST-01/ a TEST-10/
-│  │  └─ README.md
-│  └─ TESTS/EVIDENCIAS/
+├─ TESTS (10%)
+│  ├─ tests/README.md                 # 10 Casos de Negocio
+│  ├─ tests/test_1/ a test_10/
+│  ├─ tests/Dashboard_final.png       # 🆕 Screenshot Dashboard Final
+│  └─ tests/Dashboard_Inicio.png      # 🆕 Screenshot Dashboard Inicio
 │
 ├─ 📊 DASHBOARD (10%)
-│  ├─ DASHBOARD/README.md
-│  ├─ DASHBOARD/evidencias.md
-│  ├─ DASHBOARD/imagenes/
-│  └─ DASHBOARD/*.navicat
+│  ├─ dashboard/README.md
+│  ├─ dashboard/evidencias.md
+│  ├─ dashboard/Dashboard_Farmacia_Integradora.nbi
 │
-└─ .gitignore
+├─ 📁 IMAGENES
+│  ├─ logo_principal.png
+│  ├─ logo_sec.png
+│  └─ organigrama.png
+│
+├─ .git/                              # Control de versiones
+├─ .gitignore                         # Archivos ignorados
+└─ README.md                          # Este archivo
 ```
 
 ##  Distribución de Entregables
 
-| Componente | Peso | Carpeta |
-|------------|------|---------|
-|  Portada (README) | 10% | / |
-|  Documentación | 5% | /DOCS/ |
-|  Respaldos SQL | 15% | /DB/SQL/ |
-|  Respaldos NoSQL | 15% | /DB/NOSQL/ |
-|  Seguridad | 15% | /DB/SECURITY/ |
-|  API REST | 15% | /API/ |
-|  Tests (10 casos) | 10% | /TESTS/ |
-|  Dashboard | 10% | /DASHBOARD/ |
+| Componente | Peso | Carpeta | Estado |
+|------------|------|---------|--------|
+| Portada (README) | 10% | / | COMPLETO |
+| Documentación | 5% | /docs/ | COMPLETO |
+| Respaldos SQL | 15% | /db/SQL/ | COMPLETO |
+| Respaldos NoSQL | 15% | /db/NOSQL/ | COMPLETO |
+| Seguridad | 15% | /db/SECURITY/ | COMPLETO |
+| API REST Híbrida | 15% | /api/API_Hibrida/ | COMPLETO |
+| Tests (10 casos) | 10% | /tests/ | COMPLETO |
+| Dashboard | 10% | /dashboard/ | COMPLETO |
 
 ---
 
 
-##  Integrantes del Equipo
+##  ORGANIGRAMA DEL EQUIPO
 
 **Equipo de Farmacia - Tarea Integradora**
 
@@ -177,26 +198,34 @@ Responsabilidades:
 - Control de calidad
 - Documentación operativa
 
+<table style="border: none; border-collapse: collapse; width: 100%;">
+  <tr style="border: none;">
+    <td align="center" style="border: none; padding: 15px;">
+      <img src="/img/organigrama.png" alt="Organigrama del Equipo" width="100%" height="auto" />
+    </td>
+  </tr>
+</table>
+
 | Nombre | Usuario GitHub | Rol | Responsabilidades |
 |--------|-----------------|-----|------------------|
-| **Yazmin Gutierrez Hernández** | [yaz-gutzz](https://github.com/yaz-gutzz) | Coordinadora Equipo | Arquitectura, Coordinación, Documentación |
-| **Obed Guzman Garcia** | [@ObedGuzmanGuz](https://github.com/ObedGuzmanGuz) | Desarrollador Backend | APIs REST, Lógica de Negocio |
-| **Citlalli Perez Dionicio** |   [@KouDionicio](https://github.com/KouDioniciob) | Interfaz, UX/UI |
-| **Michelle Castro Otero** |[@Ktmich2095](https://github.com/Ktmich2095)  | Especialista Database | Diseño BD, Optimización, Seguridad |
+| **Yazmin Gutierrez Hernández** | [yaz-gutzz](https://github.com/yaz-gutzz) | Arquitecto/Coordinador | Arquitectura Híbrida, API REST, Coordinación General, Documentación |
+| **Obed Guzman Garcia** | [@ObedGuzmanGuz](https://github.com/ObedGuzmanGuz) | Desarrollador Backend | Desarrollo API (FastAPI), Lógica de Negocio, Integración SQL-NoSQL, Tests de API |
+| **Citlalli Perez Dionicio** | [@KouDionicio](https://github.com/KouDioniciob) | Especialista NoSQL | Desarrollo MongoDB, Esquemas JSON, Colecciones, Tests NoSQL |
+| **Michelle Castro Otero** | [@Ktmich2095](https://github.com/Ktmich2095) | Especialista SQL | Desarrollo MySQL, Diseño Relacional, Seguridad, Optimización, Tests SQL |
 
 ---
 
 ##  CRONOGRAMA DEL PROYECTO
 
-| Fase | Actividad | Duración | Estado |
-|------|-----------|----------|--------|
-| **Fase 1** | Diseño BD + Documentación | 2 semanas | Completado |
-| **Fase 2** | Desarrollo API REST Base | 3 semanas | En Progreso |
-| **Fase 3** | Integración SQL + NoSQL | 2 semanas | Pendiente |
-| **Fase 4** | Desarrollo Suite de Tests (10 casos) | 2 semanas | Pendiente |
-| **Fase 5** | Dashboard Navicat BI | 1 semana | Pendiente |
-| **Fase 6** | Validación y Optimización | 1 semana | Pendiente |
-
+| TAREAS | Enero | Febrero | Marzo | Abril |
+|--------|-------|---------|-------|-------|
+| Análisis de requerimientos del área de farmacia | ██████ | | | |
+| Diseño de base de datos relacional (MySQL) | ████████ | ███ | | |
+| Diseño de base de datos NoSQL (MongoDB u otra) | | ███████ | █ | |
+| Desarrollo de estructura y relaciones de datos | | ████████ | ███ | |
+| Desarrollo de API (CRUD medicamentos, recetas, inventario, usuarios) | | | █████████ | ███ |
+| Integración MySQL + NoSQL + API | | | ████████ | ███ |
+| Pruebas, validación y documentación final | | | | ████████ |
 
 ---
 ##  Versionado
@@ -204,12 +233,14 @@ Responsabilidades:
 | Versión | Fecha | Cambios |
 |---------|-------|---------|
 | v1.0.0 | Abril 2026 | Versión inicial completa |
+| v1.0.1 | Abril 2026 | Agregados screenshots del Dashboard y diagrama de configuración |
 
-**Rama Activa:** main  
-**Status:**  Completo
+**Rama Activa:** Correciones  
+**Rama Principal:** main  
+**Status:** Completo con ajustes finales
 
 ---
 
-**Última actualización:** Abril 2026  
+**Última actualización:** Abril 25, 2026  
 **Equipo:** Departamento de Farmacia  
 **Proyecto:** Sistema Integral de Gestión Farmacéutica Hospitalaria
