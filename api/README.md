@@ -1,191 +1,71 @@
-#  Manual de Instalación y Despliegue Local - API Híbrida (Farmacia/Hospital)
 
-## 1. Descripción
-Este proyecto es una API híbrida desarrollada con **FastAPI**, que integra **MySQL (SQL)** y **MongoDB (NoSQL)** para la gestión de un sistema de farmacia/hospital.
+# 🚀 API REST Híbrida - Farmacia Hospitalaria
 
----
+<div align="center">
 
-## 2. Requisitos previos
-Antes de ejecutar el proyecto asegúrate de tener instalado:
+| ![Python](https://img.shields.io/badge/Language-Python%203.9%2B-blue?style=for-the-badge&logo=python&logoColor=white) | ![FastAPI](https://img.shields.io/badge/Framework-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white) | ![Documentation](https://img.shields.io/badge/Documentation-Swagger-green?style=for-the-badge&logo=swagger&logoColor=white) | ![CORS](https://img.shields.io/badge/CORS-Enabled-brightgreen?style=for-the-badge) |
+| :---: | :---: | :---: | :---: |
 
-- Python 3.10 o superior  
-- MySQL Server  
-- MongoDB Community Server  
-- pip (gestor de paquetes de Python)
+</div>
 
 ---
 
-## 3. Clonar o descargar el proyecto
+## 🛠️ Arquitectura de la API Híbrida
 
-### Opción 1: Git
-```bash
-git clone <URL_DEL_REPOSITORIO>
-cd API_Hibrida
-```
+Una **API híbrida** es una arquitectura de servicio web avanzada que integra múltiples sistemas de bases de datos heterogéneos bajo una interfaz unificada. 
 
-### Opción 2: Descarga manual
-- Descargar el ZIP del proyecto  
-- Descomprimir en una carpeta local  
+Este backend, desarrollado con **Python** y **FastAPI**, actúa como una capa de abstracción que conecta dos motores de persistencia distintos, permitiendo aprovechar las fortalezas de cada paradigma en una única solución:
+
+* **🟦 MySQL (Relacional):** Gestiona datos estructurados, integridad referencial y transacciones complejas (ej. Roles, Usuarios y Catálogos Maestros).
+* **🟩 MongoDB (NoSQL):** Almacena datos semi-estructurados, documentos flexibles y logs de alta velocidad (ej. Inventarios, Recetas y Bitácoras de Seguridad).
 
 ---
 
-## 4. Crear entorno virtual
+## 🧠 Propósito y Capacidades
 
-```bash
-python -m venv venv
-```
+El objetivo central de esta implementación es proporcionar un ecosistema de servicios cohesivo que oculte la complejidad de la infraestructura subyacente, facilitando:
 
-### Activar entorno en Windows:
-```bash
-venv\Scripts\activate
-```
+1.  **Operaciones CRUD Unificadas:** Interacción simplificada con colecciones de MongoDB y tablas de MySQL.
+2.  **Validación de Datos:** Uso intensivo de **Pydantic** para garantizar que los esquemas de datos cumplan con los requerimientos del sector salud.
+3.  **Seguridad Centralizada:** Gestión de autenticación, autorización y políticas de CORS desde un solo punto de entrada.
+4.  **Documentación Automática:** Exposición de endpoints mediante **Swagger UI** y **ReDoc** para facilitar el consumo por parte del frontend.
 
 ---
 
-## 5. Instalación de dependencias
+## 🏗️ Stack Tecnológico
 
-```bash
-pip install -r requirements.txt
-```
-
-### Si no existe el archivo requirements:
-```bash
-pip install fastapi uvicorn sqlalchemy pymysql motor pymongo python-dotenv
-```
+* **Core:** FastAPI (Asynchronous Server Gateway Interface - ASGI).
+* **Base de Datos SQL:** MySQL con conectores optimizados para Python.
+* **Base de Datos NoSQL:** MongoDB utilizando el driver oficial Motor/PyMongo.
+* **Esquemas/Serialización:** Pydantic para modelos de datos rigurosos.
+* **Servidor Web:** Uvicorn para despliegues de alto rendimiento.
 
 ---
 
-## 6. Configuración del archivo .env
+## 🛡️ Gestión de Errores y Middleware
 
-Crear un archivo llamado:
+La API incorpora controladores de excepciones personalizados para manejar errores de conexión de base de datos o fallos de validación, retornando códigos de estado HTTP estandarizados y mensajes claros para el desarrollador:
 
-```
-.env
-```
-
-### Ejemplo de configuración:
-
-```env
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=
-DB_NAME=hospital_farmacia
-
-MONGO_URL=mongodb://localhost:27017
-MONGO_DB=hospital_farmacia
-```
+* `200 OK` / `201 Created` para operaciones exitosas.
+* `400 Bad Request` para errores de validación de esquema.
+* `401 Unauthorized` para fallos en el control de acceso (RBAC).
+* `500 Internal Server Error` para fallos críticos en la persistencia híbrida.
 
 ---
 
-## 7. Ejecución del servidor
-
-```bash
-uvicorn main:app --reload
-```
+> **Nota:** Esta arquitectura permite que el sistema farmacéutico sea altamente escalable, manteniendo la robustez de los datos relacionales y la flexibilidad del modelo de documentos.
 
 ---
 
-## 8. Acceso al sistema
+##  Integrantes del Equipo
 
-Una vez iniciado el servidor:
+**Equipo de Farmacia - Tarea Integradora**
 
-### 🌐 API principal
-```
-http://127.0.0.1:8000
-```
 
-### 📄 Documentación Swagger
-```
-http://127.0.0.1:8000/docs
-```
 
-### 📘 Redoc (alternativa)
-```
-http://127.0.0.1:8000/redoc
-```
-
----
-
-## 9. Notas importantes
-
-- MySQL y MongoDB deben estar en ejecución antes de iniciar la API  
-- El archivo `.env` es obligatorio para la conexión a bases de datos  
-- Si hay errores de conexión, revisar credenciales y puertos (3306 y 27017)
-
----
----
-
-## 10. Solución de errores frecuentes (FAQ)
-
-###  1. Error: No se puede conectar a MySQL
-**Posibles causas:**
-- MySQL no está encendido
-- Usuario o contraseña incorrectos en `.env`
-- Puerto 3306 bloqueado
-
-**Solución:**
-- Iniciar MySQL Server
-- Verificar credenciales en `.env`
-- Revisar conexión en Workbench o Navicat
-
----
-
-###  2. Error: MongoDB no conecta
-**Posibles causas:**
-- Servicio de MongoDB detenido
-- URL incorrecta en `.env`
-
-**Solución:**
-- Iniciar MongoDB (`mongod`)
-- Verificar:
-```env
-MONGO_URL=mongodb://localhost:27017
-```
-
----
-
-###  3. Error: "Module not found"
-**Posibles causas:**
-- No se instalaron dependencias
-- Entorno virtual no activado
-
-**Solución:**
-```bash
-venv\Scripts\activate
-pip install -r requirements.txt
-```
-
----
-
-###  4. Error: Uvicorn no reconoce main
-**Posibles causas:**
-- Archivo principal no se llama `main.py`
-
-**Solución:**
-Ejecutar correctamente:
-```bash
-uvicorn main:app --reload
-```
-
----
-
-###  5. Swagger no carga
-**Posibles causas:**
-- El servidor no está corriendo
-
-**Solución:**
-Verificar que la API esté activa en:
-```
-http://127.0.0.1:8000
-```
-
----
-
-## 10. Recomendaciones
-
-- Siempre iniciar primero MySQL y MongoDB antes de levantar la API  
-- Usar entorno virtual para evitar conflictos de librerías  
-- Mantener actualizado el archivo `.env`  
-- Revisar logs de consola para detectar errores rápidos  
-
----
+| Nombre | Usuario GitHub | Rol |
+|--------|-----------------|-----|
+| **Yazmin Gutierrez Hernández** | [yaz-gutzz](https://github.com/yaz-gutzz) |Documentacion |
+| **Obed Guzman Flores** | [@ObedGuzmanGuz](https://github.com/ObedGuzmanGuz) | Desarrollador Backend |
+| **Citlalli Perez Dionicio** |   [@KouDionicio](https://github.com/KouDioniciob) | Base de Datos |
+| **Michelle Castro Otero** |[@Ktmich2095](https://github.com/Ktmich2095)  | Base datos-Backend |
