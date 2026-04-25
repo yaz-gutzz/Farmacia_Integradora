@@ -166,3 +166,16 @@ La implementación de esta base de datos garantiza un sistema robusto, seguro y 
 
 ---
 
+
+##  Integrantes del Equipo
+
+**Equipo de Farmacia - Tarea Integradora**
+
+
+
+| Nombre | Usuario GitHub | Rol |
+|--------|-----------------|-----|
+| **Yazmin Gutierrez Hernández** | [yaz-gutzz](https://github.com/yaz-gutzz) |Documentacion |
+| **Obed Guzman Flores** | [@ObedGuzmanGuz](https://github.com/ObedGuzmanGuz) | Desarrollador Backend |
+| **Citlalli Perez Dionicio** |   [@KouDionicio](https://github.com/KouDioniciob) | Interfaz, UX/UI |
+| **Michelle Castro Otero** |[@Ktmich2095](https://github.com/Ktmich2095)  | Especialista Database |
