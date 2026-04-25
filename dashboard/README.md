@@ -69,7 +69,7 @@ La documentación detallada con configuración de dashboards, consultas y análi
 
 | Nombre | Usuario GitHub | Rol |
 |--------|-----------------|-----|
-| **Yazmin Gutierrez Hernández** | [yaz-gutzz](https://github.com/yaz-gutzz) | Líder General |
-| **Obed Guzman Garcia** | [@ObedGuzmanGuz](https://github.com/ObedGuzmanGuz) | Riesgo de Gestión |
-| **Citlalli Perez Dionicio** | [@KouDionicio](https://github.com/KouDioniciob) | Especialista UX/UI |
-| **Michelle Castro Otero** | [@Ktmich2095](https://github.com/Ktmich2095) | Especialista Database |
+| **Yazmin Gutierrez Hernández** | [yaz-gutzz](https://github.com/yaz-gutzz) | Arquitecto/Coordinador |
+| **Obed Guzman Garcia** | [@ObedGuzmanGuz](https://github.com/ObedGuzmanGuz) | Desarrollador Backend |
+| **Citlalli Perez Dionicio** | [@KouDionicio](https://github.com/KouDioniciob) | Especialista NoSQL |
+| **Michelle Castro Otero** | [@Ktmich2095](https://github.com/Ktmich2095) | Especialista SQL |

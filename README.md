@@ -208,10 +208,10 @@ Responsabilidades:
 
 | Nombre | Usuario GitHub | Rol | Responsabilidades |
 |--------|-----------------|-----|------------------|
-| **Yazmin Gutierrez Hernández** | [yaz-gutzz](https://github.com/yaz-gutzz) | Líder General | Arquitectura, Coordinación, Documentación |
-| **Obed Guzman Garcia** | [@ObedGuzmanGuz](https://github.com/ObedGuzmanGuz) | Riesgo de Gestión | Gestión de Riesgos, Procesos de Negocio |
-| **Citlalli Perez Dionicio** | [@KouDionicio](https://github.com/KouDioniciob) | Especialista UX/UI | Interfaz, Experiencia de Usuario |
-| **Michelle Castro Otero** | [@Ktmich2095](https://github.com/Ktmich2095) | Especialista Database | Diseño BD, Optimización, Seguridad |
+| **Yazmin Gutierrez Hernández** | [yaz-gutzz](https://github.com/yaz-gutzz) | Arquitecto/Coordinador | Arquitectura Híbrida, API REST, Coordinación General, Documentación |
+| **Obed Guzman Garcia** | [@ObedGuzmanGuz](https://github.com/ObedGuzmanGuz) | Desarrollador Backend | Desarrollo API (FastAPI), Lógica de Negocio, Integración SQL-NoSQL, Tests de API |
+| **Citlalli Perez Dionicio** | [@KouDionicio](https://github.com/KouDioniciob) | Especialista NoSQL | Desarrollo MongoDB, Esquemas JSON, Colecciones, Tests NoSQL |
+| **Michelle Castro Otero** | [@Ktmich2095](https://github.com/Ktmich2095) | Especialista SQL | Desarrollo MySQL, Diseño Relacional, Seguridad, Optimización, Tests SQL |
 
 ---
 
